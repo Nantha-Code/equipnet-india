@@ -3,15 +3,18 @@ import "./NotFound.css";
 
 function NotFound() {
   return (
-    <div className="notfound-container">
-      <div className="notfound-content">
-        <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/404-error-page-templates.jpg" alt="not found" />
+    <>
+    <div className="main-not"></div>
+    <div className="not">
+       
+    <h1 className="h1">Oops!</h1>  
+    <h3 className="h3">404 - PAGE NOT FOUND</h3>
 
-        <a href="/" className="home-btn">Go Home</a>
-      </div>
-
-      
+    <p className="para">The page you are looking for might have been removed had its name changed or is temporarily unavailable.</p>
+    <a href="" className="btn">GO TO HOMEPAGE</a>
+        
     </div>
+    </>
   );
 }
 
