@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Home.css"
 import Footer from './Footer';
+import About from '../About';
 
 function Home() {
   return (
@@ -60,6 +61,7 @@ function Home() {
         
     </div>
     <div className="featured-instruments">
+        <h2>Featured Instruments</h2>
         <div className="instrument">
             <ul>
             <li>Name: PCR Machine </li>
@@ -103,6 +105,7 @@ function Home() {
 
  </div>
   <Footer/> 
+  <About/>
 </> 
   );
 }

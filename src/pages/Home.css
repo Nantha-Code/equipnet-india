@@ -1,65 +1,4 @@
-/* header{
-background: rgb(160, 20, 20);
-    nav{
-        background: blue;
-        ul{
-            list-style: none;
-            display: flex;
-            justify-content:flex-end;
-            gap: 8rem;
-        }
-    }
-}
-.hero-section{
-    background: #22ff59;
-    justify-items: center;  
 
-    .search-box {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.search-box input {
-  width: 300px;
-  padding: 10px;
-}
-}
-.stats-section{
-    justify-items: center;
-}
-.testimonials{
-    display: flex;
-    overflow: hidden;
-
-    .search-box {
-      display: flex;
-      gap: 10px;
-      margin-top: 20px;
-    }
-    
-    .search-box input {
-      padding: 12px;
-      width: 320px;
-      border-radius: 10px;
-      border: none;
-    }
-    
-    .search-box button {
-      padding: 12px 20px;
-      border-radius: 10px;
-      background: #3b82f6;
-      border: none;
-      color: white;
-      font-weight: bold;
-    }
-    .image-text{
-        /* height: 10rem; */
-        /* width: 10rem; */
-        /* object-fit: cover; */
-        /* } */
-/* } */ */
 /* Global futuristic background */
 body {
   background: radial-gradient(circle at top, #0f172a, #020617);
@@ -72,7 +11,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20rem;
+  margin-top: 10rem;
   padding: 0px 20px;
   min-height: 100vh;
   margin-top: 20px;
@@ -82,17 +21,6 @@ body {
   background-attachment: fixed;
   background-position: center center; 
   background-size: cover; 
-  /* object-fit: cover; */
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 80px;
-  min-height: 100vh;
-  margin-top: 20px;
-
-  background-image: url('/src/assets/images/bg-2.png');
-  background-repeat: no-repeat; */
-
 }
 
 /* Left Content */
@@ -132,7 +60,7 @@ body {
   border-radius: 12px;
   background: #3b82f6;
   border: none;
-  color: rgb(56, 0, 0);
+  color: rgb(238, 236, 236);
   font-weight: bold;
   cursor: pointer;
 }
@@ -166,13 +94,22 @@ ul{
 }
 
 .featured-instruments{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  gap: 1rem;
+  text-align: center;
+
+  h2{
+    color: white;
+  }
 
   .instrument{
   background: rgba(255,255,255,0.08);
   padding: 16px 20px;
   border-radius: 16px;
   backdrop-filter: blur(10px);
-  width: 25.5rem;
+  /* width: 10rem;   */
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   
     ul{

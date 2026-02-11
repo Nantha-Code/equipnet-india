@@ -1,0 +1,41 @@
+.about {
+  padding: 80px 120px;
+  background: #0b0f1a;
+  color: #eaeaea;
+  font-family: 'Inter', sans-serif;
+  
+}
+
+.heading-tagline h2 {
+  font-size: 36px;
+  color: #00e5ff;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 16px;
+  color: #9faecb;
+  font-style: italic;
+}
+
+.about-content {
+  margin-top: 40px;
+  max-width: 900px;
+  line-height: 1.8;
+  font-size: 17px;
+  justify-content: center;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Highlight important policy disclaimer */
+.highlight-box {
+  background: rgba(0, 229, 255, 0.1);
+  border-left: 4px solid #00e5ff;
+  padding: 15px 20px;
+  font-weight: 500;
+  color: #ffffff;
+}   
