@@ -6,6 +6,34 @@ body {
   font-family: Inter, sans-serif;
 }
 
+/* top link */
+.top-link{
+  /* border: #1b39bd solid 2px; */
+  .link{
+    /* border: #020617 solid 2px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul{
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      justify-content: flex-end;
+      padding: 2rem;
+
+      a{
+        text-decoration: none;
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+        font-family: "Poppins", sans-serif;
+      }
+    }
+  }
+}
+.link a:hover {
+  color: rgb(0, 0, 0);
+}
+
 /* HERO SECTION */
 .hero {
   display: flex;
@@ -101,7 +129,7 @@ ul{
   text-align: center;
 
   h2{
-    color: white;
+    color: rgb(0, 0, 0);
   }
 
   .instrument{

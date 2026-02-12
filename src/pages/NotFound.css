@@ -7,6 +7,7 @@ body{
     justify-items: center;
     height: 32rem;
     width: 77rem;
+    font-family:  "Poppins", sans-serif;
     .h1{
         color: rgb(10, 23, 99);
         font-size: 16rem;
@@ -27,11 +28,12 @@ body{
     margin-bottom: 2rem;
     margin-top: 1rem;
     
-   }
+}
 }
 
 
 .btn{
+    font-family: "Share Tech", sans-serif;
     margin:  40% ;
     text-decoration: none;
     color: white;
