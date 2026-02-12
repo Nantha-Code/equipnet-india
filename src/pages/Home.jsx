@@ -6,6 +6,8 @@ import About from '../About';
 function Home() {
   return (
 <>
+<div className="bg">
+
 <header className='top-link'>
     <nav className='link'>
         <img src="https://i.pinimg.com/736x/3b/f3/09/3bf309769cc8c9af9fcfa239e90ccbbf.jpg" alt="logo" />
@@ -115,6 +117,7 @@ function Home() {
 
  </div>
   <Footer/> 
+      </div>
 </> 
   );
 }
