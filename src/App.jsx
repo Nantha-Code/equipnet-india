@@ -2,6 +2,7 @@ import Home from "./pages/Home"
 import About from "./About";
 import NotFound from "./pages/NotFound";
 import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
      {/* <Home/> */}
      {/* <About/> */}
      {/* <NotFound/> */}
-     <LoginPage/>
+     {/* <LoginPage/> */}
+     <RegisterPage/>
     </>
   );
 }
