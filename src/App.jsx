@@ -1,16 +1,16 @@
 import Home from "./pages/Home"
 import About from "./About";
 import NotFound from "./pages/NotFound";
-// import LoginPage from "./pages/LoginPage";
-// import { BrowserRouter } from "react-router";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
   return (
     <>
     {/* <LoginPage/> */}
-     <Home/>
+     {/* <Home/> */}
      {/* <About/> */}
      {/* <NotFound/> */}
+     <LoginPage/>
     </>
   );
 }
