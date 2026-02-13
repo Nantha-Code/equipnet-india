@@ -23,7 +23,9 @@ const RegisterPage = () =>{
     });
   return (
     <>
-    <form onSubmit={formik.handleSubmit}>
+    <div className="register-form">
+
+    <form onSubmit={formik.handleSubmit} className='formik-register-form'>
         
     <h2>Register</h2>
     <label>Name</label>
@@ -52,7 +54,7 @@ const RegisterPage = () =>{
     
     
     <label>Role</label>
-        <select name="role">
+        <select name="role" className='role'>
         <option value="">Please choose an Role</option>
         <option value="student">Student</option>
         <option value="institution">Institution</option>
@@ -69,11 +71,12 @@ const RegisterPage = () =>{
      onChange={formik.handleChange}
      onBlur={formik.handleBlur}
      name='password'
-    />
+     />
     
     <button type='submit' className='register-btn'>Register</button>
     
     </form>
+     </div>
     </>
   );
 }
