@@ -12,7 +12,7 @@ function App() {
      {/* <About/> */}
      {/* <NotFound/> */}
      {/* <LoginPage/> */}
-     <RegisterPage/>
+     {/* <RegisterPage/> */}
     </>
   );
 }
