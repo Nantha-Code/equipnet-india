@@ -8,10 +8,10 @@ function App() {
   return (
     <>
     {/* <LoginPage/> */}
-     <Home/>
+     {/* <Home/> */}
      {/* <About/> */}
      {/* <NotFound/> */}
-     {/* <LoginPage/> */}
+     <LoginPage/>
      {/* <RegisterPage/> */}
     </>
   );
