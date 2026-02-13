@@ -1,6 +1,8 @@
 import React from 'react'
 import { useFormik } from 'formik';
 import { object, string } from 'yup';
+import "./LoginPage.css";
+
 
 const requirements = object({
          name: string().required("please fill the name field").min(4,"consistant atleast  4 letter name").max(15),
@@ -13,10 +15,10 @@ const requirements = object({
 const RegisterPage = () =>{
     const formik =useFormik({
         initialValues:{
-            name: " ",
-            email: " ",
-            role: " ",
-            password: " "
+            name: "",
+            email: "",
+            role: "",
+            password: ""
         },
         validationSchema:requirements,
         onSubmit:(data)=>console.log(data)
@@ -54,7 +56,13 @@ const RegisterPage = () =>{
     
     
     <label>Role</label>
-        <select name="role" className='role'>
+        <select 
+        name="role" 
+        className='role'
+        value={formik.values.role}
+        onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
+        >
         <option value="">Please choose an Role</option>
         <option value="student">Student</option>
         <option value="institution">Institution</option>
