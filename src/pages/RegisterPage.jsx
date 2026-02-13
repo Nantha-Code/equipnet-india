@@ -26,7 +26,7 @@ const RegisterPage = () =>{
     <form onSubmit={formik.handleSubmit}>
         
     <h2>Register</h2>
-
+    <label>Name</label>
     <input 
      type="text"
      placeholder='name'
@@ -38,6 +38,7 @@ const RegisterPage = () =>{
     />
     {formik.touched.name&&formik.errors.name?formik.errors.name:null}
 
+    <label>Email</label>
     <input  
      type="email" 
      placeholder='email'
@@ -49,17 +50,17 @@ const RegisterPage = () =>{
     />
     {formik.touched.email&&formik.errors.email?formik.errors.email:null}
     
-    <input 
-     type="text" 
-     placeholder='role' 
-     className='role'
-     value={formik.values.role}
-     onChange={formik.handleChange}
-     onBlur={formik.handleBlur}
-     name='role'
-    />
-    {formik.touched.role&&formik.errors.role?formik.errors.role:null}
     
+    <label>Role</label>
+        <select name="role">
+        <option value="">Please choose an Role</option>
+        <option value="student">Student</option>
+        <option value="institution">Institution</option>
+        <option value="startup">Startup</option>
+        <option value="labs">R&D Labs</option>
+        </select>
+
+    <label>Password</label>
     <input 
      type="text" 
      placeholder='password' 
