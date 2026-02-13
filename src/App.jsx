@@ -3,11 +3,12 @@ import About from "./About";
 import NotFound from "./pages/NotFound";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
+import Navbar from "./Navbar";
 
 function App() {
   return (
     <>
-    
+    <Navbar/>
      {/* <Home/> */}
      {/* <About/> */}
      {/* <NotFound/> */}
