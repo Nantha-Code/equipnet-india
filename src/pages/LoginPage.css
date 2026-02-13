@@ -71,6 +71,102 @@
 
 
 
+/* ''''''''''''''''''''''''''''''''''''''''
+Register-Form
+....................................... */
+
+
+body{
+  background: white;
+  background-size: cover;
+  
+}
+/* Full page layout */
+.register-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  border-radius: 20px;
+}
+
+/* Card container */
+.formik-register-form {
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQmamKMD-bk28rePDNYG1hKikUldALf1OSGQ&s);
+  background-size: cover;
+  padding: 35px 40px;
+  border-radius: 14px;
+  width: 380px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Title */
+.formik-register-form h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #222;
+  font-weight: 600;
+}
+
+/* Labels */
+.formik-register-form label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+  margin-top: 5px;
+}
+
+/* Input & Select */
+.formik-register-form input,
+.formik-register-form select {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/* Focus effect */
+.formik-register-form input:focus,
+.formik-register-form select:focus {
+  outline: none;
+  border-color: #1e3c72;
+  box-shadow: 0 0 5px #1e3c72;
+}
+
+/* Error text */
+.formik-register-form p {
+  color: red;
+  font-size: 12px;
+  margin: 2px 0 5px 0;
+}
+
+/* Register button */
+.register-btn {
+  margin-top: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+/* Button hover */
+.register-btn:hover {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  transform: translateY(-2px);
+}
+
+
 
 
 
