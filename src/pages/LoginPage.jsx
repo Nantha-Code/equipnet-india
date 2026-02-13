@@ -26,6 +26,7 @@ const LoginPage = () => {
   });
 
   return (
+    <>
     <div className="login-container">
       <form onSubmit={formik.handleSubmit} className="login-form">
 
@@ -65,6 +66,7 @@ const LoginPage = () => {
 
       </form>
     </div>
+    </>
   );
 };
 
