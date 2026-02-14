@@ -20,7 +20,7 @@ function App() {
     <>
     {/* <Navbar/> */}
     {/* <SearchBar/> */}
-     {/* <Home/> */}
+     <Home/>
      {/* <About/> */}
      {/* <NotFound/> */}
      {/* <LoginPage/> */}
@@ -32,7 +32,7 @@ function App() {
      {/* <RequestForm/> */}
      {/* <Dashboard/> */}
      {/* <AdminDashboard/> */}
-     <AddEquipment/>
+     {/* <AddEquipment/> */}
     </>
   );
 }
