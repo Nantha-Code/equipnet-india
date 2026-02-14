@@ -10,6 +10,7 @@ import SearchBar from "./components/common/SearchBar";
 import EquipmentDetails from "./components/equipment/EquipmentDetails";
 import EquipmentCard from "./components/equipment/EquipmentCard";
 import EquipmentList from "./components/equipment/EquipmentList";
+import RequestForm from "./components/request/RequestForm";
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
      {/* <Footer/> */}
      {/* <EquipmentDetails/> */}
      {/* <EquipmentCard/> */}
-     <EquipmentList/>
+     {/* <EquipmentList/> */}
+     <RequestForm/>
     </>
   );
 }
