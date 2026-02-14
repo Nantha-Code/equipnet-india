@@ -11,7 +11,7 @@ function App() {
   return (
     <>
     {/* <Navbar/> */}
-    <SearchBar/>
+    {/* <SearchBar/> */}
      {/* <Home/> */}
      {/* <About/> */}
      {/* <NotFound/> */}
