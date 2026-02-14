@@ -2,6 +2,7 @@ import React from 'react'
 import "./Home.css"
 import Footer from '../components/common/Footer';
 import About from './About';
+import SearchBar from '../components/common/SearchBar';
 
 function Home() {
   return (
@@ -14,12 +15,7 @@ function Home() {
     <div className="srh-section">
     <h1>India’s National Research Equipment Discovery Platform</h1>
 
-
-    <div className="search-box">
-      <input placeholder="Search equipment, field, or institution..." />
-      <button>Search</button>
-    </div>
-
+   <SearchBar/>
     <p> Discover and request access to world-class government-funded scientific infrastructure.
     </p>
 
