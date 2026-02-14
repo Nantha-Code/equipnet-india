@@ -12,6 +12,7 @@ import EquipmentCard from "./components/equipment/EquipmentCard";
 import EquipmentList from "./components/equipment/EquipmentList";
 import RequestForm from "./components/request/RequestForm";
 import Dashboard from "./pages/Dashboard";
+import AdminDashboard from "./pages/AdminDashboard";
 
 function App() {
   return (
@@ -28,7 +29,8 @@ function App() {
      {/* <EquipmentCard/> */}
      {/* <EquipmentList/> */}
      {/* <RequestForm/> */}
-     <Dashboard/>
+     {/* <Dashboard/> */}
+     <AdminDashboard/>
     </>
   );
 }
