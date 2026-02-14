@@ -11,6 +11,7 @@ import EquipmentDetails from "./components/equipment/EquipmentDetails";
 import EquipmentCard from "./components/equipment/EquipmentCard";
 import EquipmentList from "./components/equipment/EquipmentList";
 import RequestForm from "./components/request/RequestForm";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
@@ -26,7 +27,8 @@ function App() {
      {/* <EquipmentDetails/> */}
      {/* <EquipmentCard/> */}
      {/* <EquipmentList/> */}
-     <RequestForm/>
+     {/* <RequestForm/> */}
+     <Dashboard/>
     </>
   );
 }
