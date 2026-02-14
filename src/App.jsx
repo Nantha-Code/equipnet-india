@@ -13,6 +13,7 @@ import EquipmentList from "./components/equipment/EquipmentList";
 import RequestForm from "./components/request/RequestForm";
 import Dashboard from "./pages/Dashboard";
 import AdminDashboard from "./pages/AdminDashboard";
+import AddEquipment from "./pages/AddEquipment";
 
 function App() {
   return (
@@ -30,7 +31,8 @@ function App() {
      {/* <EquipmentList/> */}
      {/* <RequestForm/> */}
      {/* <Dashboard/> */}
-     <AdminDashboard/>
+     {/* <AdminDashboard/> */}
+     <AddEquipment/>
     </>
   );
 }
