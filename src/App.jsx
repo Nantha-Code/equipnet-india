@@ -20,7 +20,7 @@ function App() {
     <>
     {/* <Navbar/> */}
     {/* <SearchBar/> */}
-     <Home/>
+     {/* <Home/> */}
      {/* <About/> */}
      {/* <NotFound/> */}
      {/* <LoginPage/> */}
@@ -28,7 +28,7 @@ function App() {
      {/* <Footer/> */}
      {/* <EquipmentDetails/> */}
      {/* <EquipmentCard/> */}
-     {/* <EquipmentList/> */}
+     <EquipmentList/>
      {/* <RequestForm/> */}
      {/* <Dashboard/> */}
      {/* <AdminDashboard/> */}

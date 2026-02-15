@@ -82,7 +82,6 @@ function Home() {
             </ul>
         </div>
 
-
         <div className="instrument">
             <ul>
             <li>Name: Mass Spectrometer</li>
@@ -91,20 +90,9 @@ function Home() {
         </div>
     </div>
   </div>
-
-  {/* <div className="hero-3d">
-    <div className="blob blob1"></div>
-    <div className="blob blob2"></div>
-    <div className="glass-card">
-      <h3>SEM • IIT Madras</h3>
-      <p>Status: Available</p>
-    </div>
-  </div>*/}
-
-
- </div>
+</div>
   <Footer/> 
-      </div>
+</div>
 </> 
   );
 }

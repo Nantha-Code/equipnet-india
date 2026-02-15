@@ -1,6 +1,7 @@
 import React from 'react'
 
 function EquipmentDetails() {
+    
   return (
     <>
     <div className="equipment-details-container">
