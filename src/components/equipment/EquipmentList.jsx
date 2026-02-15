@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../common/Navbar';
 import SearchBar from '../common/SearchBar';
+import "./EquipmentList.css"
 
 function EquipmentList() {
   const EquipmentData = [
@@ -145,7 +146,9 @@ return (
     <>
     <div className="equipmentlist-container">
         <div className="cards-grid">
+          <div className="machine-img">
           <img src={image} alt="machine-image" />
+          </div>
           <ul>
             <li>Name: {name}</li>
             <li>Description: {description}</li>
