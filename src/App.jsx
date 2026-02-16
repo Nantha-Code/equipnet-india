@@ -21,7 +21,7 @@ function App() {
     <>
     {/* <Navbar/> */}
     {/* <SearchBar/> */}
-     {/* <Home/> */}
+     <Home/>
      {/* <About/> */}
      {/* <NotFound/> */}
      {/* <LoginPage/> */}
@@ -33,7 +33,7 @@ function App() {
      {/* <RequestForm/> */}
      {/* <Dashboard/> */}
      {/* <AdminDashboard/> */}
-     <AddEquipment/>
+     {/* <AddEquipment/> */}
 
 
 
@@ -47,7 +47,11 @@ function App() {
         <Route path="RequestForm" element={<RequestForm />} />
         <Route path="EquipmentDetails" element={<EquipmentDetails />} />
         <Route path="Register" element={<RegisterPage />}/>
+        <Route path="About" element={<About />}/>
+        <Route path="equipmentlist" element={<EquipmentList />}/>
         {/* <Route path="" element={}/> */}
+        {/* <Route path="" element={}/> */}
+        
         
         
         <Route path="*" element={<NotFound />} />

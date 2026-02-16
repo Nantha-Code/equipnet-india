@@ -1,7 +1,9 @@
 import React from "react";
 import "./Footer.css";
+import { useNavigate } from "react-router";
 
 function Footer() {
+  const navigate = useNavigate();
   return (
     <>
     <footer className="footer">
@@ -36,7 +38,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <a href="">About us</a> 
+        <a href=""onClick={() =>navigate("About")}>About us</a> 
         <p>© 2026 I-STEM. All rights reserved.</p>
       </div>
     </footer>

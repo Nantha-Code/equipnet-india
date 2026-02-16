@@ -4,8 +4,10 @@ import Footer from '../components/common/Footer';
 import About from './About';
 import SearchBar from '../components/common/SearchBar';
 import Navbar from '../components/common/Navbar';
+import { useNavigate } from 'react-router';
 
 function Home() {
+    const navigate = useNavigate();
   return (
 <>
 <div className="bg">
@@ -17,6 +19,7 @@ function Home() {
     <h1>India’s National Research Equipment Discovery Platform</h1>
 
    <SearchBar/>
+   <button className="hero-cta" onClick={() => navigate("equipmentlist")}>Explore Equipment</button>
     <p> Discover and request access to world-class government-funded scientific infrastructure.
     </p>
 
