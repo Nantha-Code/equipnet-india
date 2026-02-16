@@ -23,7 +23,7 @@ function App() {
     {/* <SearchBar/> */}
      {/* <Home/> */}
      {/* <About/> */}
-     <NotFound/>
+     {/* <NotFound/> */}
      {/* <LoginPage/> */}
      {/* <RegisterPage/> */}
      {/* <Footer/> */}
@@ -42,9 +42,11 @@ function App() {
 
 
     <Routes>
-         <Route path="Home" element={<Home />} />
+        <Route path="Login" element={<LoginPage />}/>
+        <Route path="Home" element={<Home />} />
         <Route path="RequestForm" element={<RequestForm />} />
-        <Route path="Equipmentdetails" element={<EquipmentDetails />} />
+        <Route path="EquipmentDetails" element={<EquipmentDetails />} />
+        {/* <Route path="" element={}/> */}
         
         
         <Route path="*" element={<NotFound />} />

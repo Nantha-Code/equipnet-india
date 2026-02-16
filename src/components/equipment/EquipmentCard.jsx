@@ -11,8 +11,10 @@ function EquipmentCard() {
       < h2>department:Microbiology</h2>
     
       </div>
+      <div className="detail-button">
+        <button className='view-details' onClick={() =>navigate("Equipmentdetails")}></button>
+      </div>
     </div>
-    <button className='view-details' onClick={() =>navigate("Equipmentdetails")}></button>
     </>
   );
 }
