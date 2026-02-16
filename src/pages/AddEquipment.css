@@ -1,0 +1,85 @@
+/* Page container */
+.add-equipment-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: linear-gradient(135deg, #0f172a, #1e293b); */
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+/* Form Card */
+.equipment-container {
+  width: 100%;
+  max-width: 500px;
+  background: #111827;
+  padding: 30px 35px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Title */
+.equipment-container h2 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #38bdf8;
+}
+
+/* Inputs */
+.equipment-container input {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  background: #020617;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+/* Input focus glow */
+.equipment-container input:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56,189,248,0.15);
+}
+
+/* Error text */
+.error-text {
+  font-size: 12px;
+  color: #f87171;
+  margin-top: -6px;
+  margin-bottom: 4px;
+}
+
+/* Submit Button */
+.equipment-container button {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Button hover */
+.equipment-container button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(37,99,235,0.4);
+}
+
+/* Button active */
+.equipment-container button:active {
+  transform: scale(0.98);
+}

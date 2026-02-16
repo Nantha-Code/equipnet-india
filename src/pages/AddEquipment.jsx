@@ -2,6 +2,7 @@ import { Category, Description } from '@mui/icons-material';
 import { Formik, useFormik } from 'formik';
 import * as Yup from "yup";
 import React from 'react'
+import "./AddEquipment.css"
 
 const AddEquipment =() =>{
   const formik = useFormik({
@@ -18,7 +19,7 @@ const AddEquipment =() =>{
       .required("Enter the equipment name"),
 
       category: Yup.string()
-      .required("Select the category"),
+      .required("Enter the category"),
 
       institution: Yup.string()
       .required("Enter the institution name"),
