@@ -3,15 +3,24 @@
     display: grid;
     grid-template-columns: repeat(2,(1fr 1fr));
     background: gray;
+    gap: 2rem;
 }
 .cards-grid{
     align-items: center;
     justify-items: center;
+    justify-content: center;
     border: 2px solid green;
     margin: 8px;
     background: yellowgreen;
+
     ul{
         list-style: none;
         line-height: 3rem;
+    }
+    .request-access-btn{
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        justify-content: center;
+        font-weight: bold;
     }
 }

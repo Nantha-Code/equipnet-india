@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../common/Navbar';
 import SearchBar from '../common/SearchBar';
 import "./EquipmentList.css"
+import { useNavigate } from "react-router-dom";
 
 function EquipmentList() {
   const EquipmentData = [
@@ -141,7 +142,7 @@ return(
 
 
 function ListExpress({image, name, description, institution, location, availabilityStatus, usageType}){
-
+  const navigate = useNavigate();
 return (
     <>
     <div className="equipmentlist-container">
@@ -157,7 +158,8 @@ return (
             <li>Status: {availabilityStatus}</li>
             <li>Type: {usageType}</li>
          </ul>
-      </div>  
+      <button className='request-access-btn' onClick={() => navigate("RequestForm")}>Request Access</button>  
+      </div>
     </div>
     </>
   );
