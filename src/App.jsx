@@ -24,7 +24,7 @@ function App() {
      {/* <Home/> */}
      {/* <About/> */}
      {/* <NotFound/> */}
-     {/* <LoginPage/> */}
+     <LoginPage/>
      {/* <RegisterPage/> */}
      {/* <Footer/> */}
      {/* <EquipmentDetails/> */}

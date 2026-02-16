@@ -2,6 +2,7 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import "./LoginPage.css";
+import { useNavigate } from "react-router";
 
 const LoginPage = () => {
   const formik = useFormik({
@@ -24,7 +25,7 @@ const LoginPage = () => {
       console.log("Login Data:", values);
     }
   });
-
+  const navigate = useNavigate();
   return (
     <>
     <div className="login-container">
@@ -60,10 +61,8 @@ const LoginPage = () => {
           <p className="error-text">{formik.errors.password}</p>
         )}
 
-        <button type="submit" className="login-button">
-          Login
-        </button>
-
+        <button type="submit" className="login-button">Login</button>
+        <a href=""className="skip-button" onClick={() =>navigate("Home")}>Skip</a>
       </form>
     </div>
     </>
