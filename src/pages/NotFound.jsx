@@ -13,7 +13,7 @@ function NotFound() {
     <h3 className="h3">404 - PAGE NOT FOUND</h3>
 
     <p className="para">The page you are looking for might have been removed had its name changed or is temporarily unavailable.</p>
-    <a href="" className="btn" onClick={() =>navigate("Home")}>GO TO HOMEPAGE</a>
+    <a href="" className="btn" onClick={() =>navigate("/")}>GO TO HOMEPAGE</a>
         
     </div>
     </>

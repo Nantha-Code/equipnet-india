@@ -14,7 +14,7 @@ import RequestForm from "./components/request/RequestForm";
 import Dashboard from "./pages/Dashboard";
 import AdminDashboard from "./pages/AdminDashboard";
 import AddEquipment from "./pages/AddEquipment";
-import { Routes, Route, Navigate} from "react-router-dom";
+import { Routes, Route, Navigate, BrowserRouter} from "react-router-dom";
 
 function App() {
   return (
@@ -35,23 +35,31 @@ function App() {
      {/* <AdminDashboard/> */}
      {/* <AddEquipment/> */}
 
-
+  
 
     <Routes>
+        <Route path="/" element={<Home />} />
+
         <Route path="login" element={<LoginPage />}/>
-        <Route path="home" element={<Home />} />
+        
         <Route path="requestform" element={<RequestForm />} />
+        
         <Route path="equipmentdetails" element={<EquipmentDetails />} />
+        
         <Route path="register" element={<RegisterPage />}/>
+        
         <Route path="about" element={<About />}/>
+        
         <Route path="equipmentlist" element={<EquipmentList />}/>
+        
         {/* <Route path="" element={}/> */}
         {/* <Route path="" element={}/> */}
         
         
         
-        {/* <Route path="*" element={<NotFound />} /> */}
+        <Route path="*" element={<NotFound />} />
     </Routes>
+  
 
 
     </>
