@@ -121,8 +121,6 @@ function EquipmentList() {
 
 return(
 <>
-<Navbar/>
-<SearchBar/>
 {EquipmentData.map(({name, description, institution, location, availabilityStatus, usageType, image}) => ( 
 <ListExpress
   key={name}
@@ -158,7 +156,7 @@ return (
             <li>Status: {availabilityStatus}</li>
             <li>Type: {usageType}</li>
          </ul>
-      <button className='request-access-btn' onClick={() => navigate("RequestForm")}>Request Access</button>  
+      <button className='request-access-btn' onClick={() => navigate("requestform")}>Request Access</button>  
       </div>
     </div>
     </>

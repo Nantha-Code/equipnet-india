@@ -19,9 +19,9 @@ import { Routes, Route, Navigate} from "react-router-dom";
 function App() {
   return (
     <>
-    {/* <Navbar/> */}
-    {/* <SearchBar/> */}
-     <Home/>
+     {/* <Navbar/> */}
+     {/* <SearchBar/> */}
+     {/* <Home /> */}
      {/* <About/> */}
      {/* <NotFound/> */}
      {/* <LoginPage/> */}
@@ -37,17 +37,13 @@ function App() {
 
 
 
-
-
-
-
     <Routes>
-        <Route path="Login" element={<LoginPage />}/>
-        <Route path="Home" element={<Home />} />
-        <Route path="RequestForm" element={<RequestForm />} />
-        <Route path="EquipmentDetails" element={<EquipmentDetails />} />
-        <Route path="Register" element={<RegisterPage />}/>
-        <Route path="About" element={<About />}/>
+        <Route path="login" element={<LoginPage />}/>
+        <Route path="home" element={<Home />} />
+        <Route path="requestform" element={<RequestForm />} />
+        <Route path="equipmentdetails" element={<EquipmentDetails />} />
+        <Route path="register" element={<RegisterPage />}/>
+        <Route path="about" element={<About />}/>
         <Route path="equipmentlist" element={<EquipmentList />}/>
         {/* <Route path="" element={}/> */}
         {/* <Route path="" element={}/> */}

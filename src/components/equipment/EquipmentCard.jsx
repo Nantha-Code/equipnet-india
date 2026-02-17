@@ -12,7 +12,7 @@ function EquipmentCard() {
     
       </div>
       <div className="detail-button">
-        <button className='view-details' onClick={() =>navigate("Equipmentdetails")}></button>
+        <button className='view-details' onClick={() =>navigate("equipmentdetails")}></button>
       </div>
     </div>
     </>
