@@ -10,8 +10,8 @@ function Home() {
     const navigate = useNavigate();
   return (
 <>
-   <Navbar/>
 <div className="bg">
+   <Navbar/>
 <div className="hero">
   <div className="hero-content">
     

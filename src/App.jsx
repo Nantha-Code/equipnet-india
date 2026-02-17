@@ -39,18 +39,18 @@ function App() {
 
     <Routes>
         <Route path="/" element={<Home />} />
-
         <Route path="login" element={<LoginPage />}/>
-        
         <Route path="requestform" element={<RequestForm />} />
-        
         <Route path="equipmentdetails" element={<EquipmentDetails />} />
-        
         <Route path="register" element={<RegisterPage />}/>
-        
         <Route path="about" element={<About />}/>
-        
         <Route path="equipmentlist" element={<EquipmentList />}/>
+
+
+        {/* <Route path="/grievances" element={<Grievances />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-use" element={<TermsOfUse />} />
+        <Route path="/faq" element={<FAQ />} /> */}
         
         {/* <Route path="" element={}/> */}
         {/* <Route path="" element={}/> */}
