@@ -23,7 +23,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: rem;
   padding: 0px 20px;
   margin-top: 20px;
   /* background: url('/src/assets/images/bg-2.png');
@@ -41,7 +41,18 @@ body {
 
 
 }
+.hero-cta {
+  margin-top: 20px;
+  padding: 14px 28px;
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+  border: none;
+  color: white;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+}
 .srh-section{
+  justify-content: center;
   justify-items: center;
 }
 
