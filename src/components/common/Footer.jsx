@@ -15,10 +15,10 @@ function Footer() {
             <li>Grievances</li>
             <li>Privacy Policy</li>
             <li>Terms of Use</li>
-            <li>About Us</li>
+            <li onClick={() =>navigate("about")}>About Us</li>
             <li>FAQ</li>
-            <li>National Digital Library</li>
-            <li>Shodhganga</li>
+            <li><a className="footer-a-tag" href="https://www.ndl.gov.in/">National Digital Library</a></li>
+            
           </ul>
         </div>
 
@@ -38,7 +38,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <a href=""onClick={() =>navigate("about")}>About us</a> 
+         
         <p>© 2026 I-STEM. All rights reserved.</p>
       </div>
     </footer>
