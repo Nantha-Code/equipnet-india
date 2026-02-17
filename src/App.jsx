@@ -5,7 +5,7 @@ import NotFound from "./pages/NotFound";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import Navbar from "./components/common/Navbar";
-import Footer from "./components/common/Footer";
+import Footer from "./components/common/footer/Footer";
 import SearchBar from "./components/common/SearchBar";
 import EquipmentDetails from "./components/equipment/EquipmentDetails";
 import EquipmentCard from "./components/equipment/EquipmentCard";
