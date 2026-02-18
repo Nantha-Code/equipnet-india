@@ -12,11 +12,11 @@ function Footer() {
         <div className="footer-column">
           <h3>Resources</h3>
           <ul>
-            <li>Grievances</li>
-            <li>Privacy Policy</li>
-            <li>Terms of Use</li>
+            <li onClick={() =>navigate("grievances")}>Grievances</li>
+            <li onClick={() =>navigate("privacy-policy")}>Privacy Policy</li>
+            <li onClick={() =>navigate("terms-of-use")}>Terms of Use</li>
             <li onClick={() =>navigate("about")}>About Us</li>
-            <li>FAQ</li>
+            <li onClick={() =>navigate("faq")}>FAQ</li>
             <li><a className="footer-a-tag" href="https://www.ndl.gov.in/">National Digital Library</a></li>
             
           </ul>

@@ -14,7 +14,12 @@ import RequestForm from "./components/request/RequestForm";
 import Dashboard from "./pages/Dashboard";
 import AdminDashboard from "./pages/AdminDashboard";
 import AddEquipment from "./pages/AddEquipment";
+import Grievances from "./components/common/footer/Grievances";
+import TermsOfUse from "./components/common/footer/TermsOfUse";
+import PrivacyPolicy from "./components/common/footer/PrivacyPolicy";
+import Faq from "./components/common/footer/Faq";
 import { Routes, Route, Navigate, BrowserRouter} from "react-router-dom";
+
 
 function App() {
   return (
@@ -49,14 +54,14 @@ function App() {
         <Route path="grievances" element={<Grievances />} />
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="terms-of-use" element={<TermsOfUse />} />
-        <Route path="faq" element={<FAQ />} />
+        <Route path="faq" element={<Faq />} />
         
         {/* <Route path="" element={}/> */}
         {/* <Route path="" element={}/> */}
         
         
         
-        {/* <Route path="*" element={<NotFound />} /> */}
+        <Route path="*" element={<NotFound />} />
     </Routes>
   
 
