@@ -22,6 +22,7 @@ return(
   />
 ))}
 </>
+
 );
 
 
@@ -29,10 +30,10 @@ function ListExpress({image, name, description, institution, location, availabil
   const navigate = useNavigate();
 return (
     <>
-    <div className="equipmentlist-container">
-        <div className="cards-grid">
+    <div className="equipmentlist-container" onClick={() => navigate("equipmentcard")}>
+        <div className="cards-grid" onClick={() => navigate("equipmentcard")}>
           <div className="machine-img">
-          <img src={image} alt="machine-image" />
+          <img src={image} alt="machine-image" onClick={() => navigate("equipmentcard")} />
           </div>
           <ul>
             <li>Name: {name}</li>
