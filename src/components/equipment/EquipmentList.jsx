@@ -30,12 +30,12 @@ function ListExpress({image, name, description, institution, location, availabil
   const navigate = useNavigate();
 return (
     <>
-    <div className="equipmentlist-container" onClick={() => navigate("equipmentcard")}>
-        <div className="cards-grid" onClick={() => navigate("equipmentcard")}>
+    <div className="equipmentlist-container">
+        <div className="cards-grid" >
           <div className="machine-img">
           <img src={image} alt="machine-image" onClick={() => navigate("equipmentcard")} />
           </div>
-          <ul>
+          <ul onClick={() => navigate("equipmentcard")}>
             <li>Name: {name}</li>
             <li>Description: {description}</li>
             <li>Institution: {institution}</li>
@@ -43,7 +43,7 @@ return (
             <li>Status: {availabilityStatus}</li>
             <li>Type: {usageType}</li>
          </ul>
-      <button className='request-access-btn' onClick={() => navigate("requestform")}>Request Access</button>  
+      <button className='request-access-btn' onClick={() => navigate("requestform")}>View Details</button>  
       </div>
     </div>
     </>

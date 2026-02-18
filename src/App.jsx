@@ -41,11 +41,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="login" element={<LoginPage />}/>
         <Route path="requestform" element={<RequestForm />} />
-        <Route path="equipmentdetails" element={<EquipmentDetails />} />
         <Route path="register" element={<RegisterPage />}/>
         <Route path="about" element={<About />}/>
         <Route path="equipmentlist" element={<EquipmentList />}/>
-
+        <Route path="equipmentcard" element={<EquipmentCard />}/>
+        {/* <Route path="equipmentdetails" element={<EquipmentDetails />} /> */}
 
         {/* <Route path="/grievances" element={<Grievances />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
@@ -57,7 +57,7 @@ function App() {
         
         
         
-        <Route path="*" element={<NotFound />} />
+        {/* <Route path="*" element={<NotFound />} /> */}
     </Routes>
   
 
