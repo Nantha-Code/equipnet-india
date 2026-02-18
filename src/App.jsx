@@ -45,7 +45,7 @@ function App() {
         <Route path="about" element={<About />}/>
         <Route path="equipmentlist" element={<EquipmentList />}/>
         <Route path="equipmentcard" element={<EquipmentCard />}/>
-        {/* <Route path="equipmentdetails" element={<EquipmentDetails />} /> */}
+        <Route path="equipmentdetails" element={<EquipmentDetails />} />
 
         {/* <Route path="/grievances" element={<Grievances />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
