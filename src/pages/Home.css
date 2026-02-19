@@ -138,5 +138,49 @@ ul{
   }
 }
 
-
-
+.small-stats-container{
+  padding: 10rem;
+  
+  .tittle-container{
+    width: 40rem;
+    
+    .stats-box-tittle{
+      text-align: center;
+      color: black;
+      font-size: 2.5rem;
+      font-weight: bolder;
+    }
+  }
+  .all-stats-boxes{
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+    
+    .stats-box{
+      width: 100%;
+      padding: 2rem;
+      background: white;
+      border-radius: 0.5rem;
+      
+    }
+    .box-icon{
+      height: 5rem;
+    
+    }
+    
+    .count{
+      color: black;
+      font-weight: bolder;
+      font-size: 2.3rem;
+      margin-bottom: 4px;
+      letter-spacing: 1px;
+    }
+    .para-name{
+      color: #08357c;
+      font-weight: bold;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+  }
+  
+}
