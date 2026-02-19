@@ -1,7 +1,7 @@
 /* top link */
 .top-link{
   margin-top: 0px;
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
   border-radius: 15px;
   overflow: hidden;
   border: #1b39bd solid 2px;
@@ -13,10 +13,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px);      */
     border-radius: 15px;
     overflow: hidden;
     width: 100%;
+
+    .nav-icon{
+      height: 8rem;
+    }
     
     ul{
       display: flex;
