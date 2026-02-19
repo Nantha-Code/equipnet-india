@@ -55,6 +55,7 @@ function App() {
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="terms-of-use" element={<TermsOfUse />} />
         <Route path="faq" element={<Faq />} />
+        <Route path="search" element={<SearchBar />} />
         
         {/* <Route path="" element={}/> */}
         {/* <Route path="" element={}/> */}
