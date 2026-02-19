@@ -93,10 +93,16 @@ function Home() {
         </div>
     </div>
     <div className="about-container">
-        <h2 className='about-tittle'>About Us</h2>
-        <p className='about-para'>
+        <div className="about-tittle">
+        <h2>About Us</h2>
+        </div>
+        <div className="about-para">
+        <p>
             The I-STEM Web Portal: a National Portal that is the gateway for researchers to locate the specific facility(ies) they need for their R&D work and identify the one that is either located closest to them or available the soonest.</p>
-            <a href="about-tag">know more</a>
+        </div>
+        <div className="about-tag">
+            <a href="">know more</a>
+        </div>
     </div>
     <div className="small-stats-container">
 
