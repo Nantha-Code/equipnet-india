@@ -139,18 +139,28 @@ ul{
 }
 
 .about-container{
-  border: 2px solid black;
-  text-align: center;
+  justify-content: start;
+  margin: 3rem; 
+  padding: 1rem;
+
   .about-tittle{
-
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
   }
-
   .about-para{
+    p{
+      width: 76rem;
+      color: black;
+    }
 
   }
-
   .about-tag{
+    a{
 
+      color: red;
+      text-decoration: none;
+    }
   }
 
 }
