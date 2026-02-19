@@ -92,6 +92,38 @@ function Home() {
             </ul>
         </div>
     </div>
+    <div className="about-container">
+        <h2>About Us</h2>
+        <p>
+            The I-STEM Web Portal: a National Portal that is the gateway for researchers to locate the specific facility(ies) they need for their R&D work and identify the one that is either located closest to them or available the soonest.</p>
+            <a href="">know more</a>
+    </div>
+    <div className="small-stats-container">
+
+            <h2>Statistics of Researchers, Equipment, Institution</h2>
+
+        <div className="stats-box">
+            <img src="" alt="" />
+            <h2>30704+</h2>
+            <p>Equipment Listed</p>
+        </div>
+        <div className="stats-box">
+            <img src="" alt="" />
+            <h2>3763+</h2>
+            <p>Institute Listed</p>
+        </div>
+        <div className="stats-box">
+            <img src="" alt="" />
+            <h2>54607+</h2>
+            <p>Researchers</p>
+        </div>
+        <div className="stats-box">
+            <img src="" alt="" />
+            <h2>82360+</h2>
+            <p>Facility Booking Record (FBR)</p>
+        </div>
+
+    </div>
   </div>
 </div>
   <Footer/> 
