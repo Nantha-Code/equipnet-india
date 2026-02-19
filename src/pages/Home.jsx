@@ -101,7 +101,7 @@ function Home() {
             The I-STEM Web Portal: a National Portal that is the gateway for researchers to locate the specific facility(ies) they need for their R&D work and identify the one that is either located closest to them or available the soonest.</p>
         </div>
         <div className="about-tag">
-            <a href="">know more</a>
+            <a href="" onClick={() => navigate("about")}>know more</a>
         </div>
     </div>
     <div className="small-stats-container">
