@@ -86,7 +86,7 @@ body {
 .stats {
   display: flex;
   gap: 1rem;
-  margin: 1rem;
+  margin: 2rem;
   padding: 1rem;
   margin-top: 30px;
   display: grid;
@@ -116,7 +116,7 @@ ul{
 }
 }
 .feauture{
-  margin: 3rem;
+  margin: 1.9rem;
   padding: 1rem;
 }
 
