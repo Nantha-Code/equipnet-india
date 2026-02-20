@@ -10,8 +10,8 @@ function Home() {
     const navigate = useNavigate();
   return (
 <>
-<div className="bg">
    <Navbar/>
+<div className="bg">
 <div className="hero">
   <div className="hero-content">
     
@@ -62,8 +62,9 @@ function Home() {
 
         
     </div>
+ <div className="feauture">
+        <h2 className='featured-instruments-tittle'>Featured Instruments</h2>
     <div className="featured-instruments">
-        <h2>Featured Instruments</h2>
         <div className="instrument">
             <ul>
             <li>Name: PCR Machine </li>
@@ -91,7 +92,23 @@ function Home() {
             <li>Location: Pune</li>
             </ul>
         </div>
+
+        <div className="instrument">
+            <ul>
+            <li>Name: Mass Spectrometer</li>
+            <li>Location: Pune</li>
+            </ul>
+        </div>
+
+        <div className="instrument">
+            <ul>
+            <li>Name: Mass Spectrometer</li>
+            <li>Location: Pune</li>
+            </ul>
+        </div>
+        
     </div>
+</div>
     <div className="about-container">
         <div className="about-tittle">
         <h2>About Us</h2>

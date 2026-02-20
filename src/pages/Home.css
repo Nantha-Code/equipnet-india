@@ -8,14 +8,15 @@ body {
 
 /* bg top */
 .bg{
-  background: url('/src/assets/images/bg-2.png');
+  
+  background: url('/src/assets/images/bg-blue.png');
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: contain;
   background-attachment: fixed;
   background-position: center center; 
   background-size: cover; 
-
+  
 }
 
 /* HERO SECTION */
@@ -109,19 +110,29 @@ ul{
   font-weight: bolder;
 }
 }
+.feauture{
+  margin: 3rem;
+  padding: 1rem;
+}
+
+.featured-instruments-tittle{
+      color: black;
+      font-size: 2rem;
+      font-weight: bolder;
+      /* padding: 1rem; */
+    
+}
 
 .featured-instruments{
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 2rem;
   gap: 1rem;
   text-align: center;
 
-  h2{
-    color: rgb(0, 0, 0);
-  }
 
   .instrument{
+  width: 30rem;
   background: rgba(255,255,255,0.08);
   padding: 16px 20px;
   border-radius: 16px;
@@ -142,6 +153,8 @@ ul{
   justify-content: start;
   margin: 3rem; 
   padding: 1rem;
+  background: white;
+  border-radius: 0.5rem;
 
   .about-tittle{
     color: black;

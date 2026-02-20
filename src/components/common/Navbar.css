@@ -9,7 +9,7 @@
   width: 100%;
   
   .link{
-    /* border: #020617 solid 2px; */
+    border: #020617 solid 2px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,5 +39,5 @@
   }
 }
 .link a:hover {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
