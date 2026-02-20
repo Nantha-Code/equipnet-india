@@ -19,7 +19,7 @@ function Home() {
     <h1>India’s National Research Equipment Discovery Platform</h1>
 
    <SearchBar/>
-   <button className="hero-cta" onClick={() => navigate("equipmentlist")}>Explore Equipment</button>
+   {/* <button className="hero-cta" onClick={() => navigate("equipmentlist")}>Explore Equipment</button> */}
     <p> Discover and request access to world-class government-funded scientific infrastructure.
     </p>
 
@@ -58,10 +58,9 @@ function Home() {
             <li><span className='tick'>✔</span> Researchers accessing shared infrastructure nationwide.</li>
             <li><span className='tick'>✔</span> Pan-India Access</li>
         </ul>
-        </div>
-
-        
+        </div>  
     </div>
+
  <div className="feauture">
         <h2 className='featured-instruments-tittle'>Featured Instruments</h2>
     <div className="featured-instruments">
@@ -106,7 +105,7 @@ function Home() {
             <li>Location: Pune</li>
             </ul>
         </div>
-        
+
     </div>
 </div>
     <div className="about-container">
