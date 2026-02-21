@@ -4,12 +4,11 @@
   backdrop-filter: blur(10px);
   border-radius: 15px;
   overflow: hidden;
-  /* border: #1b39bd solid 2px; */
+  border: #1b39bd solid 2px;
   margin-bottom: 3rem;
   width: 100%;
   
   .link{
-    border: #020617 solid 2px;
     display: flex;
     justify-content: space-between;
     align-items: center;
