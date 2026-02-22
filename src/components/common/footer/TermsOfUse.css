@@ -1,0 +1,111 @@
+/* Import Professional Fonts: Merriweather for headings, Inter for body text */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@400;700;900&display=swap');
+
+/* Main Document Container */
+.terms-main-container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 50px 60px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-top: 6px solid #1e40af; /* Institutional blue accent */
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05); /* Soft, professional shadow */
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  color: #334155;
+  line-height: 1.8;
+}
+
+/* Main Heading */
+.tittle-h2 {
+  font-family: 'Merriweather', serif;
+  color: #0f172a; /* Dark Slate */
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+/* Intro Paragraph Styling */
+.tittle-1 .tittle-para {
+  text-align: center;
+  font-size: 1.15rem;
+  color: #64748b;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0; /* Clean separator line */
+}
+
+/* Subheadings (H3) */
+.tittle-h3 {
+  font-family: 'Merriweather', serif;
+  color: #1e293b;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+
+/* Standard Paragraphs */
+.tittle-para {
+  font-size: 1.05rem;
+  color: #475569;
+  margin-bottom: 20px;
+}
+
+/* Custom List Styling */
+.tittle-ul {
+  list-style-type: none; /* Removes default black dot bullets */
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+
+.tittle-ul-list {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  color: #475569;
+}
+
+/* Custom Blue Arrow for List Items */
+.tittle-ul-list::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #3b82f6; /* Bright accent blue */
+  font-weight: bold;
+}
+
+/* Special Styling for the Disclaimer Section (.tittle-4) */
+.tittle-4 {
+  margin-top: 50px;
+  padding: 25px 30px;
+  background-color: #f8fafc; /* Very light slate background */
+  border-left: 4px solid #1e40af; /* Blue accent line on the left */
+  border-radius: 0 8px 8px 0;
+}
+
+/* Adjust heading and text inside the disclaimer box */
+.tittle-4 .tittle-h3 {
+  margin-top: 0;
+  color: #0f172a;
+}
+
+.tittle-4 .tittle-para {
+  margin-bottom: 0;
+  font-size: 0.95rem; /* Slightly smaller text for legal notes */
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
+  .terms-main-container {
+    margin: 20px;
+    padding: 30px 20px;
+  }
+  .tittle-h2 { 
+    font-size: 2rem; 
+  }
+}

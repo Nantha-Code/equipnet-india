@@ -1,9 +1,10 @@
 import React from 'react'
+import "./TermsOfUse.css"
 
 function TermsOfUse() {
   return (
     <>
-    
+
     <div className="terms-main-container">
         <h2 className='tittle-h2'>Terms of Use</h2>
 
