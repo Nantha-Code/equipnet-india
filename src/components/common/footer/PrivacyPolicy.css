@@ -114,7 +114,7 @@
 }
 
 /* Responsive design for smaller screens */
-@media (max-width: 768px) {
+@media (width > 768px) {
   .policy-main-container {
     margin: 20px;
     padding: 30px 20px;
