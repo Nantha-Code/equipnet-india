@@ -96,7 +96,7 @@
 }
 
 /* Responsive design for mobile screens */
-@media (max-width: 768px) {
+@media (width > 768px) {
   .faq-main-container {
     margin: 20px;
     padding: 30px 20px;
