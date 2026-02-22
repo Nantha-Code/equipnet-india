@@ -1,41 +1,80 @@
+/* Import Professional Fonts: Merriweather for headings, Inter for body text */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@400;700;900&display=swap');
+
+/* Main Document Container (Matches your other policy pages) */
 .about {
-  padding: 80px 120px;
-  background: #0b0f1a;
-  color: #eaeaea;
+  max-width: 850px;
+  margin: 60px auto;
+  padding: 50px 60px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-top: 6px solid #1e40af; /* Institutional blue accent */
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  border-radius: 8px;
   font-family: 'Inter', sans-serif;
-  
-}
-
-.heading-tagline h2 {
-  font-size: 36px;
-  color: #00e5ff;
-  margin-bottom: 10px;
-}
-
-.tagline {
-  font-size: 16px;
-  color: #9faecb;
-  font-style: italic;
-}
-
-.about-content {
-  margin-top: 40px;
-  max-width: 900px;
+  color: #334155;
   line-height: 1.8;
-  font-size: 17px;
-  justify-content: center;
 }
 
-.about-content p {
-  margin-bottom: 20px;
-  text-align: justify;
+/* Header Section */
+.heading-tagline {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e2e8f0; /* Clean separator line */
 }
 
-/* Highlight important policy disclaimer */
-.highlight-box {
-  background: rgba(0, 229, 255, 0.1);
-  border-left: 4px solid #00e5ff;
-  padding: 15px 20px;
+/* Main Heading */
+.heading-tagline h2 {
+  font-family: 'Merriweather', serif;
+  color: #0f172a; /* Dark Slate */
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: 15px;
+  letter-spacing: -0.02em;
+}
+
+/* Tagline / Subtitle */
+.tagline {
+  display: block;
+  font-size: 1.15rem;
+  color: #3b82f6; /* Bright accent blue to make it stand out */
   font-weight: 500;
-  color: #ffffff;
-}   
+  font-style: italic; /* Gives a sophisticated, institutional feel */
+}
+
+/* Standard Paragraphs */
+.about-content-para {
+  font-size: 1.05rem;
+  color: #475569;
+  margin-bottom: 22px;
+  text-align: justify; /* Aligns text cleanly on both left and right edges like a textbook */
+}
+
+/* The Highlight Box (For your crucial "EquipNet does not own..." paragraph) */
+.highlight-box {
+  margin: 40px 0;
+  padding: 25px 30px;
+  background-color: #8ebce9; /* Very light slate background */
+  border-left: 4px solid #1e40af; /* Deep blue accent line */
+  border-radius: 0 8px 8px 0;
+  font-size: 1.05rem;
+  font-weight: 600; /* Bolder text to draw the eye */
+  color: #0f172a;
+  line-height: 1.7;
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
+  .about {
+    margin: 20px;
+    padding: 30px 20px;
+  }
+  .heading-tagline h2 { 
+    font-size: 2rem; 
+  }
+  .about-content-para {
+    text-align: left; /* Justified text can look messy on very small phone screens, so we revert to left-aligned */
+  }
+}
