@@ -16,93 +16,97 @@ function Home() {
   <div className="hero-content">
     
     <div className="srh-section">
-    <h1>India’s National Research Equipment Discovery Platform</h1>
+    <h1 className='tittle-tagline'>India’s National Research Equipment Discovery Platform</h1>
 
    <SearchBar/>
-   {/* <button className="hero-cta" onClick={() => navigate("equipmentlist")}>Explore Equipment</button> */}
-    <p> Discover and request access to world-class government-funded scientific infrastructure.
+   
+    <p className='tagline-para'> Discover and request access to world-class government-funded scientific infrastructure.
     </p>
 
     </div>
 
     <div className="stats">
       <div className="stat-card">
-        <ul>
-            <h3>Inter-institution collaboration count</h3>
-            <li><span className='tick'>✔</span> 1000+ Instruments</li>
-            <li><span className='tick'>✔</span> 300+ Institutions</li>
-            <li><span className='tick'>✔</span> Pan-India Access</li>
+        <ul className='stat-card-ul'>
+            <h3 className='stat-card-ul-h3'>Inter-institution collaboration count</h3>
+            <li className='stat-card-ul-list'><span className='tick'>✔</span> 1000+ Instruments</li>
+            <li className='stat-card-ul-list'><span className='tick'>✔</span> 300+ Institutions</li>
+            <li className='stat-card-ul-list'><span className='tick'>✔</span> Pan-India Access</li>
         </ul>
         </div>
 
         <div className="stat-card">
-        <ul>
-            <h3>Total Registered Equipment</h3>
-            <li><span className='tick'>✔</span> 12,480+ Instruments Listed</li>
-            <li><span className='tick'>✔</span> Across universities, research labs</li>
-            <li><span className='tick'>✔</span> government institutes</li>
+        <ul className='stat-card-ul'>
+            <h3 className='stat-card-ul-h3'>Total Registered Equipment</h3>
+            <li className='stat-card-ul-list'><span className='tick'>✔</span> 12,480+ Instruments Listed</li>
+            <li className='stat-card-ul-list'><span className='tick'>✔</span> Across universities, research labs</li>
+            <li className='stat-card-ul-list'><span className='tick'>✔</span> government institutes</li>
         </ul>
         </div>
 
         <div className="stat-card">
-        <ul> <h3>Active Research Institutions</h3>
-            <li><span className='tick'>✔</span> 1,230+ Institutions Onboarded</li>
-            <li><span className='tick'>✔</span> Including IITs, NITs, central universities</li>
-            <li><span className='tick'>✔</span> private R&D labs</li>
+        <ul className='stat-card-ul'> 
+            <h3 className='stat-card-ul-h3'>Active Research Institutions</h3>
+            <li className='stat-card-ul-list'><span className='tick'>✔</span> 1,230+ Institutions Onboarded</li>
+            <li className='stat-card-ul-list'><span className='tick'>✔</span> Including IITs, NITs, central universities</li>
+            <li className='stat-card-ul-list'><span className='tick'>✔</span> private R&D labs</li>
         </ul>
         </div>
 
         <div className="stat-card">
-        <ul> <h3>Successful Equipment Bookings</h3>
-            <li><span className='tick'>✔</span> 58,900+ Reservations Processed</li>
-            <li><span className='tick'>✔</span> Researchers accessing shared infrastructure nationwide.</li>
-            <li><span className='tick'>✔</span> Pan-India Access</li>
+        <ul className='stat-card-ul'> 
+            <h3 className='stat-card-ul-h3'>Successful Equipment Bookings</h3>
+            <li className='stat-card-ul-list'><span className='tick'>✔</span> 58,900+ Reservations Processed</li>
+            <li className='stat-card-ul-list'><span className='tick'>✔</span> Researchers accessing shared infrastructure nationwide.</li>
+            <li className='stat-card-ul-list'><span className='tick'>✔</span> Pan-India Access</li>
         </ul>
         </div>  
     </div>
 
  <div className="feauture">
         <h2 className='featured-instruments-tittle'>Featured Instruments</h2>
+
     <div className="featured-instruments">
+        
         <div className="instrument">
-            <ul>
-            <li>Name: PCR Machine </li>
-            <li>Location: IIT Madras</li>
+            <ul className="instrument-ul">
+            <li className="instrument-ul-list"> <strong>Name:</strong> PCR Machine </li>
+            <li className="instrument-ul-list"> <strong>Location: </strong>IIT Madras</li>
             </ul>
         </div>
 
         <div className="instrument">
-            <ul>
-            <li>Name: SEM </li>
-            <li>Location: IISc</li>
+            <ul className="instrument-ul">
+            <li className="instrument-ul-list"> <strong>Name:</strong>SEM </li>
+            <li className="instrument-ul-list"> <strong>Location:</strong>IISc</li>
             </ul>
         </div>
 
         <div className="instrument">
-            <ul>
-            <li>Name: NGS Sequencer </li>
-            <li>Location: NIT Trichy</li>
+            <ul className="instrument-ul">
+            <li className="instrument-ul-list"> <strong>Name:</strong>NGS Sequencer </li>
+            <li className="instrument-ul-list"> <strong>Location:</strong>NIT Trichy</li>
             </ul>
         </div>
 
         <div className="instrument">
-            <ul>
-            <li>Name: Mass Spectrometer</li>
-            <li>Location: Pune</li>
+            <ul className="instrument-ul">
+            <li className="instrument-ul-list"> <strong>Name:</strong>Mass Spectrometer</li>
+            <li className="instrument-ul-list"> <strong>Name:</strong>Pune</li>
             </ul>
         </div>
 
         <div className="instrument">
-            <ul>
-            <li>Name: Mass Spectrometer</li>
-            <li>Location: Pune</li>
+            <ul className="instrument-ul">
+            <li className="instrument-ul-list"> <strong>Name:</strong>Mass Spectrometer</li>
+            <li className="instrument-ul-list"> <strong>Location:</strong>Pune</li>
             </ul>
         </div>
 
         <div className="instrument">
-            <ul>
-            <li>Name: Mass Spectrometer</li>
-            <li>Location: Pune</li>
+            <ul className="instrument-ul">
+            <li className="instrument-ul-list"> <strong>Name:</strong>Mass Spectrometer</li>
+            <li className="instrument-ul-list"> <strong>Location: </strong>Pune</li>
             </ul>
         </div>
 
@@ -113,7 +117,7 @@ function Home() {
         <h2>About Us</h2>
         </div>
         <div className="about-para">
-        <p>
+        <p >
             The I-STEM Web Portal: a National Portal that is the gateway for researchers to locate the specific facility(ies) they need for their R&D work and identify the one that is either located closest to them or available the soonest.</p>
         </div>
         <div className="about-tag">
