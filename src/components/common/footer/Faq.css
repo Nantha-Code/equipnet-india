@@ -1,0 +1,113 @@
+/* Import Professional Fonts: Merriweather for headings, Inter for body text */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@400;700;900&display=swap');
+
+/* Main Document Container */
+.faq-main-container {
+  max-width: 850px;
+  margin: 60px auto;
+  padding: 50px 60px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-top: 6px solid #1e40af; /* Institutional blue accent */
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  color: #334155;
+  line-height: 1.8;
+}
+
+/* Main Page Title */
+.tittle-h1 {
+  font-family: 'Merriweather', serif;
+  color: #0f172a; /* Dark Slate */
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 20px;
+}
+
+/* First Main Question */
+.tittle-h2 {
+  font-family: 'Merriweather', serif;
+  color: #1e40af; /* Deep blue to make the intro question stand out */
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/* FAQ Question Headers (H3) */
+.tittle-h3 {
+  font-family: 'Merriweather', serif;
+  color: #1e293b;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 12px;
+  padding-left: 15px;
+  border-left: 3px solid #3b82f6; /* Bright blue vertical line next to questions */
+}
+
+/* Paragraphs / Answers */
+.tittle-para, .sub-para {
+  font-size: 1.05rem;
+  color: #475569;
+  margin-bottom: 15px;
+  padding-left: 18px; /* Aligns the text neatly under the indented questions */
+}
+
+/* Sub-paragraphs (Intro sentences before lists) */
+.sub-para {
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 10px;
+}
+
+/* Custom List Styling */
+.tittle-ul {
+  list-style-type: none;
+  padding-left: 18px; /* Aligns with paragraphs */
+  margin-bottom: 25px;
+}
+
+.tittle-ul-li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  color: #475569;
+}
+
+/* Custom Blue Arrow for List Items */
+.tittle-ul-li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #3b82f6;
+  font-weight: bold;
+}
+
+/* Adds consistent spacing to the bottom of nested divs inside tittle-8 */
+.tittle-8i, .tittle-8ii, .tittle-8iii {
+  margin-top: 30px;
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
+  .faq-main-container {
+    margin: 20px;
+    padding: 30px 20px;
+  }
+  .tittle-h1 {
+    font-size: 2rem;
+  }
+  .tittle-h3 {
+    padding-left: 10px;
+  }
+  .tittle-para, .sub-para, .tittle-ul {
+    padding-left: 13px;
+  }
+}

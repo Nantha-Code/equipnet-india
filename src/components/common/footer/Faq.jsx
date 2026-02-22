@@ -15,7 +15,7 @@ function Faq() {
 
 <div className="tittle-2">
 
-<h3 className='tittle-h3'>🧪 Who can use this platform?</h3>
+<h3 className='tittle-h3'>Who can use this platform?</h3>
 <ul className='tittle-ul'>
     <li className='tittle-ul-li'>Students</li>
     <li className='tittle-ul-li'>Researchers</li>
