@@ -1,0 +1,80 @@
+/* Academic / Research Policy Theme */
+
+.grievance-main-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px 60px;
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  font-family: "Times New Roman", Georgia, serif; /* Research journal vibe */
+  color: #111;
+  line-height: 1.8;
+}
+
+/* Main Title */
+.grievance-tittle {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  color: #0b2a4a;
+  border-bottom: 2px solid #0b2a4a;
+  padding-bottom: 12px;
+  margin-bottom: 30px;
+}
+
+/* Subtitle */
+.tittle-span {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  color: #555;
+  margin-top: 6px;
+}
+
+/* Section Headings */
+.subtopic-grievance {
+  font-size: 18px;
+  font-weight: 700;
+  color: #002147; /* University navy */
+  margin-top: 26px;
+  margin-bottom: 8px;
+}
+
+/* Paragraph */
+.para {
+  font-size: 15px;
+  text-align: justify;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+/* Lists */
+.grievance-ul {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.grievance-ul-li {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+/* Officer Section */
+.grievance-main-container > div,
+.grievance-main-container p:last-child {
+  font-size: 15px;
+}
+
+/* Academic spacing */
+.grievance-main-container section {
+  margin-bottom: 20px;
+}
+
+/* Print-friendly research look */
+@media print {
+  .grievance-main-container {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+}
