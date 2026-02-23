@@ -31,7 +31,6 @@ function App() {
      {/* <NotFound/> */}
      {/* <LoginPage/> */}
      {/* <RegisterPage/> */}
-     {/* <Footer/> */}
      {/* <EquipmentDetails/> */}
      {/* <EquipmentCard/> */}
      {/* <EquipmentList/> */}
@@ -43,6 +42,7 @@ function App() {
   
 
     <Routes>
+      
         <Route path="/" element={<Home />} />
         <Route path="login" element={<LoginPage />}/>
         <Route path="requestform" element={<RequestForm />} />
@@ -67,6 +67,7 @@ function App() {
   
 
 
+     {/* <Footer/> */}
     </>
 
   );

@@ -4,10 +4,11 @@
   backdrop-filter: blur(10px);
   border-radius: 15px;
   overflow: hidden;
-  border: #1b39bd solid 2px;
+  /* border: #1b39bd solid 2px; */
   margin-bottom: 0; 
   width: 100%;
-  
+  background: rgb(255, 244, 244);
+
   .link{
     display: flex;
     justify-content: space-between;

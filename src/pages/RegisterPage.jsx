@@ -1,7 +1,7 @@
 import React from 'react'
 import { useFormik } from 'formik';
 import { object, string } from 'yup';
-import "./LoginPage.css";
+import "./RegisterPage.css";
 
 
 const requirements = object({
@@ -29,7 +29,7 @@ const RegisterPage = () =>{
 
     <form onSubmit={formik.handleSubmit} className='formik-register-form'>
         
-    <h2>Register</h2>
+    <h2> <strong>Register</strong></h2>
     <label>Name</label>
     <input 
      type="text"
