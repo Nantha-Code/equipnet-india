@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-// import "./EquipmentDetail.css";
+import "./EquipmentDetails.css";
 
 function EquipmentDetails() {
 
@@ -28,7 +28,7 @@ function EquipmentDetails() {
   return (
     <div className="equipment-detail-container">
 
-      <button onClick={() => navigate(-1)}>⬅ Back</button>
+      <button onClick={() => navigate(-1)}>⬅</button>
 
       <img src={equipment.image} alt={equipment.name} />
 

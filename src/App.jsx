@@ -38,7 +38,7 @@ function App() {
      {/* <RequestForm/> */}
      {/* <Dashboard/> */}
      {/* <AdminDashboard/> */}
-     <AddEquipment/>
+     {/* <AddEquipment/> */}
 
   
 

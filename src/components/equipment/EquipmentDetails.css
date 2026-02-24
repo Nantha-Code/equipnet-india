@@ -1,0 +1,101 @@
+/* Container styling */
+.equipment-detail-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  font-family: 'Inter', -apple-system, sans-serif;
+  display: grid;
+  /* Defining a grid so we can position elements freely */
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px;
+}
+
+/* 1. Back Button Styling */
+.equipment-detail-container button {
+  grid-column: 1 / -1; /* Make it span full width at the top */
+  justify-self: start;
+  padding: 8px 16px;
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  color: #374151;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 10px;
+}
+
+.equipment-detail-container button:hover {
+  background-color: #e5e7eb;
+  transform: translateX(-4px);
+}
+
+/* 2. Image Styling */
+.equipment-detail-container img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  grid-row: 2 / 8; /* Makes the image span alongside the text info */
+  border: 1px solid #f0f0f0;
+}
+
+/* 3. Title Styling */
+.equipment-detail-container h2 {
+  grid-column: 2;
+  margin: 0;
+  font-size: 2rem;
+  color: #111827;
+  letter-spacing: -0.5px;
+}
+
+/* 4. Paragraph/Details Styling */
+.equipment-detail-container p {
+  grid-column: 2;
+  margin: 0;
+  padding: 12px 0;
+  border-bottom: 1px solid #f3f4f6;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* Target the Description specifically (the first <p> after <h2>) */
+.equipment-detail-container h2 + p {
+  font-size: 1.1rem;
+  color: #6b7280;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 10px;
+}
+
+/* Bold label styling */
+.equipment-detail-container p strong {
+  display: inline-block;
+  width: 120px;
+  color: #1f2937;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive design for Mobile */
+@media (max-width: 768px) {
+  .equipment-detail-container {
+    grid-template-columns: 1fr;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .equipment-detail-container img,
+  .equipment-detail-container h2,
+  .equipment-detail-container p {
+    grid-column: 1;
+  }
+  
+  .equipment-detail-container img {
+    height: 250px;
+    grid-row: auto;
+  }
+}
