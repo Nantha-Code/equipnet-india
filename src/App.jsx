@@ -37,7 +37,7 @@ function App() {
      {/* <EquipmentList/> */}
      {/* <RequestForm/> */}
      {/* <Dashboard/> */}
-     <AdminDashboard/>
+     {/* <AdminDashboard/> */}
      {/* <AddEquipment/> */}
 
   
@@ -50,7 +50,7 @@ function App() {
         <Route path="register" element={<RegisterPage />}/>
         <Route path="about" element={<About />}/>
         <Route path="equipmentlist" element={<EquipmentList />}/>
-        <Route path="/equipment/:id" element={<EquipmentDetails />} />
+        <Route path="equipment/:id" element={<EquipmentDetails />} />
         <Route path="equipmentcard" element={<EquipmentCard />}/>
 
         <Route path="grievances" element={<Grievances />} />

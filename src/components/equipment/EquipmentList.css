@@ -1,115 +1,119 @@
-/* Main container grid */
+/* 1. Main Container Logic */
+/* Since EquipmentList maps multiple ListExpress components, 
+   we treat the body or a wrapper as a grid provider. */
+
+body {
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* 2. Individual Card Container */
 .equipmentlist-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  padding: 2rem;
-  background: radial-gradient(circle at top, #0f172a, #020617);
-  min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
 }
 
-/* Card styling */
 .cards-grid {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
-  border-radius: 18px;
-  padding: 1.2rem;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  display: flex;
-  flex-direction: column;
-  /* gap: 1rem; */
+    display: flex;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    border: 1px solid #eef0f2;
 }
 
-/* Hover Netflix zoom effect */
 .cards-grid:hover {
-  transform: scale(1.06);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-/* Image container */
+/* 3. Image Section */
+.machine-img {
+    width: 250px;
+    min-width: 250px;
+    height: 200px;
+    background: #f0f0f0;
+}
+
 .machine-img img {
-  width: 100%;
-  height: 25rem;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* List styling */
+/* 4. Content Section (The List) */
 .cards-grid ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 0.95rem;
-  color: #e5e7eb;
-  line-height: 1.6rem;
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    flex-grow: 1;
 }
 
-.cards-grid li {
-  display: flex;
-  justify-content: space-between;
-  font-weight: 500;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  padding: 0.2rem 0;
+/* Name/Title */
+.cards-grid ul li:first-child {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 4px;
 }
 
-/* Request button */
-.request-access-btn {
-  margin-top: auto;
-  padding: 0.7rem 1rem;
-  border: none;
-  border-radius: 10px;
-  font-weight: 600;
-  cursor: pointer;
-  background: linear-gradient(135deg, #22c55e, #16a34a);
-  color: white;
-  transition: 0.2s ease;
+/* Institution & Location */
+.cards-grid ul li:nth-child(2),
+.cards-grid ul li:nth-child(3) {
+    color: #718096;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
 }
 
-/* Button hover glow */
-.request-access-btn:hover {
-  background: linear-gradient(135deg, #16a34a, #15803d);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(34,197,94,0.4);
-}
+/* Icon-like effect for Institution/Location */
+.cards-grid ul li:nth-child(2)::before { content: "🏢 "; font-size: 0.8rem; margin-right: 5px; }
+.cards-grid ul li:nth-child(3)::before { content: "📍 "; font-size: 0.8rem; margin-right: 5px; }
 
-/* Base style for the status list item */
+/* 5. Status Badge Styling */
 .status-badge {
-  font-weight: bold;
-  padding: 4px 12px;
-  border-radius: 20px;
-  display: inline-block;
-  font-size: 0.85rem;
-  margin-top: 5px;
+    align-self: flex-start;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
 }
 
-/* Style for Available */
-.status-available {
-  background-color: #dcfce7;
-  color: #166534;
-  border: 1px solid #bbf7d0;
+/* Dynamic Colors based on your class logic */
+.available {
+    background-color: #c6f6d5;
+    color: #22543d;
 }
 
-/* Style for Unavailable or Maintenance */
-.status-unavailable, .status-busy {
-  background-color: #fee2e2;
-  color: #991b1b;
-  border: 1px solid #fecaca;
-}
-
-/* Optional: Dull the whole card if unavailable */
-.equipmentlist-container:has(.status-unavailable) {
-  opacity: 0.8;
-  filter: grayscale(0.3);
-}
-
-.status-available::before {
-  content: "●";
-  margin-right: 5px;
-  color: #22c55e;
+.unavailable, .busy, .maintenance {
+    background-color: #fed7d7;
+    color: #822727;
 }
 
 
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .cards-grid {
+        flex-direction: column;
+    }
 
+    .machine-img {
+        width: 100%;
+        height: 180px;
+    }
 
+    .cards-grid ul {
+        padding: 15px;
+    }
+}
