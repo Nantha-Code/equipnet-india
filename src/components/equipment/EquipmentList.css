@@ -74,37 +74,42 @@
   box-shadow: 0 10px 20px rgba(34,197,94,0.4);
 }
 
-
-
-
-
-
-
-
-
-/* .equipmentlist-container{
-    border: 2px solid black;
-    display: grid;
-    grid-template-columns: repeat(2,(1fr 1fr));
-    background: gray;
-    gap: 2rem;
+/* Base style for the status list item */
+.status-badge {
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 0.85rem;
+  margin-top: 5px;
 }
-.cards-grid{
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    border: 2px solid green;
-    margin: 8px;
-    background: yellowgreen;
 
-    ul{
-        list-style: none;
-        line-height: 3rem;
-    }
-    .request-access-btn{
-        padding: 0.5rem;
-        border-radius: 0.5rem;
-        justify-content: center;
-        font-weight: bold;
-    }
-} */
+/* Style for Available */
+.status-available {
+  background-color: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+/* Style for Unavailable or Maintenance */
+.status-unavailable, .status-busy {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+/* Optional: Dull the whole card if unavailable */
+.equipmentlist-container:has(.status-unavailable) {
+  opacity: 0.8;
+  filter: grayscale(0.3);
+}
+
+.status-available::before {
+  content: "●";
+  margin-right: 5px;
+  color: #22c55e;
+}
+
+
+
+

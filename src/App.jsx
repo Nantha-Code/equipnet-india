@@ -12,8 +12,8 @@ import EquipmentCard from "./components/equipment/EquipmentCard";
 import EquipmentList from "./components/equipment/EquipmentList";
 import RequestForm from "./components/request/RequestForm";
 import Dashboard from "./pages/Dashboard";
-import AdminDashboard from "./pages/AdminDashboard";
-import AddEquipment from "./pages/AddEquipment";
+import AdminDashboard from "./pages/Admin/AdminDashboard";
+import AddEquipment from "./pages/Admin/AddEquipment";
 import Grievances from "./components/common/footer/Grievances";
 import TermsOfUse from "./components/common/footer/TermsOfUse";
 import PrivacyPolicy from "./components/common/footer/PrivacyPolicy";
@@ -37,7 +37,7 @@ function App() {
      {/* <EquipmentList/> */}
      {/* <RequestForm/> */}
      {/* <Dashboard/> */}
-     {/* <AdminDashboard/> */}
+     <AdminDashboard/>
      {/* <AddEquipment/> */}
 
   

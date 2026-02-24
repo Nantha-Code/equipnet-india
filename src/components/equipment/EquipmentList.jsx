@@ -43,7 +43,7 @@ function ListExpress({ id, image, name, institution, location, availabilityStatu
           <li> {name}</li>
           <li> {institution}</li>
           <li> {location}</li>
-          <li> {availabilityStatus}</li>
+          <li className={`status-badge ${availabilityStatus.toLowerCase().replace(/\s/g, '-')}`}>{availabilityStatus}</li>
         </ul>
 
       </div>
