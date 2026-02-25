@@ -94,19 +94,20 @@ body {
 
 .stat-card {
 
-  background: rgba(255,255,255,0.08);
+  background: white;
   padding: 16px 20px;
-  border-radius: 16px;
-  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  /* backdrop-filter: blur(10px); */
   gap: 2rem ;
   justify-items: center;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
   
 ul{
   list-style: none;
   line-height: 3rem;
   border-radius: 1rem;
   padding: 1rem;
+  color: blue;
   
 }
 .tick{
@@ -137,11 +138,11 @@ ul{
 
   .instrument{
   width: 30rem;
-  background: rgba(255,255,255,0.08);
+  background:white;
   padding: 16px 20px;
-  border-radius: 16px;
+  border-radius: 8px;
   backdrop-filter: blur(10px);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
   
     ul{
       list-style: none;

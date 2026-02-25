@@ -1,24 +1,19 @@
-import React from "react";
-import Home from "./pages/Home"
-import About from "./pages/About";
-import NotFound from "./pages/NotFound";
-import LoginPage from "./pages/LoginPage";
-import RegisterPage from "./pages/RegisterPage";
-import Navbar from "./components/common/Navbar";
-import Footer from "./components/common/footer/Footer";
 import SearchBar from "./components/common/SearchBar";
-import EquipmentDetails from "./components/equipment/EquipmentDetails";
 import EquipmentCard from "./components/equipment/EquipmentCard";
+import EquipmentDetails from "./components/equipment/EquipmentDetails";
 import EquipmentList from "./components/equipment/EquipmentList";
-import RequestForm from "./components/request/RequestForm";
-import Dashboard from "./pages/Dashboard";
-import AdminDashboard from "./pages/Admin/AdminDashboard";
-import AddEquipment from "./pages/Admin/AddEquipment";
-import Grievances from "./components/common/footer/Grievances";
-import TermsOfUse from "./components/common/footer/TermsOfUse";
-import PrivacyPolicy from "./components/common/footer/PrivacyPolicy";
+import About from "./pages/About";
+import Home from "./pages/Home";
+import LoginPage from "./pages/LoginPage";
+import NotFound from "./pages/NotFound";
+import RegisterPage from "./pages/RegisterPage";
+import { Route, Routes } from "react-router-dom";
 import Faq from "./components/common/footer/Faq";
-import { Routes, Route, Navigate, BrowserRouter} from "react-router-dom";
+import Grievances from "./components/common/footer/Grievances";
+import PrivacyPolicy from "./components/common/footer/PrivacyPolicy";
+import TermsOfUse from "./components/common/footer/TermsOfUse";
+import AddEquipment from "./pages/Admin/AddEquipment";
+import UserDashboard from "./pages/UserDashboard";
 
 
 
@@ -39,6 +34,10 @@ function App() {
      {/* <Dashboard/> */}
      {/* <AdminDashboard/> */}
      {/* <AddEquipment/> */}
+     {/* <AdminRequests /> */}
+     {/* <UserDashboard /> */}
+     {/* <RequestStatus /> */}
+      
 
   
 
@@ -46,20 +45,21 @@ function App() {
       
         <Route path="/" element={<Home />} />
         <Route path="login" element={<LoginPage />}/>
-        <Route path="requestform" element={<RequestForm />} />
+        {/* <Route path="requestform" element={<RequestForm />} /> */}
         <Route path="register" element={<RegisterPage />}/>
         <Route path="about" element={<About />}/>
         <Route path="equipmentlist" element={<EquipmentList />}/>
         <Route path="equipment/:id" element={<EquipmentDetails />} />
         <Route path="equipmentcard" element={<EquipmentCard />}/>
-
         <Route path="grievances" element={<Grievances />} />
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="terms-of-use" element={<TermsOfUse />} />
         <Route path="faq" element={<Faq />} />
         <Route path="search" element={<SearchBar />} />
         <Route path="add" element={<AddEquipment />}/>
-
+        {/* <Route path="adminrequest" element={<AdminRequests />}/> */}
+        <Route path="user-dashboard" element={<UserDashboard />}/>
+        
 
         {/* <Route path="" element={}/> */}
         {/* <Route path="" element={}/> */}
