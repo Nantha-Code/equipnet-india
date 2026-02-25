@@ -35,7 +35,7 @@ h2 {
 /* Making the form fields split into two columns */
 .equipment-form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:1fr;
   gap: 15px;
 }
 
