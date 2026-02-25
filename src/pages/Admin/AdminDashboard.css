@@ -1,113 +1,134 @@
-/* Container & General Reset */
+/* Container & Background */
 .admin-dashboard {
-  max-width: 1100px;
-  margin: 40px auto;
+  max-width: 1200px;
+  margin: 30px auto;
   padding: 20px;
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  color: #333;
-  background-color: #f9fbff;
-  border-radius: 12px;
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
 }
 
-.admin-dashboard h2 {
-  color: #2c3e50;
-  font-size: 28px;
+h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
   margin-bottom: 30px;
-  border-left: 5px solid #3498db;
-  padding-left: 15px;
+  text-align: center;
 }
 
-/* 1. CREATE Section (Input Container) */
-.equipment-input-container {
+/* ================= ADD EQUIPMENT FORM ================= */
+.add-equipment-container {
   background: white;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  display: flex;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+}
+
+.equipment-form h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #334155;
+  font-size: 1.25rem;
+}
+
+/* Making the form fields split into two columns */
+.equipment-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 15px;
-  align-items: center;
-  margin-bottom: 40px;
-  flex-wrap: wrap; /* Good for mobile responsiveness */
 }
 
-.equipment-input-container input {
-  flex: 1;
-  min-width: 200px;
-  padding: 12px 15px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: 14px;
-  transition: border-color 0.3s ease;
+/* Full width for certain elements */
+.equipment-form h3, 
+.equipment-form button {
+  grid-column: 1 / -1;
 }
 
-.equipment-input-container input:focus {
+.equipment-form input {
+  padding: 12px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.equipment-form input:focus {
   outline: none;
-  border-color: #3498db;
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
-.equipment-input-container button {
-  background-color: #27ae60;
+/* Formik Error Messages */
+.equipment-form p {
+  color: #ef4444;
+  font-size: 0.8rem;
+  margin: -10px 0 10px 5px;
+  grid-column: span 1;
+}
+
+.equipment-form button {
+  background-color: #2563eb;
   color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 6px;
+  padding: 14px;
   font-weight: 600;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.2s;
+  margin-top: 10px;
 }
 
-.equipment-input-container button:hover {
-  background-color: #219150;
+.equipment-form button:hover {
+  background-color: #1d4ed8;
 }
 
-/* 2. READ Section (Table Styling) */
-.admin-dashboard h3 {
+/* ================= EQUIPMENT TABLE ================= */
+.admin-dashboard h3:last-of-type {
   margin-bottom: 15px;
-  color: #7f8c8d;
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: 1.5rem;
 }
 
 table {
   width: 100%;
-  border-collapse: collapse; /* Removes that ugly double border */
+  border-collapse: collapse;
   background: white;
-  border-radius: 10px;
-  overflow: hidden; /* Rounds the table corners */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  border: none !important; /* Overrides the border="1" in JSX */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: none !important; /* Removes JSX border="1" */
 }
 
 thead {
-  background-color: #ecf0f1;
+  background-color: #f1f5f9;
 }
 
 th {
   text-align: left;
-  padding: 15px;
-  color: #34495e;
+  padding: 16px;
   font-weight: 600;
-  border-bottom: 2px solid #dee2e6;
+  color: #475569;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
 }
 
 td {
-  padding: 15px;
-  border-bottom: 1px solid #f1f1f1;
-  vertical-align: middle;
+  padding: 16px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.95rem;
 }
 
 tr:hover {
-  background-color: #f8f9fa;
+  background-color: #f8fafc;
 }
 
-/* 3. ACTIONS (Buttons inside Table) */
+/* Action Buttons inside Table */
 td button {
   padding: 6px 14px;
   margin-right: 8px;
-  border-radius: 4px;
-  font-size: 13px;
+  border-radius: 6px;
+  font-weight: 500;
   cursor: pointer;
   border: 1px solid transparent;
   transition: all 0.2s;
@@ -115,36 +136,27 @@ td button {
 
 /* Edit Button */
 td button:first-child {
-  background-color: #ebf5ff;
-  color: #007bff;
-  border-color: #cce5ff;
+  background-color: #eff6ff;
+  color: #2563eb;
 }
 
 td button:first-child:hover {
-  background-color: #007bff;
-  color: white;
+  background-color: #dbeafe;
 }
 
 /* Delete Button */
 td button:last-child {
-  background-color: #fff5f5;
-  color: #e74c3c;
-  border-color: #fed7d7;
+  background-color: #fff1f2;
+  color: #e11d48;
 }
 
 td button:last-child:hover {
-  background-color: #e74c3c;
-  color: white;
+  background-color: #ffe4e6;
 }
 
-/* Responsive Table */
-@media (max-width: 600px) {
-  .equipment-input-container {
-    flex-direction: column;
-  }
-  
-  .equipment-input-container input, 
-  .equipment-input-container button {
-    width: 100%;
+/* Responsive Tweak */
+@media (max-width: 768px) {
+  .equipment-form {
+    grid-template-columns: 1fr;
   }
 }

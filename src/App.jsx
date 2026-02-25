@@ -12,9 +12,9 @@ import Faq from "./components/common/footer/Faq";
 import Grievances from "./components/common/footer/Grievances";
 import PrivacyPolicy from "./components/common/footer/PrivacyPolicy";
 import TermsOfUse from "./components/common/footer/TermsOfUse";
-import AddEquipment from "./pages/Admin/AddEquipment";
+// import AddEquipment from "./pages/Admin/AddEquipment";
 import UserDashboard from "./pages/UserDashboard";
-
+import AdminDashboard from "./pages/Admin/AdminDashboard";
 
 
 function App() {
@@ -32,11 +32,11 @@ function App() {
      {/* <EquipmentList/> */}
      {/* <RequestForm/> */}
      {/* <Dashboard/> */}
-     {/* <AdminDashboard/> */}
      {/* <AddEquipment/> */}
      {/* <AdminRequests /> */}
      {/* <UserDashboard /> */}
      {/* <RequestStatus /> */}
+     <AdminDashboard />
       
 
   
@@ -56,7 +56,7 @@ function App() {
         <Route path="terms-of-use" element={<TermsOfUse />} />
         <Route path="faq" element={<Faq />} />
         <Route path="search" element={<SearchBar />} />
-        <Route path="add" element={<AddEquipment />}/>
+        {/* <Route path="add" element={<AddEquipment />}/> */}
         {/* <Route path="adminrequest" element={<AdminRequests />}/> */}
         <Route path="user-dashboard" element={<UserDashboard />}/>
         
