@@ -1,3 +1,8 @@
+import { Route, Routes } from "react-router-dom";
+import Faq from "./components/common/footer/Faq";
+import Grievances from "./components/common/footer/Grievances";
+import PrivacyPolicy from "./components/common/footer/PrivacyPolicy";
+import TermsOfUse from "./components/common/footer/TermsOfUse";
 import SearchBar from "./components/common/SearchBar";
 import EquipmentCard from "./components/equipment/EquipmentCard";
 import EquipmentDetails from "./components/equipment/EquipmentDetails";
@@ -7,14 +12,7 @@ import Home from "./pages/Home";
 import LoginPage from "./pages/LoginPage";
 import NotFound from "./pages/NotFound";
 import RegisterPage from "./pages/RegisterPage";
-import { Route, Routes } from "react-router-dom";
-import Faq from "./components/common/footer/Faq";
-import Grievances from "./components/common/footer/Grievances";
-import PrivacyPolicy from "./components/common/footer/PrivacyPolicy";
-import TermsOfUse from "./components/common/footer/TermsOfUse";
-// import AddEquipment from "./pages/Admin/AddEquipment";
 import UserDashboard from "./pages/UserDashboard";
-import AdminDashboard from "./pages/Admin/AdminDashboard";
 
 
 function App() {
@@ -30,13 +28,12 @@ function App() {
      {/* <EquipmentDetails/> */}
      {/* <EquipmentCard/> */}
      {/* <EquipmentList/> */}
-     {/* <RequestForm/> */}
      {/* <Dashboard/> */}
-     {/* <AddEquipment/> */}
      {/* <AdminRequests /> */}
      {/* <UserDashboard /> */}
      {/* <RequestStatus /> */}
      {/* <AdminDashboard /> */}
+     {/* <RequestPage/> */}
       
 
   
@@ -45,7 +42,6 @@ function App() {
       
         <Route path="/" element={<Home />} />
         <Route path="login" element={<LoginPage />}/>
-        {/* <Route path="requestform" element={<RequestForm />} /> */}
         <Route path="register" element={<RegisterPage />}/>
         <Route path="about" element={<About />}/>
         <Route path="equipmentlist" element={<EquipmentList />}/>
@@ -56,7 +52,6 @@ function App() {
         <Route path="terms-of-use" element={<TermsOfUse />} />
         <Route path="faq" element={<Faq />} />
         <Route path="search" element={<SearchBar />} />
-        {/* <Route path="add" element={<AddEquipment />}/> */}
         {/* <Route path="adminrequest" element={<AdminRequests />}/> */}
         <Route path="user-dashboard" element={<UserDashboard />}/>
         
