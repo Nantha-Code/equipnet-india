@@ -13,6 +13,7 @@ import LoginPage from "./pages/LoginPage";
 import NotFound from "./pages/NotFound";
 import RegisterPage from "./pages/RegisterPage";
 import UserDashboard from "./pages/UserDashboard";
+import {AdminDashboard} from "./pages/Admin/AdminDashboard";
 
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
      {/* <UserDashboard /> */}
      {/* <RequestStatus /> */}
      {/* <RequestPage/> */}
-    <AdminDashboard />
+     <AdminDashboard />
       
 
   
@@ -52,6 +53,7 @@ function App() {
         <Route path="terms-of-use" element={<TermsOfUse />} />
         <Route path="faq" element={<Faq />} />
         <Route path="search" element={<SearchBar />} />
+        {/* <Route path="adminrequest" element={<AdminRequests />}/> */}
         <Route path="user-dashboard" element={<UserDashboard />}/>
         
 
