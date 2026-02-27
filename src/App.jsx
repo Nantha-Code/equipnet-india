@@ -32,8 +32,8 @@ function App() {
      {/* <AdminRequests /> */}
      {/* <UserDashboard /> */}
      {/* <RequestStatus /> */}
-     {/* <AdminDashboard /> */}
      {/* <RequestPage/> */}
+    <AdminDashboard />
       
 
   
@@ -52,7 +52,6 @@ function App() {
         <Route path="terms-of-use" element={<TermsOfUse />} />
         <Route path="faq" element={<Faq />} />
         <Route path="search" element={<SearchBar />} />
-        {/* <Route path="adminrequest" element={<AdminRequests />}/> */}
         <Route path="user-dashboard" element={<UserDashboard />}/>
         
 
