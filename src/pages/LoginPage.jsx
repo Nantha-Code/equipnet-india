@@ -62,7 +62,7 @@ const LoginPage = () => {
         )}
 
         <button type="submit" className="login-button">Login</button>
-        <a href=""className="skip-button" onClick={() =>navigate("Home")}>Skip</a>
+        <a href=""className="skip-button" onClick={() =>navigate("/")}>Skip</a>
       </form>
     </div>
     </>

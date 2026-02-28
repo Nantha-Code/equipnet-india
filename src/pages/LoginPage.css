@@ -68,3 +68,9 @@
 .login-button:hover {
   background: #ff0066;
 }
+.skip-button{
+text-decoration: none;
+padding: 0.5rem;
+text-align: center;
+
+}
