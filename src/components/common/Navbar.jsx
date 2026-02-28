@@ -21,8 +21,8 @@ function Navbar() {
                     <a
                       href="#about"
                       onClick={(e) => {
-                        e.preventDefault();
-                        document.getElementById("about").scrollIntoView({ behavior: "smooth" });}}>About
+                      e.preventDefault();
+                      document.getElementById("about").scrollIntoView({ behavior: "smooth" });}}>About
                     </a>
                 </li> 
             </ul>
