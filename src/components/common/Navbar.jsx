@@ -3,7 +3,7 @@ import "./Navbar.css"
 import { useNavigate } from 'react-router';
 import { Link } from "react-router-dom";
 
-export function Navbar() {
+function Navbar() {
   const navigate = useNavigate();
   return (
     <>
@@ -32,3 +32,4 @@ export function Navbar() {
   );
 }
 
+export default Navbar;

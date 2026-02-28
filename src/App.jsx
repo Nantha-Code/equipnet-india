@@ -14,7 +14,6 @@ import NotFound from "./pages/NotFound";
 import RegisterPage from "./pages/RegisterPage";
 import UserDashboard from "./pages/UserDashboard";
 import {AdminDashboard} from "./pages/Admin/AdminDashboard";
-import { Navbar } from "./components/common/Navbar";
 
 
 function App() {

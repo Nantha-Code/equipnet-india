@@ -6,7 +6,7 @@ import SearchBar from '../components/common/SearchBar';
 import Navbar from '../components/common/Navbar';
 import { useNavigate } from 'react-router';
 
-function Home() {
+ function Home() {
     const navigate = useNavigate();
   return (
 <>
