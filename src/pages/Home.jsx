@@ -112,7 +112,7 @@ function Home() {
 
     </div>
 </div>
-    <div className="about-container">
+    <div className="about-container" id='about'>
         <div className="about-tittle">
         <h2>About Us</h2>
         </div>

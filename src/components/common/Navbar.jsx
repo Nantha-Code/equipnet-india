@@ -1,9 +1,9 @@
 import React from 'react'
 import "./Navbar.css"
 import { useNavigate } from 'react-router';
-import Home from "./pages/Home";
+import { Link } from "react-router-dom";
 
-function Navbar() {
+export function Navbar() {
   const navigate = useNavigate();
   return (
     <>
@@ -15,8 +15,16 @@ function Navbar() {
                 <li> <a href="" className='equipment-tag' onClick={() => navigate("equipmentlist")}>Equipment</a></li>
                 <li><a href="" className='register-tag' onClick={() => navigate("register")}>Register</a></li>
                 <li><a href="" className='login-tag' onClick={() =>navigate("login")}>Login</a></li>
-                {/* <li><a href="" onClick={() =>navigate(about-container)}>About</a></li> */}
-                <li><a href=""></a></li>
+              
+                {/* <li><a href="#about" onClick={() => document.getElementById("about").scrollIntoView({ behavior: "smooth" })}>About</a></li> */}
+                <li>
+                    <a
+                      href="#about"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        document.getElementById("about").scrollIntoView({ behavior: "smooth" });}}>About
+                    </a>
+                </li> 
             </ul>
         </nav>
     </header>
@@ -24,4 +32,3 @@ function Navbar() {
   );
 }
 
-export default Navbar;
