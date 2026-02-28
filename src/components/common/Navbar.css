@@ -1,3 +1,19 @@
+header{
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  gap: 60rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.logo-container{
+  
+  /* border: 2px solid black; */
+
+  .logo{
+    height: 9rem;
+  }
+}
 /* top link */
 .top-link{
   margin-top: 0px;

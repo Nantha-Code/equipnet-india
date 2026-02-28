@@ -1,76 +1,89 @@
-/* Full screen center */
-.login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 20rem;
-  /* background: linear-gradient(135deg, #667eea, #764ba2); */
-  font-family: Arial, sans-serif;
+/* General Reset for the Navbar area */
+.top-link {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0.5rem 2rem;
+    font-family: 'Inter', -apple-system, sans-serif;
 }
 
-/* Card style */
-.login-form {
-  background: #fff;
-  padding: 35px;
-  border-radius: 12px;
-  width: 320px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
+.link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Title */
-.login-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 24px;
+/* Logo / SVG Icon */
+.nav-icon {
+    height: 45px;
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-.login-form span {
-  color: #ff0066;
+.nav-icon:hover {
+    transform: scale(1.05);
 }
 
-/* Input fields */
-.input-box {
-  padding: 12px;
-  margin-bottom: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
-  transition: all 0.3s ease;
+/* List Container */
+.nav-link-lists {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
 }
 
-.input-box:focus {
-  outline: none;
-  border-color: #667eea;
-  box-shadow: 0 0 5px #667eea;
+/* Individual Links */
+.nav-link-lists li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
 }
 
-/* Error text */
-.error-text {
-  color: red;
-  font-size: 12px;
-  margin-bottom: 10px;
+/* Hover States & Special Tags */
+.nav-link-lists li a:hover {
+    color: #2F4BFF; /* Matching your SVG blue color */
+    border-bottom: 2px solid #2F4BFF;
 }
 
-/* Button */
-.login-button {
-  padding: 12px;
-  background: #667eea;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 15px;
-  cursor: pointer;
-  transition: 0.3s;
+/* Highlight the Login/Register buttons as "Action Buttons" */
+.register-tag, .login-tag {
+    color: #2F4BFF !important;
 }
 
-.login-button:hover {
-  background: #ff0066;
+.login-tag {
+    background-color: #2F4BFF;
+    color: white !important;
+    padding: 0.5rem 1.2rem !important;
+    border-radius: 6px;
+    border-bottom: none !important;
 }
-.skip-button{
-text-decoration: none;
-padding: 0.5rem;
-text-align: center;
 
+.login-tag:hover {
+    background-color: #050D42;
+    transform: translateY(-2px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .nav-link-lists {
+        gap: 1rem;
+    }
+    
+    .nav-link-lists li a {
+        font-size: 0.9rem;
+    }
+    
+    .home-tag {
+        display: none; 
+    }
 }
