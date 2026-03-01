@@ -164,6 +164,7 @@ ul{
   .about-h2{
     border: none;
     margin-left: 3rem;
+    text-align: left;
   }
 
   .about-tittle{
