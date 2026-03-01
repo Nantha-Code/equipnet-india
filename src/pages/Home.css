@@ -124,6 +124,7 @@ ul{
       color: black;
       font-size: 2rem;
       font-weight: bolder;
+      border: none;
       
     
 }
@@ -159,8 +160,14 @@ ul{
   padding: 1rem;
   background: white;
   border-radius: 0.5rem;
+      
+  .about-h2{
+    border: none;
+    margin-left: 3rem;
+  }
 
   .about-tittle{
+    border: none;
     color: black;
     font-weight: bold;
     font-size: 1.5rem;

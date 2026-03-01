@@ -20,7 +20,7 @@ import { useNavigate } from 'react-router';
 
    <SearchBar/>
    
-    <p className='tagline-para'> Discover and request access to world-class government-funded scientific infrastructure.
+    <p className="search-tagline"> Discover and request access to world-class government-funded scientific infrastructure.
     </p>
 
     </div>
@@ -114,7 +114,7 @@ import { useNavigate } from 'react-router';
 </div>
     <div className="about-container" id='about'>
         <div className="about-tittle">
-        <h2>About Us</h2>
+        <h2 className='about-h2'>About Us</h2>
         </div>
         <div className="about-para">
         <p >
