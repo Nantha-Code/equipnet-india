@@ -10,7 +10,7 @@ function Navbar() {
     <>
         <header>
           <div className="logo-container" onClick={() =>navigate("/")}>
-            <img className="logo" onClick={() =>navigate("/")} src="src/assets/images/project-logo.png" alt="logo"/>
+            <img className="logo" onClick={() =>navigate("/")} src="public/images/project-logo.png" alt="logo"/>
           </div>
             <ul className='nav-link-lists'>
               <li><Link to="/" className='home-tag'>Home</Link></li>

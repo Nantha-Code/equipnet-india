@@ -1,14 +1,14 @@
 
 /* Global futuristic background */
 body {
-  color: rgb(99, 9, 9);
+  /* color: rgb(99, 9, 9); */
   font-family: Inter, sans-serif;
 }
 
 /* bg top */
 .bg{
   
-  background: url('/src/assets/images/bg-blue.png');
+  background: url('public/images/bg-blue.png');
   min-height: 100vh;
   background-repeat: no-repeat;
   background-attachment: fixed;
