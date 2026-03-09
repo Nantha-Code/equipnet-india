@@ -195,11 +195,7 @@
   color: #666;
   text-transform: uppercase;
 }
-*{
-  *h2{
-  border: none;
-}
-}
+
 /* Responsive Fixes */
 @media (max-width: 768px) {
   .tittle-tagline { font-size: 2rem; }
