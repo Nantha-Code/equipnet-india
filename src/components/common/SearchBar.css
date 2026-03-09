@@ -1,0 +1,82 @@
+/* Container for the search bar */
+.search-box {
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  margin: 20px auto;
+  background: #ffffff;
+  padding: 8px;
+  border-radius: 50px; /* Rounded pill shape */
+  box-shadow: 0 10px 25px rgba(0, 91, 255, 0.15); /* Soft blue shadow */
+  border: 1px solid #e0e7ff;
+  transition: all 0.3s ease;
+}
+
+/* Hover/Focus effect for the whole box */
+.search-box:focus-within {
+  box-shadow: 0 12px 30px rgba(0, 91, 255, 0.25);
+  transform: translateY(-2px);
+  border-color: #005bff;
+}
+
+/* The Input field */
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  color: #333;
+  background: transparent;
+  border-radius: 50px 0 0 50px;
+}
+
+.search-box input::placeholder {
+  color: #a0aec0;
+  font-weight: 400;
+}
+
+/* The Search Button */
+.search-box button {
+  background: #005bff;
+  color: white;
+  border: none;
+  padding: 14px 35px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s active;
+  margin-left: 5px;
+}
+
+.search-box button:hover {
+  background: #0046cc;
+  box-shadow: 0 4px 12px rgba(0, 91, 255, 0.3);
+}
+
+.search-box button:active {
+  transform: scale(0.97);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .search-box {
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 10px;
+  }
+  
+  .search-box input {
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+  }
+  
+  .search-box button {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+}
