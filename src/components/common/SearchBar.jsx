@@ -28,7 +28,7 @@ function SearchBar() {
       <div className="search-controls">
         <input
           type="text"
-          placeholder="Search equipment (e.g., Microscope)..."
+          placeholder="Search equipment...."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />

@@ -1,8 +1,8 @@
 /* General Reset & Background */
-.bg {
+.body{
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  background-color: #f8fafd;
-  color: #333;
+  background-color: #050d42;
+  color: #050d42;
   line-height: 1.6;
 }
 
@@ -34,6 +34,8 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
   padding: 40px 5%;
+  background: #050d42;
+  width: 100%;
 }
 
 .stat-card {
