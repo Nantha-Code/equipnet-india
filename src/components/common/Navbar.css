@@ -5,6 +5,7 @@ header{
   gap: 60rem;
   border-radius: 0.5rem;
   overflow: hidden;
+  position: sticky;
 }
 .logo-container{
   

@@ -1,82 +1,95 @@
-/* Container for the search bar */
-.search-box {
+/* SearchBar.css */
+
+/* The main container */
+.searchbar {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  /* background-color: #ffffff; */
+  border-radius: 12px;
+  /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* The Title (Note: using your exact class name 'search-tittle') */
+.search-tittle {
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Container for input and button to sit perfectly side-by-side */
+.search-controls {
   display: flex;
-  align-items: center;
-  max-width: 800px;
-  margin: 20px auto;
-  background: #ffffff;
-  padding: 8px;
-  border-radius: 50px; /* Rounded pill shape */
-  box-shadow: 0 10px 25px rgba(0, 91, 255, 0.15); /* Soft blue shadow */
-  border: 1px solid #e0e7ff;
-  transition: all 0.3s ease;
+  gap: 10px;
 }
 
-/* Hover/Focus effect for the whole box */
-.search-box:focus-within {
-  box-shadow: 0 12px 30px rgba(0, 91, 255, 0.25);
-  transform: translateY(-2px);
-  border-color: #005bff;
-}
-
-/* The Input field */
-.search-box input {
-  flex: 1;
-  border: none;
+/* The Input Field */
+.searchbar input[type="text"] {
+  flex: 1; /* Takes up all remaining space */
+  padding: 14px 18px;
+  font-size: 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
   outline: none;
-  padding: 15px 25px;
-  font-size: 1.1rem;
-  color: #333;
-  background: transparent;
-  border-radius: 50px 0 0 50px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.search-box input::placeholder {
-  color: #a0aec0;
-  font-weight: 400;
+.searchbar input[type="text"]:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
 }
 
 /* The Search Button */
-.search-box button {
-  background: #005bff;
+.search-btn {
+  padding: 14px 24px;
+  font-size: 16px;
+  background-color: #3498db;
   color: white;
   border: none;
-  padding: 14px 35px;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 40px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.1s active;
-  margin-left: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
-.search-box button:hover {
-  background: #0046cc;
-  box-shadow: 0 4px 12px rgba(0, 91, 255, 0.3);
+.search-btn:hover {
+  background-color: #2980b9;
 }
 
-.search-box button:active {
-  transform: scale(0.97);
+.search-btn:active {
+  transform: scale(0.97); /* Slight click effect */
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .search-box {
-    flex-direction: column;
-    border-radius: 15px;
-    padding: 10px;
-  }
-  
-  .search-box input {
-    width: 100%;
-    padding: 12px;
-    text-align: center;
-  }
-  
-  .search-box button {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 10px;
-    border-radius: 10px;
-  }
+/* The Results List */
+.searchbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 25px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between list items */
+}
+
+/* Individual Result Items */
+.searchbar li {
+  background-color: #f8f9fa;
+  padding: 16px 20px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.searchbar li:hover {
+  background-color: #e3f2fd; /* Very light blue on hover */
+  border-color: #90caf9;
+  transform: translateY(-2px); /* Lifts up slightly */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
