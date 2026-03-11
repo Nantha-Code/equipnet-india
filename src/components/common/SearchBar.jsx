@@ -1,15 +1,16 @@
 import { useState } from "react";
 import "./SearchBar.css"; 
+import { API } from "../../global";
 
 function SearchBar() {
   const [search, setSearch] = useState("");
   const [results, setResults] = useState([]);
 
-  const API_URL = "https://6971eb5e32c6bacb12c50344.mockapi.io/api/v1/EquipmentData";
+  
 
   async function handleSearch() {
     try {
-      const response = await fetch(API_URL);
+      const response = await fetch(API);
       const data = await response.json();
 
       // filter results

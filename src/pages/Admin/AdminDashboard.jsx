@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import "./AdminDashboard.css";
+import { API } from "../../global";
 
-const API = "https://6971eb5e32c6bacb12c50344.mockapi.io/api/v1/EquipmentData";
+
 
 export function AdminDashboard() {
   const [equipment, setEquipment] = useState([]);

@@ -1,68 +1,99 @@
-header{
-  border: 2px solid black;
+/* --- Main Header Styling & Sticky Position --- */
+header {
+  background-color: #0B1120; /* Your primary dark background */
+  
+  /* The Sticky Magic */
+  position: sticky;
+  top: 0;           /* Tells the navbar to stick exactly at the top (0px) */
+  z-index: 1000;    /* Ensures the navbar stays ON TOP of all other content scrolling underneath it */
+  
+  /* Layout */
+  display: flex;
+  justify-content: space-between; /* Logo on the left, links on the right */
+  align-items: center;            /* Centers everything vertically */
+  padding: 15px 5%;               /* Adds breathing room on the sides */
+  
+  /* A subtle bottom border to separate it from the rest of the page */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08); 
+  
+  /* Optional: Adds a smooth glass-like blur effect if you slightly lower the background opacity */
+  /* backdrop-filter: blur(8px); */
+}
+
+/* --- Logo Styling --- */
+.logo-container {
   display: flex;
   align-items: center;
-  gap: 60rem;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  position: sticky;
-  width: 100%;
-  color: white;
-  background: #111827;
-  
+  cursor: pointer;
 }
-.logo-container{
-  
-  /* border: 2px solid black; */
 
-  .logo{
-    height: 9rem;
-  }
+.logo {
+  height: 45px; /* Adjust this to fit your actual image */
+  width: auto;
+  transition: transform 0.2s ease;
 }
-/* top link */
-.top-link{
-  margin-top: 0px;
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  overflow: hidden;
-  /* border: #1b39bd solid 2px; */
-  margin-bottom: 0; 
-  width: 100%;
-  color: white;
-  background: rgb(255, 244, 244);
 
-  .link{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    backdrop-filter: blur(10px);     
-    border-radius: 15px;
-    overflow: hidden;
-    width: 100%;
-    color: white;
-
-    .nav-icon{
-      height: 8rem;
-    }
-    
-    ul{
-      display: flex;
-      list-style: none;
-      gap: 2rem;
-      justify-content: flex-end;
-      padding: 2rem;
-      color: white;
-      
-      a{
-        text-decoration: none;
-        font-size: 1.1rem;
-        letter-spacing: 2px;
-        color: white;
-        font-family: "Poppins", sans-serif;
-      }
-    }
-  }
+.logo:hover {
+  transform: scale(1.05); /* Slight zoom effect when hovered */
 }
-.link a:hover {
-  color: rgb(255, 0, 0);
+
+/* --- Navigation Links Container --- */
+.nav-link-lists {
+  display: flex;
+  align-items: center;
+  list-style: none; /* Removes the bullet points */
+  gap: 30px;        /* Spacing between each link */
+  margin: 0;
+  padding: 0;
+}
+
+/* --- General Link Styling --- */
+.nav-link-lists li a,
+.home-tag, 
+.equipment-tag {
+  color: #D1D5DB; /* A soft, readable light-grey */
+  text-decoration: none; /* Removes the underline */
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for text links */
+.nav-link-lists li a:hover,
+.home-tag:hover, 
+.equipment-tag:hover {
+  color: #00E5FF; /* A bright cyan accent color that looks great on navy */
+}
+
+
+
+/* Login Button (Outlined style) */
+.login-tag {
+  color: #00E5FF !important; /* Force cyan text */
+  border: 1px solid #00E5FF;
+  padding: 8px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.login-tag:hover {
+  background-color: rgba(0, 229, 255, 0.1); 
+}
+
+/* Register Button (Solid filled style) */
+.register-tag {
+  background-color: #00E5FF;
+  color: #0B1120 !important; /* Dark text for contrast */
+  padding: 8px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.register-tag:hover {
+  opacity: 0.9;
+  transform: translateY(-2px); /* Slight lift effect */
 }

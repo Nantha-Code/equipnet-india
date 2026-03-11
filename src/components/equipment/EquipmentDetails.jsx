@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./EquipmentDetails.css";
+import { API } from "../../global";
 
 function EquipmentDetails() {
 
@@ -10,7 +11,7 @@ function EquipmentDetails() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`https://6971eb5e32c6bacb12c50344.mockapi.io/api/v1/EquipmentData/${id}`)
+    fetch(`${API}/${id}`)
       .then(res => res.json())
       .then(data => {
         setEquipment(data);

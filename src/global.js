@@ -1,0 +1,1 @@
+export const API = "https://6971eb5e32c6bacb12c50344.mockapi.io/api/v1/EquipmentData";

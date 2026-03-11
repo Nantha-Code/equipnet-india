@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./EquipmentList.css";
+import { API } from "../../global";
 
 function EquipmentList() {
 
   const [equipment, setEquipment] = useState([]);
 
   useEffect(() => {
-    fetch("https://6971eb5e32c6bacb12c50344.mockapi.io/api/v1/EquipmentData")
+    fetch(API)
       .then(res => res.json())
       .then(data => setEquipment(data))
       .catch(err => console.error("API Error:", err));
