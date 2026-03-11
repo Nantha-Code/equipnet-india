@@ -28,17 +28,17 @@ function EquipmentDetails() {
   return (
     <div className="equipment-detail-container">
 
-      <button onClick={() => navigate(-1)}>⬅</button>
+      <button className="back-btn" onClick={() => navigate(-1)}>⬅</button>
 
-      <img src={equipment.image} alt={equipment.name} />
+      <img className="equipment-img" src={equipment.image} alt={equipment.name} />
 
-      <h2>{equipment.name}</h2>
+      <h2 className="equipment-name">{equipment.name}</h2>
 
-      <p><strong>Description:</strong> {equipment.description}</p>
-      <p><strong>Institution:</strong> {equipment.institution}</p>
-      <p><strong>Location:</strong> {equipment.location}</p>
-      <p><strong>Status:</strong> {equipment.availabilityStatus}</p>
-      <p><strong>Usage Type:</strong> {equipment.usageType}</p>
+      <p className="equipment-para"><strong>Description:</strong> {equipment.description}</p>
+      <p className="equipment-para"><strong>Institution:</strong> {equipment.institution}</p>
+      <p className="equipment-para"><strong>Location:</strong> {equipment.location}</p>
+      <p className="equipment-para"><strong>Status:</strong> {equipment.availabilityStatus}</p>
+      <p className="equipment-para"><strong>Usage Type:</strong> {equipment.usageType}</p>
 
     </div>
   );

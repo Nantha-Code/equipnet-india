@@ -2,7 +2,7 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import "./LoginPage.css";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 const LoginPage = () => {
   const formik = useFormik({
@@ -62,7 +62,10 @@ const LoginPage = () => {
         )}
 
         <button type="submit" className="login-button">Login</button>
-        <a href=""className="skip-button" onClick={() =>navigate("/")}>Skip</a>
+        <p className="nav-to-signup">
+          Don&apos;t have an account?{' '}
+        </p>
+          <p className="nav-sign" onClick={() => navigate("register")}>Create one free</p>
       </form>
     </div>
     </>

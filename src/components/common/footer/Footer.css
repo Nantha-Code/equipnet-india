@@ -1,10 +1,10 @@
 /* Main Footer Container */
 .footer {
-  background-color: #050D42; /* Deep blue matching your navbar icon */
+  background-color:#172136; /* Deep blue matching your navbar icon */
   color: #e2e8f0; /* Soft white/gray for readability */
   padding: 4rem 2rem 1.5rem 2rem;
   font-family: 'Inter', -apple-system, sans-serif;
-  margin-top: auto; /* Pushes footer to bottom if page content is short */
+  margin-top: 1rem; /* Pushes footer to bottom if page content is short */
 }
 
 /* Grid Layout for Columns */

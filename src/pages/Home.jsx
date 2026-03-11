@@ -30,36 +30,28 @@ import { useNavigate } from 'react-router';
         <ul className='stat-card-ul'>
              <h3 className='stat-card-ul-h3'>200<span>+</span></h3>
              <li className='stat-card-ul-list'>Research Instruments</li>
-            {/* <li className='stat-card-ul-list'><span className='tick'>✔</span> 300+ Institutions</li>
-            <li className='stat-card-ul-list'><span className='tick'>✔</span> Pan-India Access</li> */} 
-        </ul>
+            </ul>
         </div>
 
         <div className="stat-card">
         <ul className='stat-card-ul'>
             <h3 className='stat-card-ul-h3'>50<span>+</span></h3>
             <li className='stat-card-ul-list'>Institutions</li>
-            {/* <li className='stat-card-ul-list'><span className='tick'>✔</span> Across universities, research labs</li>
-            <li className='stat-card-ul-list'><span className='tick'>✔</span> government institutes</li> */}
-        </ul>
+           </ul>
         </div>
 
         <div className="stat-card">
         <ul className='stat-card-ul'> 
             <h3 className='stat-card-ul-h3'>20<span>+</span></h3>
             <li className='stat-card-ul-list'>States Covered</li>
-            {/* <li className='stat-card-ul-list'><span className='tick'>✔</span> Including IITs, NITs, central universities</li>
-            <li className='stat-card-ul-list'><span className='tick'>✔</span> private R&D labs</li> */}
-        </ul>
+           </ul>
         </div>
 
         <div className="stat-card">
         <ul className='stat-card-ul'> 
             <h3 className='stat-card-ul-h3'>1000<span>+</span></h3>
             <li className='stat-card-ul-list'>Researchers Helped</li>
-            {/* <li className='stat-card-ul-list'><span className='tick'>✔</span> Researchers accessing shared infrastructure nationwide.</li>
-            <li className='stat-card-ul-list'><span className='tick'>✔</span> Pan-India Access</li> */}
-        </ul>
+           </ul>
         </div>  
     </div>
 

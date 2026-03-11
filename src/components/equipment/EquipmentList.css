@@ -3,9 +3,9 @@
    we treat the body or a wrapper as a grid provider. */
 
 body {
-    background-color: #f4f7f6;
+    background-color: #050d42;
     margin: 0;
-    padding: 20px;
+    /* padding: 20px; */
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
@@ -16,7 +16,8 @@ body {
 }
 
 .cards-grid {
-    display: flex;
+    /* display: grid; */
+    /* grid-template-columns: repeat(2,1fr); */
     background: #ffffff;
     border-radius: 12px;
     overflow: hidden;
@@ -30,7 +31,14 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
-
+/* cards */
+.cards{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 24rem;
+    width: 15rem;
+    padding: 2rem;
+}
 /* 3. Image Section */
 .machine-img {
     width: 250px;

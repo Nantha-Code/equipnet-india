@@ -30,6 +30,7 @@ function ListExpress({ id, image, name, institution, location, availabilityStatu
   return (
     <div className="equipmentlist-container">
       <div className="cards-grid">
+        <div className="cards">
 
         <div className="machine-img">
           <img
@@ -38,14 +39,15 @@ function ListExpress({ id, image, name, institution, location, availabilityStatu
             onClick={() => navigate(`/equipment/${id}`)}
           />
         </div>
-
-        <ul onClick={() => navigate(`/equipment/${id}`)}>
-          <li> {name}</li>
-          <li> {institution}</li>
-          <li> {location}</li>
-          <li className={`status-badge ${availabilityStatus.toLowerCase().replace(/\s/g, '-')}`}>{availabilityStatus}</li>
-        </ul>
-
+        <div className="equipment-list">
+            <ul onClick={() => navigate(`/equipment/${id}`)}>
+              <li> {name}</li>
+              <li> {institution}</li>
+              <li> {location}</li>
+              <li className={`status-badge ${availabilityStatus.toLowerCase().replace(/\s/g, '-')}`}>{availabilityStatus}</li>
+            </ul>
+         </div>
+        </div>
       </div>
     </div>
   );

@@ -1,205 +1,248 @@
-/* General Reset & Background */
-.body{
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  background-color: #050d42;
-  color: #050d42;
-  line-height: 1.6;
+/* --- Base Variables & Setup --- */
+:root {
+  --bg-dark: #0B1120;      /* The deep navy background from the image */
+  --card-bg: #111827;      /* Slightly lighter for cards */
+  --card-border: #1F2937;  /* Subtle grey border */
+  --accent-cyan: #00E5FF;  /* The bright cyan accent color */
+  --text-main: #F9FAFB;
+  --text-muted: #9CA3AF;
 }
 
-/* Hero Section */
+/* Ensure the whole page takes the dark theme */
+.bg {
+  background-color: var(--bg-dark);
+  color: white;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  min-height: 100vh;
+  /* padding-bottom: 80px; */
+}
+
+/* --- Hero Section --- */
 .hero {
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #ffffff 0%, #eef4ff 100%);
-  text-align: center;
+  /* padding: 80px 20px 40px; */
+  display: flex;
+  justify-content: center;
 }
 
-.tittle-tagline {
-  font-size: 2.8rem;
-  font-weight: 800;
-  color: #050d42;
-  margin-bottom: 20px;
-  letter-spacing: -0.5px;
-}
-
-.search-tagline {
-  font-size: 1.1rem;
-  color: #555;
-  max-width: 700px;
-  margin: 20px auto;
-}
-
-/* Big Stats Cards (Top) */
-.stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  padding: 40px 5%;
-  background: #050d42;
+.hero-content {
+  /* max-width: 1200px; */
   width: 100%;
 }
 
-.stat-card {
-  background: #fff;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 91, 255, 0.08);
-  transition: transform 0.3s ease;
-  border: 1px solid #eef2f7;
-  text-align: left;
+.srh-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 60px;
+  gap: 25px;
 }
 
-.stat-card:hover {
-  transform: translateY(-5px);
+.tittle-tagline {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+  max-width: 900px;
 }
 
-.stat-card-ul-h3 {
-  color: #005bff;
-  font-size: 1.25rem;
-  margin-bottom: 15px;
+/* Optional: If you want to make specific words cyan like in the image, 
+   wrap those words in a <span> in your React code and target it here */
+.tittle-tagline span {
+  color: var(--accent-cyan);
+}
+
+.search-tagline {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* --- Top Stats Section --- */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 50px 0;
+  border-top: 1px solid var(--card-border);
+  border-bottom: 1px solid var(--card-border);
+  margin-bottom: 80px;
+  background-color: rgba(17, 24, 39, 0.3); /* Very subtle background for the band */
 }
 
 .stat-card-ul {
   list-style: none;
   padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.stat-card-ul-h3 {
+  font-size: 3.5rem;
+  color: var(--accent-cyan);
+  margin: 0 0 10px 0;
+  font-weight: 800;
+  border: none;
 }
 
 .stat-card-ul-list {
-  margin: 10px 0;
-  font-size: 0.95rem;
-  display: flex;
-  align-items: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
 }
 
-.tick {
-  color: #00c853;
-  margin-right: 10px;
-  font-weight: bold;
-}
-
-/* Featured Instruments Grid */
+/* --- Featured Instruments (Styled like the cards in the image) --- */
 .feauture {
-  padding: 60px 5%;
-  background: #fff;
+  padding: 0 20px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .featured-instruments-tittle {
   text-align: center;
-  font-size: 2rem;
-  margin-bottom: 40px;
-  color: #050d42;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: white ;
   border: none;
 }
+
 .featured-instruments {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  border:none;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
 }
 
 .instrument {
-  background: #f1f5ff;
-  padding: 20px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 12px;
-  border-left: 5px solid #022e80;
+  padding: 30px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.instrument:hover {
+  border-color: var(--accent-cyan);
+  transform: translateY(-5px);
 }
 
 .instrument-ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .instrument-ul-list {
-  font-size: 0.9rem;
-  margin-bottom: 5px;
+  color: var(--text-muted);
+  font-size: 1.05rem;
 }
 
-/* About Section */
+.instrument-ul-list strong {
+  color: var(--text-main);
+}
+
+/* --- About Section (Styled like the bottom CTA in the image) --- */
 .about-container {
-  padding: 80px 10%;
-  background: #050d42;
-  color: #fff;
-  text-align: left;
-  border-radius: 8px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 50px;
+  margin: 0 auto 80px;
+  width: 100%;
+  text-align: center;
 }
 
 .about-h2 {
-  font-size: 2.2rem;
+  font-size: 2rem;
+  margin-top: 0;
   margin-bottom: 20px;
-  color: white;
-  border: none;
+   border: none;
+   color: white;
 }
 
 .about-para {
-  width: 100%;
-  margin: 0 auto 30px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto 35px;
   font-size: 1.1rem;
-  opacity: 0.9;
 }
 
 .about-tag a {
-  color: white;
-  border-radius: 30px;
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: var(--accent-cyan);
+  color: #000;
+  border-radius: 6px;
   text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
+  font-weight: 700;
+  transition: opacity 0.2s ease;
+  
 }
 
 .about-tag a:hover {
-  background: #fff;
-  box-shadow: 0 0 20px rgba(6, 243, 255, 0.4);
+  opacity: 0.85;
 }
 
-/* Small Stats Boxes (Bottom) */
+/* --- Bottom Small Stats Section --- */
 .small-stats-container {
-  padding: 60px 5%;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .stats-box-tittle {
   text-align: center;
-  margin-bottom: 40px;
-  color: #050d42;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
   border: none;
+  color: white;
 }
 
 .all-stats-boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
 }
 
 .stats-box {
-  background: #fff;
-  width: 220px;
-  padding: 30px 20px;
-  border-radius: 8px;
+  background-color: var(--bg-dark);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 35px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  gap: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.stats-box:hover {
+  background-color: var(--card-bg);
 }
 
 .box-icon {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 15px;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
 }
 
 .count {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 800;
-  color: #005bff;
-  margin: 5px 0;
+  color: var(--text-main);
+  margin: 0;
 }
 
 .para-name {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #666;
-  text-transform: uppercase;
-}
-
-/* Responsive Fixes */
-@media (max-width: 768px) {
-  .tittle-tagline { font-size: 2rem; }
-  .stats-box { width: 100%; }
+  color: var(--text-muted);
+  margin: 0;
+  font-size: 1rem;
 }

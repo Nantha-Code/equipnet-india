@@ -6,7 +6,6 @@ function NotFound() {
   const navigate= useNavigate();
   return (
     <>
-    <div className="main-not"></div>
     <div className="not">
        
     <h1 className="h1">Oops!</h1>  

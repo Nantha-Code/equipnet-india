@@ -39,7 +39,7 @@ function Footer() {
 
       <div className="footer-bottom">
          
-        <p>© 2026 I-STEM. All rights reserved.</p>
+        <p>© 2026 Equipnet. All rights reserved.</p>
       </div>
     </footer>
     </>
