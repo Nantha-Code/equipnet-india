@@ -62,7 +62,7 @@ export function AdminDashboard() {
     setEquipment(equipment.filter(item => item.id !== id));
   };
 
-  // ================= EDIT (basic prompt style) =================
+  // ================= EDIT =================
   const handleEdit = async (id) => {
     const updatedName = prompt("Enter new equipment name:");
     if (!updatedName) return;
