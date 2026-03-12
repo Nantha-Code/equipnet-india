@@ -96,4 +96,53 @@ header {
 .register-tag:hover {
   opacity: 0.9;
   transform: translateY(-2px); /* Slight lift effect */
+}    
+
+/* Tablet & Smaller Laptops (max-width: 900px) */
+@media screen and (max-width: 900px) {
+  header {
+    padding: 15px 3%; /* Reduces the side padding slightly */
+  }
+  
+  .nav-link-lists {
+    gap: 15px; /* Brings the links closer together so they don't wrap too early */
+  }
+
+  /* Slightly shrink the font size to fit everything on one line */
+  .nav-link-lists li a,
+  .home-tag, 
+  .equipment-tag {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Phones (max-width: 650px) */
+@media screen and (max-width: 650px) {
+  header {
+    /* Changes layout from a single row to a column */
+    flex-direction: column; 
+    padding: 15px 20px;
+    gap: 15px; /* Adds space between the logo and the links */
+  }
+  
+  .nav-link-lists {
+    width: 100%;
+    flex-wrap: wrap;             /* Allows links to drop to the next line if needed */
+    justify-content: center;     /* Centers the links neatly under the logo */
+    gap: 15px 20px;              /* 15px gap vertically, 20px gap horizontally */
+  }
+  
+  /* Make the auth buttons slightly smaller to fit side-by-side easily */
+  .login-tag, 
+  .register-tag {
+    padding: 6px 14px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Very Small Phones (max-width: 380px) */
+@media screen and (max-width: 380px) {
+  .nav-link-lists {
+    gap: 10px 15px; /* Tighter spacing for very narrow screens like iPhone SE */
+  }
 }
