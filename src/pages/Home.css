@@ -248,3 +248,100 @@
   margin: 0;
   font-size: 1rem;
 }
+
+/* Tablet & Smaller Laptops */
+@media screen and (max-width: 1024px) {
+  .tittle-tagline {
+    font-size: 2.8rem;
+    padding: 0 20px;
+  }
+
+  .stats {
+    padding: 35px 0;
+  }
+}
+
+/* Tablets & Large Mobile Phones (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .hero {
+    padding-top: 40px; /* Gives breathing room under the navbar */
+  }
+  
+  .tittle-tagline {
+    font-size: 2.2rem;
+  }
+
+  .search-tagline {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  /* Shrinks the huge 200+ text */
+  .stat-card-ul-h3 {
+    font-size: 2.5rem;
+  }
+
+  /* Changes the top stats band into a 2x2 grid instead of a single row */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  /* Shrinks all section headers uniformly */
+  .featured-instruments-tittle, 
+  .stats-box-tittle, 
+  .about-h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  /* Makes the About card fit better on mobile screens */
+  .about-container {
+    padding: 30px 20px;
+    border-radius: 0; /* Making it flush with screen edges looks cleaner on mobile */
+    border-left: none;
+    border-right: none;
+    margin-bottom: 50px;
+  }
+
+  .about-para {
+    font-size: 1rem;
+  }
+
+  /* Tighter spacing for the bottom stats boxes */
+  .all-stats-boxes {
+    gap: 1.2rem;
+  }
+}
+
+/* Small Mobile Phones (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .tittle-tagline {
+    font-size: 1.8rem;
+  }
+
+  .stat-card-ul-h3 {
+    font-size: 2.2rem;
+  }
+
+  /* Stacks the top stats band vertically */
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* Forces single-column layout for safety on very small screens */
+  .featured-instruments {
+    grid-template-columns: 1fr; 
+  }
+
+  .all-stats-boxes {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-box {
+    padding: 25px 15px;
+  }
+}
