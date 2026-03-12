@@ -1,48 +1,91 @@
-import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import "./EquipmentDetails.css";
-import { API } from "../../global";
+// import { useEffect, useState } from "react";
+// import { useParams, useNavigate } from "react-router-dom";
+// import { API } from "../../global";
+// import "./EquipmentDetails.css";
 
-function EquipmentDetails() {
+// function EquipmentDetails() {
 
-  const { id } = useParams(); // <-- from URL
-  const navigate = useNavigate();
-  const [equipment, setEquipment] = useState(null);
-  const [loading, setLoading] = useState(true);
+//   const { id } = useParams();
+//   const navigate = useNavigate();
 
-  useEffect(() => {
-    fetch(`${API}/${id}`)
-      .then(res => res.json())
-      .then(data => {
-        setEquipment(data);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.error("Error:", err);
-        setLoading(false);
-      });
-  }, [id]);
+//   const [equipment, setEquipment] = useState(null);
+// // const [Loading, setLoading] = useState();
+//   useEffect(() => {
+//     fetch(`${API}/${id}`)
+//       .then(res => res.json())
+//       .then(data => setEquipment(data))
+//       .catch(err => console.error(err));
+//   }, [id]);
+// // useEffect(() => {
+// //   fetch(`${API}/${id}`)
+// //     .then(res => {
+// //       if(!res.ok){
+// //         throw new Error("Equipment not found")
+// //       }
+// //       return res.json()
+// //     })
+// //     .then(data => {
+// //       setEquipment(data)
+// //       setLoading(false)
+// //     })
+// //     .catch(err => {
+// //       console.error(err)
+// //       setLoading(false)
+// //     })
+// // }, [id])
+//   if (!equipment) return <p>Loading...</p>;
 
-  if (loading) return <p>Loading...</p>;
-  if (!equipment) return <p>Equipment not found</p>;
+//   return (
+//     <div className="equipment-detail-container">
 
-  return (
-    <div className="equipment-detail-container">
+//       <button className="back-btn" onClick={() => navigate(-1)}>
+//         ⬅ Back
+//       </button>
 
-      <button className="back-btn" onClick={() => navigate(-1)}>⬅</button>
+//       {/* <img
+//         className="equipment-img"
+//         src={equipment.imagUrl}
+//         alt={equipment.name}
+//       /> */}
+//       {equipment.image && (
+//   <img
+//     className="equipment-img"
+//     src={equipment.image}
+//     alt={equipment.name}
+//   />
+// )}
 
-      <img className="equipment-img" src={equipment.image} alt={equipment.name} />
+//       <h2 className="equipment-name">{equipment.name}</h2>
 
-      <h2 className="equipment-name">{equipment.name}</h2>
+//       <p className="equipment-para">
+//         <strong>Description:</strong> {equipment.description}
+//       </p>
 
-      <p className="equipment-para"><strong>Description:</strong> {equipment.description}</p>
-      <p className="equipment-para"><strong>Institution:</strong> {equipment.institution}</p>
-      <p className="equipment-para"><strong>Location:</strong> {equipment.location}</p>
-      <p className="equipment-para"><strong>Status:</strong> {equipment.availabilityStatus}</p>
-      <p className="equipment-para"><strong>Usage Type:</strong> {equipment.usageType}</p>
+//       <p className="equipment-para">
+//         <strong>Institution:</strong> {equipment.institution}
+//       </p>
 
-    </div>
-  );
-}
+//       <p className="equipment-para">
+//         <strong>Location:</strong> {equipment.location}
+//       </p>
 
-export default EquipmentDetails;
+//       <p className="equipment-para">
+//         <strong>Status:</strong> {equipment.availabilityStatus}
+//       </p>
+
+//       <p className="equipment-para">
+//         <strong>Usage Type:</strong> {equipment.usageType}
+//       </p>
+
+//       <button
+//         className="register-btn"
+//         onClick={() => navigate("/register")}
+//       >
+//         Register to Rent
+//       </button>
+
+//     </div>
+//   );
+// }
+
+// export default EquipmentDetails;

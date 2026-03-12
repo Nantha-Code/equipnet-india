@@ -1,127 +1,168 @@
-/* 1. Main Container Logic */
-/* Since EquipmentList maps multiple ListExpress components, 
-   we treat the body or a wrapper as a grid provider. */
-
-body {
-    background-color: #050d42;
-    margin: 0;
-    /* padding: 20px; */
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+/* --- Base Page Setup --- */
+.equipmentlist-page {
+  background-color: #0B1120; /* Deep navy background */
+  min-height: 100vh;
+  padding: 40px 5%;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
-/* 2. Individual Card Container */
-.equipmentlist-container {
-    max-width: 1200px;
-    margin: 0 auto 20px auto;
+.page-title {
+  color: #F9FAFB;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
+/* ========================================= */
+/* --- The Grid Magic (4 Columns) --- */
+/* ========================================= */
 .cards-grid {
-    /* display: grid; */
-    /* grid-template-columns: repeat(2,1fr); */
-    background: #ffffff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
-    border: 1px solid #eef0f2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Exactly 4 equal columns */
+  gap: 30px; /* Space between the cards */
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.cards-grid:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+/* --- Individual Card Styling --- */
+.card {
+  background-color: #111827;
+  border: 1px solid #1F2937;
+  border-radius: 12px;
+  overflow: hidden; /* Keeps the image inside the rounded corners */
+  display: flex;
+  flex-direction: column; /* Stacks image, text, and button vertically */
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
-/* cards */
-.cards{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    height: 24rem;
-    width: 15rem;
-    padding: 2rem;
+
+.card:hover {
+  transform: translateY(-8px); /* Lifts the card */
+  border-color: #00E5FF; /* Cyan border glow */
+  box-shadow: 0 10px 25px rgba(0, 229, 255, 0.1);
 }
-/* 3. Image Section */
+
+/* --- Image Section --- */
 .machine-img {
-    width: 250px;
-    min-width: 250px;
-    height: 200px;
-    background: #f0f0f0;
+  width: 100%;
+  height: 200px; /* Fixed height so all cards are identical */
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .machine-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Prevents image stretching */
+  transition: transform 0.3s ease;
 }
 
-/* 4. Content Section (The List) */
-.cards-grid ul {
-    list-style: none;
-    padding: 20px;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 8px;
-    flex-grow: 1;
+.card:hover .machine-img img {
+  transform: scale(1.05); /* Slight zoom on image when hovering over card */
 }
 
-/* Name/Title */
-.cards-grid ul li:first-child {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #1a202c;
-    margin-bottom: 4px;
+/* --- Text Information --- */
+.equipment-info {
+  padding: 20px;
+  flex-grow: 1; /* Pushes the button to the bottom if text is short */
+  cursor: pointer;
 }
 
-/* Institution & Location */
-.cards-grid ul li:nth-child(2),
-.cards-grid ul li:nth-child(3) {
-    color: #718096;
-    font-size: 0.95rem;
-    display: flex;
-    align-items: center;
+.equipment-name {
+  color: #F9FAFB;
+  font-size: 1.25rem;
+  margin: 0 0 10px 0;
+  font-weight: 700;
 }
 
-/* Icon-like effect for Institution/Location */
-.cards-grid ul li:nth-child(2)::before { content: "🏢 "; font-size: 0.8rem; margin-right: 5px; }
-.cards-grid ul li:nth-child(3)::before { content: "📍 "; font-size: 0.8rem; margin-right: 5px; }
+.equipment-detail {
+  color: #9CA3AF;
+  font-size: 0.95rem;
+  margin: 5px 0;
+}
 
-/* 5. Status Badge Styling */
+/* --- Status Badges --- */
 .status-badge {
-    align-self: flex-start;
-    padding: 4px 12px;
-    border-radius: 6px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-top: 10px;
-    letter-spacing: 0.5px;
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-/* Dynamic Colors based on your class logic */
+/* Dynamic colors based on the status text */
 .available {
-    background-color: #c6f6d5;
-    color: #22543d;
+  background-color: rgba(46, 204, 113, 0.15);
+  color: #2ecc71; /* Green */
+  border: 1px solid rgba(46, 204, 113, 0.3);
 }
 
-.unavailable, .busy, .maintenance {
-    background-color: #fed7d7;
-    color: #822727;
+.booked, .unavailable {
+  background-color: rgba(231, 76, 60, 0.15);
+  color: #e74c3c; /* Red */
+  border: 1px solid rgba(231, 76, 60, 0.3);
 }
 
+.maintenance {
+  background-color: rgba(241, 196, 15, 0.15);
+  color: #f1c40f; /* Yellow */
+  border: 1px solid rgba(241, 196, 15, 0.3);
+}
 
-/* Responsive for Mobile */
-@media (max-width: 768px) {
-    .cards-grid {
-        flex-direction: column;
-    }
+/* Default badge if status is weird */
+.unknown {
+  background-color: rgba(156, 163, 175, 0.15);
+  color: #9CA3AF;
+}
 
-    .machine-img {
-        width: 100%;
-        height: 180px;
-    }
+/* --- View Details Button --- */
+.view-btn {
+  background-color: transparent;
+  color: #00E5FF;
+  border: none;
+  border-top: 1px solid #1F2937;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
 
-    .cards-grid ul {
-        padding: 15px;
-    }
+.view-btn:hover {
+  background-color: rgba(0, 229, 255, 0.1);
+}
+
+/* ========================================= */
+/* --- Responsive Design (Media Queries) --- */
+/* ========================================= */
+
+/* Large Laptops / Smaller Desktops (Under 1200px) -> 3 Columns */
+@media screen and (max-width: 1200px) {
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablets (Under 900px) -> 2 Columns */
+@media screen and (max-width: 900px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .page-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* Mobile Phones (Under 600px) -> 1 Column */
+@media screen and (max-width: 600px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .equipmentlist-page {
+    padding: 30px 20px;
+  }
 }

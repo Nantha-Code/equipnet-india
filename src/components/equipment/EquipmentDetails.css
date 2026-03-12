@@ -1,4 +1,4 @@
-/* Container for the whole page */
+/* Container for the whole page
 .equipment-detail-container {
   max-width: 750px;
   margin: 50px auto;
@@ -70,4 +70,4 @@
 /* Special styling for the Status to make it look like a badge (Optional extra touch) */
 .equipment-para:nth-of-type(4) {
   border-left-color: #2ecc71; /* Green accent for status */
-} 
+}  */

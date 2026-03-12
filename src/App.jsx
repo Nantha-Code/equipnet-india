@@ -5,7 +5,7 @@ import PrivacyPolicy from "./components/common/footer/PrivacyPolicy";
 import TermsOfUse from "./components/common/footer/TermsOfUse";
 import SearchBar from "./components/common/SearchBar";
 import EquipmentCard from "./components/equipment/EquipmentCard";
-import EquipmentDetails from "./components/equipment/EquipmentDetails";
+// import EquipmentDetails from "./components/equipment/EquipmentDetails";
 import EquipmentList from "./components/equipment/EquipmentList";
 import About from "./pages/About";
 import Home from "./pages/Home";
@@ -49,7 +49,7 @@ function App() {
         <Route path="register" element={<RegisterPage />}/>
         <Route path="about" element={<About />}/>
         <Route path="equipmentlist" element={<EquipmentList />}/>
-        <Route path="equipment/:id" element={<EquipmentDetails />} />
+        {/* <Route path="/equipment/:id" element={<EquipmentDetails />} /> */}
         <Route path="equipmentcard" element={<EquipmentCard />}/>
         <Route path="grievances" element={<Grievances />} />
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
