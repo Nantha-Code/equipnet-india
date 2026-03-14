@@ -1,90 +1,226 @@
-
-body{
-  background: white;
-  background-size: cover;
-  
-}
-/* Full page layout */
-.register-form {
+/* ========================================= */
+/* --- Main Layout --- */
+/* ========================================= */
+.register-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-family: "Segoe UI", sans-serif;
-  border-radius: 20px;
+  min-height: 100vh;
+  background-color: #0B1120; /* Your primary dark background */
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #F9FAFB;
 }
 
-/* Card container */
-.formik-register-form {
-  background: white;
-  background-size: cover;
-  padding: 35px 40px;
-  border-radius: 14px;
-  width: 380px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+/* ========================================= */
+/* --- Left Panel (Information) --- */
+/* ========================================= */
+.left-panel {
+  flex: 1; /* Takes up exactly half the screen */
+  padding: 60px 5%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(135deg, #0B1120 0%, #111827 100%); /* Subtle gradient */
+  border-right: 1px solid #1F2937;
+}
+
+.logo {
+  color: #ffffff; /* Cyan accent */
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  border: none;
+}
+
+.logo-tittle {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #F9FAFB;
+}
+
+.left-panel-para {
+  font-size: 1.15rem;
+  color: #9CA3AF;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 90%;
+}
+
+.left-side-ul {
+  list-style: none; /* Removes default bullets */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.left-side-li {
+  font-size: 1.05rem;
+  color: #D1D5DB;
+  display: flex;
+  align-items: center;
   gap: 10px;
 }
 
-/* Title */
-.formik-register-form h2 {
+/* Adding a custom cyan checkmark to the list items */
+.left-side-li::before {
+  content: '✓';
+  color: #00E5FF;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* ========================================= */
+/* --- Right Panel (The Form) --- */
+/* ========================================= */
+.right-panel {
+  flex: 1; /* Takes up the other half of the screen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 5%;
+}
+
+.form-card {
+  background-color: #111827; /* Slightly lighter than the background */
+  border: 1px solid #1F2937;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.main-tittle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 30px;
   text-align: center;
-  font-size: 26px;
-  margin-bottom: 15px;
-  color: #222;
+}
+
+/* ========================================= */
+/* --- Form Elements --- */
+/* ========================================= */
+.label {
+  display: block;
+  font-size: 0.9rem;
   font-weight: 600;
+  color: #D1D5DB;
+  margin-bottom: 8px;
 }
 
-/* Labels */
-.formik-register-form label {
-  font-size: 14px;
-  font-weight: 500;
-  color: #444;
-  margin-top: 5px;
-}
-
-/* Input & Select */
-.formik-register-form input,
-.formik-register-form select {
-  padding: 12px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  transition: all 0.3s ease;
-}
-
-/* Focus effect */
-.formik-register-form input:focus,
-.formik-register-form select:focus {
+/* Target all inputs and selects inside the form */
+.form-card input,
+.form-card select {
+  width: 100%;
+  /* background-color: #0B1120; */
+  background-color: white;
+  /* color: #F9FAFB; */
+  color: black;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  margin-bottom: 15px; /* Spacing between fields */
   outline: none;
-  border-color: #1e3c72;
-  box-shadow: 0 0 5px #1e3c72;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; /* Ensures padding doesn't stretch the width */
 }
 
-/* Error text */
-.formik-register-form p {
-  color: red;
-  font-size: 12px;
-  margin: 2px 0 5px 0;
+.form-card input::placeholder {
+  color: #6B7280;
 }
 
-/* Register button */
-.register-btn {
-  margin-top: 15px;
-  padding: 12px;
+/* Focus states for accessibility and aesthetics */
+.form-card input:focus,
+.form-card select:focus {
+  border-color: #00E5FF;
+  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.15);
+}
+
+/* Custom styling for the Select dropdown */
+.form-card select {
+  appearance: none; /* Removes default OS styling */
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%239CA3AF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem top 50%;
+  background-size: 0.65rem auto;
+}
+
+/* Formik Error Text */
+.error {
+  color: #EF4444; /* Soft Red */
+  font-size: 0.85rem;
+  margin-top: -10px; /* Pulls it close to the input */
+  margin-bottom: 15px; /* Restores spacing for the next element */
+  font-weight: 500;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  background-color: #00E5FF;
+  color: #0B1120;
   border: none;
   border-radius: 8px;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 700;
   cursor: pointer;
-  transition: transform 0.2s, background 0.3s;
+  margin-top: 10px;
+  transition: opacity 0.2s ease, transform 0.1s ease;
 }
 
-/* Button hover */
-.register-btn:hover {
-  background: linear-gradient(135deg, #ff416c, #ff4b2b);
-  transform: translateY(-2px);
+.submit-btn:hover {
+  opacity: 0.9;
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* ========================================= */
+/* --- Responsive Design (Media Queries) --- */
+/* ========================================= */
+
+/* Tablets (max-width: 900px) */
+@media screen and (max-width: 900px) {
+  .register-container {
+    flex-direction: column; /* Stacks the left and right panels vertically */
+  }
+
+  .left-panel {
+    border-right: none;
+    border-bottom: 1px solid #1F2937;
+    padding: 40px 5%;
+    text-align: center; /* Center text on mobile */
+    align-items: center;
+  }
+
+  .left-side-ul {
+    align-items: flex-start; /* Keeps bullets aligned left even if parent is centered */
+  }
+
+  .logo-tittle {
+    font-size: 2.2rem;
+  }
+
+  .right-panel {
+    padding: 40px 5%;
+  }
+}
+
+/* Mobile Phones (max-width: 500px) */
+@media screen and (max-width: 500px) {
+  .form-card {
+    padding: 30px 20px;
+  }
+
+  .logo-tittle {
+    font-size: 1.8rem;
+  }
 }

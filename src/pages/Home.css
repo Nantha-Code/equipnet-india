@@ -1,6 +1,6 @@
 /* --- Base Variables & Setup --- */
 :root {
-  --bg-dark: #0B1120;      /* The deep navy background from the image */
+  --bg-dark:#0B1120;       /* The deep navy background from the image */
   --card-bg: #111827;      /* Slightly lighter for cards */
   --card-border: #1F2937;  /* Subtle grey border */
   --accent-cyan: #00E5FF;  /* The bright cyan accent color */
