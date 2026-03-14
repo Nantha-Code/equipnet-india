@@ -1,13 +1,164 @@
+/* EquipmentDetails.css */
+
+/* 1. Root Container Setup */
+.e-main-container {
+  background-color: #0B1120;
+  /* min-height: 100vh; */
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #ffffff;
+}
+
+/* 2. Main Title - Big and Bold */
+.e-name {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  text-align: center;
+  background: linear-gradient(to right, #60a5fa, #2dd4bf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -1px;
+}
+
+/* 3. The Details Flexbox */
 .details-page {
+  display: flex;
+  gap: 50px;
+  max-width: 1100px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
   padding: 40px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
-.details-page h1 {
-  margin-bottom: 20px;
+/* 4. Image Section */
+.e-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.e-photo {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.e-photo:hover {
+  transform: scale(1.02);
+}
+
+/* 5. Details Section */
+.e-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: center;
+}
+
+.e-details p {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Styling the <span> tags inside your <p> tags */
+.e-details p span {
+  font-weight: 700;
+  color: #60a5fa; /* Light blue accent */
+  margin-right: 10px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  display: inline-block;
+  min-width: 120px; /* Aligns the colons */
+}
+
+/* Special styling for Price */
 .price {
-  font-size: 18px;
-  font-weight: bold;
-  color: green;
+  font-size: 1.8rem !important;
+  color: #ffffff !important;
+  margin-top: 10px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+}
+
+.price span {
+  color: #2dd4bf !important; /* Teal accent for price */
+}
+
+/* 6. Booking Button */
+.booking-btn {
+  margin-top: 40px;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border: none;
+  padding: 16px 60px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+.booking-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.4);
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+}
+/* Normal State (Already in your CSS) */
+.booking-btn {
+  margin-top: 40px;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border: none;
+  padding: 16px 60px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Disabled State (The Grey "Not Working" Look) */
+.booking-btn:disabled {
+  background: #334155;        /* Deep grey-blue */
+  color: #94a3b8;             /* Muted text color */
+  cursor: not-allowed;        /* Changes cursor to a 'stop' sign */
+  opacity: 0.6;               /* Makes it look "faded" */
+  box-shadow: none;           /* Removes the glow/shadow */
+  transform: none !important; /* Prevents the hover 'lift' effect */
+}
+
+/* 7. Responsive adjustments */
+@media (max-width: 850px) {
+  .details-page {
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+  }
+  
+  .e-name {
+    font-size: 2rem;
+  }
+
+  .e-details p span {
+    display: block;
+    margin-bottom: 4px;
+  }
 }

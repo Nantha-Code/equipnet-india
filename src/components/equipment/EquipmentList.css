@@ -1,34 +1,60 @@
 /* --- Base Page Setup --- */
+/* Note: It's best if you move your <h2 className="page-title"> INSIDE the <div className="equipmentlist-page"> in your React code for perfect background coverage! */
+
 .equipmentlist-page {
   background-color: #0B1120; /* Deep navy background */
   min-height: 100vh;
   padding: 40px 5%;
   font-family: 'Inter', 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the title and searchbar */
 }
 
 .page-title {
   color: #F9FAFB;
   font-size: 2.5rem;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  font-weight: 800;
+  width: 100%;
+  border: none;
 }
-.searchbar{
-  padding: 10px;
-  width: 300px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 16px;
 
+/* --- The Search/Filter Bar --- */
+.searchbar {
+  width: 100%;
+  max-width: 500px; /* Keeps it from stretching too wide on big screens */
+  background-color: #111827;
+  color: #F9FAFB;
+  border: 1px solid #1F2937;
+  border-radius: 8px;
+  padding: 14px 20px;
+  font-size: 1.05rem;
+  margin-bottom: 40px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.searchbar::placeholder {
+  color: #6B7280;
+}
+
+.searchbar:focus {
+  border-color: #00E5FF; /* Cyan highlight when typing */
+  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.15);
+}
+
 /* ========================================= */
 /* --- The Grid Magic (4 Columns) --- */
 /* ========================================= */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Exactly 4 equal columns */
-  gap: 30px; /* Space between the cards */
+  gap: 25px; /* Space between the cards */
+  width: 100%;
   max-width: 1400px;
-  margin: 0 auto;
 }
 
 /* --- Individual Card Styling --- */
@@ -54,6 +80,7 @@
   height: 200px; /* Fixed height so all cards are identical */
   cursor: pointer;
   overflow: hidden;
+  border-bottom: 1px solid #1F2937;
 }
 
 .machine-img img {
@@ -72,6 +99,8 @@
   padding: 20px;
   flex-grow: 1; /* Pushes the button to the bottom if text is short */
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
 
 .equipment-name {
@@ -85,12 +114,15 @@
   color: #9CA3AF;
   font-size: 0.95rem;
   margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 /* --- Status Badges --- */
 .status-badge {
-  display: inline-block;
-  padding: 6px 12px;
+  align-self: flex-start; /* Keeps the badge from stretching full width */
+  padding: 6px 14px;
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 600;
@@ -112,7 +144,7 @@
   border: 1px solid rgba(231, 76, 60, 0.3);
 }
 
-.maintenance {
+.maintenance, .under-maintenance {
   background-color: rgba(241, 196, 15, 0.15);
   color: #f1c40f; /* Yellow */
   border: 1px solid rgba(241, 196, 15, 0.3);
@@ -122,6 +154,7 @@
 .unknown {
   background-color: rgba(156, 163, 175, 0.15);
   color: #9CA3AF;
+  border: 1px solid rgba(156, 163, 175, 0.3);
 }
 
 /* --- View Details Button --- */
@@ -134,12 +167,13 @@
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   width: 100%;
 }
 
 .view-btn:hover {
   background-color: rgba(0, 229, 255, 0.1);
+  color: #F9FAFB;
 }
 
 /* ========================================= */
@@ -166,10 +200,13 @@
 
 /* Mobile Phones (Under 600px) -> 1 Column */
 @media screen and (max-width: 600px) {
-  .cards-grid {
-    grid-template-columns: 1fr;
-  }
   .equipmentlist-page {
     padding: 30px 20px;
+  }
+  .cards-grid {
+    grid-template-columns: 1fr; /* Stacks cards in a single column */
+  }
+  .searchbar {
+    font-size: 1rem;
   }
 }

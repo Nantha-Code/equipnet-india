@@ -15,16 +15,16 @@ function EquipmentList() {
 
   return (
     <>
+      <h2 className="page-title">Available Equipment</h2>
+    <div className="equipmentlist-page">
     <input 
     className="searchbar"
     type="text"
-    placeholder="Filter by Name" 
+    placeholder="Search equipments" 
     value={search}
     onChange={
     (event)=>setSearch(event.target.value)}
     />
-    <div className="equipmentlist-page">
-      <h2 className="page-title">Available Equipment</h2>
       
       <div className="cards-grid">
         {equipment.filter((eqp)=>eqp.name.toLowerCase().includes(search.toLowerCase())).map((item) => (
