@@ -1,80 +1,177 @@
-/* --- Main Full-Screen Container --- */
+/* ========================================= */
+/* --- Main Layout --- */
+/* ========================================= */
 .login-container {
   display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center;     /* Centers vertically */
-  min-height: 100vh;       /* Takes up the full height of the viewport */
+  min-height: 100vh;
   background-color: #0B1120; /* Your primary dark background */
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 20px;
+  color: #F9FAFB;
 }
 
-/* --- The Form Card --- */
-.login-form {
-  background-color: #111827; /* Slightly lighter navy for the card */
-  padding: 40px 35px;
+/* ========================================= */
+/* --- Left Panel (Information) --- */
+/* ========================================= */
+.left-panel {
+  flex: 1; /* Takes exactly half the screen */
+  padding: 60px 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(135deg, #0B1120 0%, #111827 100%);
+  border-right: 1px solid #1F2937; /* Separator line */
+}
+
+.logo {
+  color: #00E5FF; /* Cyan accent */
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.logo-tittle {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #F9FAFB;
+}
+
+.left-side-para {
+  font-size: 1.15rem;
+  color: #9CA3AF;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 90%;
+}
+
+.left-side-ul {
+  list-style: none; /* Removes standard bullets */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.left-side-li {
+  font-size: 1.05rem;
+  color: #D1D5DB;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Custom cyan checkmarks for the list */
+.left-side-li::before {
+  content: '✓';
+  color: #00E5FF;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* ========================================= */
+/* --- Right Panel (The Login Form) --- */
+/* ========================================= */
+.right-panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 5%;
+}
+
+.login-card {
+  background-color: #111827; /* Slightly elevated card color */
+  border: 1px solid #1F2937;
   border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); /* Soft dark shadow */
-  border: 1px solid #1F2937; /* Very subtle border to define the edges */
+  padding: 50px 40px;
   width: 100%;
-  max-width: 400px; /* Keeps the form from getting too wide on desktop */
+  max-width: 450px; /* Keeps the login form from getting too wide */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.main-tittle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.register-link {
+  font-size: 0.95rem;
+  color: #9CA3AF;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.register-link span {
+  color: #00E5FF;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.register-link span:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* ========================================= */
+/* --- Form Elements --- */
+/* ========================================= */
+.login-form {
   display: flex;
   flex-direction: column;
 }
 
-/* --- Form Heading --- */
-.login-form h2 {
-  color: #F9FAFB; /* Off-white for readability */
-  font-size: 2.2rem;
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 30px;
-  font-weight: 700;
-  border: none;
+.mail-tag, 
+.password {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #D1D5DB;
+  margin-bottom: 8px;
 }
 
-/* Highlighting the "in" part of "Login" */
-.login-form h2 span {
-  color: #00E5FF; /* Your cyan accent */
-}
-
-/* --- Input Fields --- */
-.input-box {
-  background-color: #0B1120; /* Inside of the input matches the page background */
-  color: #F9FAFB; /* White text when typing */
+.e-mail-tag, 
+.password-tag {
+  background-color: #0B1120; /* Deep navy inside the inputs */
+  color: #F9FAFB;
   border: 1px solid #374151;
   border-radius: 8px;
   padding: 14px 16px;
   font-size: 1rem;
-  margin-bottom: 15px; /* Space between inputs */
-  transition: all 0.3s ease;
+  margin-bottom: 20px; /* Space between fields */
   outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Placeholder styling */
-.input-box::placeholder {
+.e-mail-tag::placeholder,
+.password-tag::placeholder {
   color: #6B7280;
 }
 
-/* When the user clicks inside the input box (Focus State) */
-.input-box:focus {
+/* Glow effect when the user clicks to type */
+.e-mail-tag:focus, 
+.password-tag:focus {
   border-color: #00E5FF;
-  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.15); /* Soft cyan glow */
+  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.15);
 }
 
-/* --- Error Messages (Yup Validation) --- */
-.error-text {
-  color: #EF4444; /* A soft red color for errors */
+/* Formik Validation Errors */
+.error {
+  color: #EF4444; /* Alert Red */
   font-size: 0.85rem;
-  margin-top: -10px;    /* Pulls it closer to the input field above it */
-  margin-bottom: 15px;  /* Pushes the next input field down */
+  margin-top: -15px; /* Pulls it up tight under the input */
+  margin-bottom: 15px;
   font-weight: 500;
 }
 
-/* --- The Login Button --- */
-.login-button {
+/* Submit Button */
+.login-btn {
   background-color: #00E5FF;
-  color: #0B1120; /* Dark text for high contrast on the cyan button */
+  color: #0B1120; /* High contrast dark text */
   border: none;
   border-radius: 8px;
   padding: 14px;
@@ -82,37 +179,59 @@
   font-weight: 700;
   cursor: pointer;
   margin-top: 10px;
-  transition: background-color 0.3s ease, transform 0.1s ease;
+  transition: opacity 0.2s ease, transform 0.1s ease;
 }
 
-.login-button:hover {
-  background-color: #00B8CC; /* Slightly darker cyan on hover */
+.login-btn:hover {
+  opacity: 0.9;
 }
 
-.login-button:active {
-  transform: scale(0.98); /* Slight "click" indent effect */
+.login-btn:active {
+  transform: scale(0.98); /* Satisfying 'click' push-down effect */
 }
 
-/* --- Bottom Navigation Links --- */
-.nav-to-signup {
-  color: #9CA3AF;
-  text-align: center;
-  font-size: 0.95rem;
-  margin-top: 25px;
-  margin-bottom: 5px;
+/* ========================================= */
+/* --- Responsive Design (Media Queries) --- */
+/* ========================================= */
+
+/* Tablets (max-width: 900px) */
+@media screen and (max-width: 900px) {
+  .login-container {
+    flex-direction: column; /* Stack panels vertically */
+  }
+
+  .left-panel {
+    border-right: none;
+    border-bottom: 1px solid #1F2937;
+    padding: 50px 5%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .left-side-ul {
+    align-items: flex-start; /* Keep text left-aligned inside centered container */
+  }
+
+  .logo-tittle {
+    font-size: 2.2rem;
+  }
+
+  .right-panel {
+    padding: 40px 5%;
+  }
 }
 
-.nav-sign {
-  color: #00E5FF;
-  text-align: center;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  margin-top: 0;
-  transition: opacity 0.2s ease;
-}
+/* Mobile Phones (max-width: 500px) */
+@media screen and (max-width: 500px) {
+  .login-card {
+    padding: 40px 25px; /* Less padding on small screens to save space */
+  }
 
-.nav-sign:hover {
-  opacity: 0.8;
-  text-decoration: underline;
+  .logo-tittle {
+    font-size: 1.8rem;
+  }
+
+  .main-tittle {
+    font-size: 1.8rem;
+  }
 }

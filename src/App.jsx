@@ -9,7 +9,7 @@ import EquipmentDetails from "./components/equipment/EquipmentDetails";
 import EquipmentList from "./components/equipment/EquipmentList";
 import About from "./pages/About";
 import Home from "./pages/Home";
-import LoginPage from "./pages/LoginPage";
+import { LoginPage } from "./pages/LoginPage";
 import NotFound from "./pages/NotFound";
 import { RegisterPage } from "./pages/RegisterPage";
 import UserDashboard from "./pages/UserDashboard";
@@ -41,7 +41,7 @@ function App() {
      {/* <RequestPage/> */}
      {/* <AdminDashboard /> */}
      {/* <SearchResults/> */}
-     <RegisterPage />
+     {/* <RegisterPage /> */}
       
 
   
