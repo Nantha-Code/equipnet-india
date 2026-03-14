@@ -1,162 +1,59 @@
-/* Container & Background */
-.admin-dashboard {
-  max-width: 1200px;
-  margin: 30px auto;
-  padding: 20px;
-  font-family: 'Inter', -apple-system, system-ui, sans-serif;
-  background-color: #f8fafc;
-  color: #1e293b;
+.admin-dashboard{
+  padding:40px;
 }
 
-h2 {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #0f172a;
-  margin-bottom: 30px;
-  text-align: center;
+.equipment-form{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  width:300px;
+  margin-bottom:40px;
 }
 
-/* ================= ADD EQUIPMENT FORM ================= */
-.add-equipment-container {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  margin-bottom: 50px;
+.equipment-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:20px;
 }
 
-.equipment-form h3 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  color: #334155;
-  font-size: 1.25rem;
+.equipment-card{
+  border:1px solid #ddd;
+  padding:15px;
+  border-radius:10px;
+  background:#fff;
 }
 
-/* Making the form fields split into two columns */
-.equipment-form {
-  display: grid;
-  grid-template-columns:1fr;
-  gap: 15px;
+.equipment-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:8px;
 }
 
-/* Full width for certain elements */
-.equipment-form h3, 
-.equipment-form button {
-  grid-column: 1 / -1;
+.card-buttons{
+  display:flex;
+  gap:10px;
+  margin-top:10px;
 }
 
-.equipment-form input {
-  padding: 12px 16px;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  transition: all 0.2s;
+.status-buttons{
+  display:flex;
+  gap:8px;
+  margin-top:10px;
 }
 
-.equipment-form input:focus {
-  outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+.status{
+  font-weight:bold;
 }
 
-/* Formik Error Messages */
-.equipment-form p {
-  color: #ef4444;
-  font-size: 0.8rem;
-  margin: -10px 0 10px 5px;
-  grid-column: span 1;
+.status.AVAILABLE{
+  color:green;
 }
 
-.equipment-form button {
-  background-color: #2563eb;
-  color: white;
-  padding: 14px;
-  font-weight: 600;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.2s;
-  margin-top: 10px;
+.status.BOOKED{
+  color:red;
 }
 
-.equipment-form button:hover {
-  background-color: #1d4ed8;
-}
-
-/* ================= EQUIPMENT TABLE ================= */
-.admin-dashboard h3:last-of-type {
-  margin-bottom: 15px;
-  font-size: 1.5rem;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  border: none !important; /* Removes JSX border="1" */
-}
-
-thead {
-  background-color: #f1f5f9;
-}
-
-th {
-  text-align: left;
-  padding: 16px;
-  font-weight: 600;
-  color: #475569;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  letter-spacing: 0.05em;
-}
-
-td {
-  padding: 16px;
-  border-bottom: 1px solid #f1f5f9;
-  font-size: 0.95rem;
-}
-
-tr:hover {
-  background-color: #f8fafc;
-}
-
-/* Action Buttons inside Table */
-td button {
-  padding: 6px 14px;
-  margin-right: 8px;
-  border-radius: 6px;
-  font-weight: 500;
-  cursor: pointer;
-  border: 1px solid transparent;
-  transition: all 0.2s;
-}
-
-/* Edit Button */
-td button:first-child {
-  background-color: #eff6ff;
-  color: #2563eb;
-}
-
-td button:first-child:hover {
-  background-color: #dbeafe;
-}
-
-/* Delete Button */
-td button:last-child {
-  background-color: #fff1f2;
-  color: #e11d48;
-}
-
-td button:last-child:hover {
-  background-color: #ffe4e6;
-}
-
-/* Responsive Tweak */
-@media (max-width: 768px) {
-  .equipment-form {
-    grid-template-columns: 1fr;
-  }
+.status.MAINTENANCE{
+  color:orange;
 }

@@ -12,6 +12,7 @@ import { useNavigate } from 'react-router';
   return (
 <>
    <Navbar/>
+   <button onClick={() => navigate("admin")} >admin</button>
 <div className="bg">
 <div className="hero">
   <div className="hero-content">
