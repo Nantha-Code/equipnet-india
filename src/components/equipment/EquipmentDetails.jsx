@@ -1,89 +1,77 @@
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { API } from "../../global";
+import "./EquipmentDetails.css";
+
+function EquipmentDetails() {
+  const { id } = useParams();
+  const [equipment, setEquipment] = useState(null);
+
+  useEffect(() => {
+    async function fetchEquipment() {
+      const res = await fetch(`${API}/${id}`);
+      const data = await res.json();
+      setEquipment(data);
+    }
+
+    fetchEquipment();
+  }, [id]);
+
+  if (!equipment) return <p>Loading...</p>;
+
+  return (
+    <div className="details-page">
+      <h1>{equipment.name}</h1>
+      <p>{equipment.description}</p>
+      <p className="price">Price: ₹{equipment.price}</p>
+    </div>
+  );
+}
+
+export default EquipmentDetails;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // import { useEffect, useState } from "react";
-// import { useParams, useNavigate } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 // import { API } from "../../global";
-// import "./EquipmentDetails.css";
 
 // function EquipmentDetails() {
-
 //   const { id } = useParams();
-//   const navigate = useNavigate();
-
 //   const [equipment, setEquipment] = useState(null);
-// // const [Loading, setLoading] = useState();
+
 //   useEffect(() => {
-//     fetch(`${API}/${id}`)
-//       .then(res => res.json())
-//       .then(data => setEquipment(data))
-//       .catch(err => console.error(err));
+//     async function fetchEquipment() {
+//       const res = await fetch(`${API}/${id}`);
+//       const data = await res.json();
+//       setEquipment(data);
+//     }
+
+//     fetchEquipment();
 //   }, [id]);
-// // useEffect(() => {
-// //   fetch(`${API}/${id}`)
-// //     .then(res => {
-// //       if(!res.ok){
-// //         throw new Error("Equipment not found")
-// //       }
-// //       return res.json()
-// //     })
-// //     .then(data => {
-// //       setEquipment(data)
-// //       setLoading(false)
-// //     })
-// //     .catch(err => {
-// //       console.error(err)
-// //       setLoading(false)
-// //     })
-// // }, [id])
+
 //   if (!equipment) return <p>Loading...</p>;
 
 //   return (
-//     <div className="equipment-detail-container">
-
-//       <button className="back-btn" onClick={() => navigate(-1)}>
-//         ⬅ Back
-//       </button>
-
-//       {/* <img
-//         className="equipment-img"
-//         src={equipment.imagUrl}
-//         alt={equipment.name}
-//       /> */}
-//       {equipment.image && (
-//   <img
-//     className="equipment-img"
-//     src={equipment.image}
-//     alt={equipment.name}
-//   />
-// )}
-
-//       <h2 className="equipment-name">{equipment.name}</h2>
-
-//       <p className="equipment-para">
-//         <strong>Description:</strong> {equipment.description}
-//       </p>
-
-//       <p className="equipment-para">
-//         <strong>Institution:</strong> {equipment.institution}
-//       </p>
-
-//       <p className="equipment-para">
-//         <strong>Location:</strong> {equipment.location}
-//       </p>
-
-//       <p className="equipment-para">
-//         <strong>Status:</strong> {equipment.availabilityStatus}
-//       </p>
-
-//       <p className="equipment-para">
-//         <strong>Usage Type:</strong> {equipment.usageType}
-//       </p>
-
-//       <button
-//         className="register-btn"
-//         onClick={() => navigate("/register")}
-//       >
-//         Register to Rent
-//       </button>
-
+//     <div>
+//       <h1>{equipment.name}</h1>
+//       <p>{equipment.description}</p>
+//       <p>Price: {equipment.price}</p>
 //     </div>
 //   );
 // }

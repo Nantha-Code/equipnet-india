@@ -3,9 +3,9 @@ import Faq from "./components/common/footer/Faq";
 import Grievances from "./components/common/footer/Grievances";
 import PrivacyPolicy from "./components/common/footer/PrivacyPolicy";
 import TermsOfUse from "./components/common/footer/TermsOfUse";
-import SearchBar from "./components/common/SearchBar";
+// import SearchBar from "./components/common/SearchBar";
 import EquipmentCard from "./components/equipment/EquipmentCard";
-// import EquipmentDetails from "./components/equipment/EquipmentDetails";
+import EquipmentDetails from "./components/equipment/EquipmentDetails";
 import EquipmentList from "./components/equipment/EquipmentList";
 import About from "./pages/About";
 import Home from "./pages/Home";
@@ -15,7 +15,9 @@ import RegisterPage from "./pages/RegisterPage";
 import UserDashboard from "./pages/UserDashboard";
 import {AdminDashboard} from "./pages/Admin/AdminDashboard";
 import "./App.css"
+// import SearchResults from "./components/common/SearchResults";
 // import Signup from "./pages/Signup";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 
@@ -38,6 +40,7 @@ function App() {
      {/* <RequestStatus /> */}
      {/* <RequestPage/> */}
      {/* <AdminDashboard /> */}
+     {/* <SearchResults/> */}
       
 
   
@@ -55,11 +58,14 @@ function App() {
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="terms-of-use" element={<TermsOfUse />} />
         <Route path="faq" element={<Faq />} />
-        <Route path="search" element={<SearchBar />} />
+        {/* <Route path="search" element={<SearchBar />} /> */}
         <Route path="admin" element={<AdminDashboard />}/>
         <Route path="user-dashboard" element={<UserDashboard />}/>
         {/* <Route path="signup" element={<Signup />}/> */}
-        
+        {/* <Route path="/" element={<Home />} /> */}
+        {/* <Route path="/search" element={<SearchBar />} /> */}
+        <Route path="/equipment/:id" element={<EquipmentDetails />} />
+         {/* <Route path="results" element={<SearchResults />}/> */}
 
         {/* <Route path="" element={}/> */}
         {/* <Route path="" element={}/> */}

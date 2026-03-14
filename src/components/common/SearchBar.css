@@ -1,84 +1,27 @@
-/* SearchBar.css */
-
-/* The main container */
-.searchbar {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 30px;
-  /* border-radius: 12px; */
-  /* background-color: #ffffff; */
-  /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-/* Container for input and button to sit perfectly side-by-side */
-.search-controls {
+.searchbar-container {
   display: flex;
+  justify-content: center;
   gap: 10px;
+  margin: 30px 0;
 }
 
-/* The Input Field */
-.searchbar input[type="text"] {
-  flex: 1; /* Takes up all remaining space */
-  padding: 14px 18px;
+.search-input {
+  padding: 10px;
+  width: 300px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
   font-size: 16px;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  outline: none;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.searchbar input[type="text"]:focus {
-  border-color: #3498db;
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
-}
-
-/* The Search Button */
 .search-btn {
-  padding: 14px 24px;
-  font-size: 16px;
-  background-color: #3498db;
+  padding: 10px 18px;
+  background-color: #0077ff;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
 .search-btn:hover {
-  background-color: #2980b9;
-}
-
-.search-btn:active {
-  transform: scale(0.97); /* Slight click effect */
-}
-
-/* The Results List */
-.searchbar ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 25px 0 0 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px; /* Space between list items */
-}
-
-/* Individual Result Items */
-.searchbar li {
-  background-color: #f8f9fa;
-  padding: 16px 20px;
-  border-radius: 8px;
-  border: 1px solid #e9ecef;
-  color: #333;
-  font-weight: 500;
-  font-size: 1.1rem;
-  transition: all 0.2s ease;
-  cursor: pointer;
-}
-
-.searchbar li:hover {
-  background-color: #e3f2fd; /* Very light blue on hover */
-  border-color: #90caf9;
-  transform: translateY(-2px); /* Lifts up slightly */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  background-color: #005fcc;
 }

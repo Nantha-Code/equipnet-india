@@ -5,7 +5,7 @@ import { API } from "../../global";
 
 function EquipmentList() {
   const [equipment, setEquipment] = useState([]);
-
+  const [search, setSearch] = useState("")
   useEffect(() => {
     fetch(API)
       .then((res) => res.json())
@@ -14,16 +14,27 @@ function EquipmentList() {
   }, []);
 
   return (
+    <>
+    <input 
+    className="searchbar"
+    type="text"
+    placeholder="Filter by Name" 
+    value={search}
+    onChange={
+    (event)=>setSearch(event.target.value)}
+    />
     <div className="equipmentlist-page">
       <h2 className="page-title">Available Equipment</h2>
       
       <div className="cards-grid">
-        {equipment.map((item) => (
+        {equipment.filter((eqp)=>eqp.name.toLowerCase().includes(search.toLowerCase())).map((item) => (
           <ListExpress key={item.id} {...item} />
         ))}
       </div>
     </div>
+    </>
   );
+
 }
 
 function ListExpress({ id, image, name, institution, location, availabilityStatus }) {

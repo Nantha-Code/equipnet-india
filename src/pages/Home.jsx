@@ -1,13 +1,14 @@
-import React from 'react'
+// import React, { useState } from 'react'
 import "./Home.css"
 import Footer from '../components/common/footer/Footer';
 import About from './About';
-import SearchBar from '../components/common/SearchBar';
+// import SearchBar from '../components/common/SearchBar';
 import Navbar from '../components/common/Navbar';
 import { useNavigate } from 'react-router';
 
  function Home() {
     const navigate = useNavigate();
+    // const [Search, setSearch] = useState("");
   return (
 <>
    <Navbar/>
@@ -18,7 +19,13 @@ import { useNavigate } from 'react-router';
     <div className="srh-section">
     <h1 className='tittle-tagline'>India’s National Research Equipment Discovery Platform</h1>
 
-   <SearchBar/>
+   {/* <SearchBar/> */}
+   {/* <input 
+   type="text" 
+   placeholder='search by name'
+   value={Search}
+   onChange={(event) =>setSearch(event.target.value)}
+   /> */}
    
     <p className="search-tagline"> Discover and request access to world-class government-funded scientific infrastructure.
     </p>
