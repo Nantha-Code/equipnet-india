@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./EquipmentList.css";
 import { API } from "../../global"; 
 
-function EquipmentList() {
+export function EquipmentList() {
   const [equipment, setEquipment] = useState([]);
   const [search, setSearch] = useState("")
   useEffect(() => {
@@ -64,4 +64,3 @@ function ListExpress({ id, image, name, institution, location, availabilityStatu
   );
 }
 
-export default EquipmentList;

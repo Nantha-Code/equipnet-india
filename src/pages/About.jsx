@@ -1,7 +1,7 @@
 import React from 'react'
 import "./About.css"
 
-function About() {
+export function About() {
   return (
     <> 
     <div className="about">
@@ -58,4 +58,3 @@ function About() {
   );
 }
 
-export default About;

@@ -5,12 +5,12 @@ import PrivacyPolicy from "./components/common/footer/PrivacyPolicy";
 import TermsOfUse from "./components/common/footer/TermsOfUse";
 // import SearchBar from "./components/common/SearchBar";
 import EquipmentCard from "./components/equipment/EquipmentCard";
-import EquipmentDetails from "./components/equipment/EquipmentDetails";
-import EquipmentList from "./components/equipment/EquipmentList";
-import About from "./pages/About";
-import Home from "./pages/Home";
+import { EquipmentDetails } from "./components/equipment/EquipmentDetails";
+import { EquipmentList } from "./components/equipment/EquipmentList";
+import { About } from "./pages/About";
+import { Home } from "./pages/Home";
 import { LoginPage } from "./pages/LoginPage";
-import NotFound from "./pages/NotFound";
+import { NotFound } from "./pages/NotFound";
 import { RegisterPage } from "./pages/RegisterPage";
 import UserDashboard from "./pages/UserDashboard";
 import {AdminDashboard} from "./pages/Admin/AdminDashboard";
@@ -73,7 +73,7 @@ function App() {
         {/* <Route path="/search" element={<SearchBar />} /> */}
         <Route path="equipment/:id" element={<EquipmentDetails />} />
          {/* <Route path="results" element={<SearchResults />}/> */}
-        <Route path="/booking" element={<BookingPage />}/>
+        <Route path="booking" element={<BookingPage />}/>
 
         {/* <Route path="" element={}/> */}
         {/* <Route path="" element={}/> */}

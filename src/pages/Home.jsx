@@ -1,8 +1,8 @@
 import "./Home.css"
-import About from './About';
+import { About } from './About';
 import { useNavigate } from 'react-router';
 
- function Home() {
+export  function Home() {
     const navigate = useNavigate();
     
   return (
@@ -157,4 +157,3 @@ import { useNavigate } from 'react-router';
   );
 }
 
-export default Home;
