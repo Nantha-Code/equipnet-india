@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { API } from "../../global";
+import { useNavigate } from "react-router-dom";
 import "./EquipmentDetails.css";
 
 function EquipmentDetails() {
+  const navigate = useNavigate();
   const { id } = useParams();
   const [equipment, setEquipment] = useState(null);
 
@@ -38,8 +40,10 @@ function EquipmentDetails() {
     </div>
       <button 
         className="booking-btn" 
-        disabled={equipment.availabilityStatus !== "Available"}>
-        {equipment.availabilityStatus === "Available" ? "Book now" : "Unavailable"}
+        disabled={equipment.availabilityStatus !== "AVAILABLE"}
+        onClick={() => navigate(`/booking/${equipment.id}`)}
+        >
+        {equipment.availabilityStatus === "AVAILABLE" ? "Book now" : "Unavailable"}
       </button>
     </div>
     </>

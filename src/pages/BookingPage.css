@@ -1,0 +1,45 @@
+.booking-container{
+display:flex;
+gap:40px;
+padding:40px;
+}
+
+.booking-form{
+flex:2;
+background:white;
+padding:30px;
+border-radius:10px;
+}
+
+.booking-summary{
+flex:1;
+background:white;
+padding:25px;
+border-radius:10px;
+}
+
+.role-buttons{
+display:flex;
+gap:10px;
+margin:10px 0;
+}
+
+.role-buttons button{
+padding:10px 15px;
+border:1px solid #ccc;
+cursor:pointer;
+}
+
+.continue-btn{
+margin-top:20px;
+padding:12px;
+width:100%;
+background:#4c7df0;
+color:white;
+border:none;
+border-radius:6px;
+}
+
+.cost-box{
+margin-top:20px;
+}

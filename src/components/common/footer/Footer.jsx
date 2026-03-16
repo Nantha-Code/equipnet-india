@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.css";
 import { useNavigate } from "react-router";
 
-function Footer() {
+export function Footer() {
   const navigate = useNavigate();
   return (
     <>
@@ -46,7 +46,6 @@ function Footer() {
   );
 }
 
-export default Footer;
 
 
 

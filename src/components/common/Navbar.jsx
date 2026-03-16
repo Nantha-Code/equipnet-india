@@ -3,7 +3,7 @@ import "./Navbar.css"
 import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router';
 
-function Navbar() {
+ export function Navbar() {
 
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -41,4 +41,3 @@ function Navbar() {
   );
 }
 
-export default Navbar;

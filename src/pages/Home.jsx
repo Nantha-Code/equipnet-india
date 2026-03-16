@@ -1,17 +1,13 @@
-// import React, { useState } from 'react'
 import "./Home.css"
-import Footer from '../components/common/footer/Footer';
 import About from './About';
-// import SearchBar from '../components/common/SearchBar';
-import Navbar from '../components/common/Navbar';
 import { useNavigate } from 'react-router';
 
  function Home() {
     const navigate = useNavigate();
-    // const [Search, setSearch] = useState("");
+    
   return (
 <>
-   <Navbar/>
+   {/* <Navbar/> */}
    <button onClick={() => navigate("admin")} >admin</button>
 <div className="bg">
 <div className="hero">
@@ -156,7 +152,6 @@ import { useNavigate } from 'react-router';
     </div>
   </div>
 </div>
-  <Footer/> 
 </div>
 </> 
   );

@@ -15,6 +15,11 @@ import { RegisterPage } from "./pages/RegisterPage";
 import UserDashboard from "./pages/UserDashboard";
 import {AdminDashboard} from "./pages/Admin/AdminDashboard";
 import "./App.css"
+import { BookingPage } from "./pages/BookingPage";
+import { Navbar } from "./components/common/Navbar";
+import { Footer } from "./components/common/footer/Footer";
+
+
 // import SearchResults from "./components/common/SearchResults";
 // import Signup from "./pages/Signup";
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -42,12 +47,13 @@ function App() {
      {/* <AdminDashboard /> */}
      {/* <SearchResults/> */}
      {/* <RegisterPage /> */}
-      
+     {/* <BookingPage /> */}
 
   
-
-    <Routes>
       
+
+<Navbar/>
+    <Routes>
         <Route path="/" element={<Home />} />
         <Route path="login" element={<LoginPage />}/>
         <Route path="register" element={<RegisterPage />}/>
@@ -65,8 +71,9 @@ function App() {
         {/* <Route path="signup" element={<Signup />}/> */}
         {/* <Route path="/" element={<Home />} /> */}
         {/* <Route path="/search" element={<SearchBar />} /> */}
-        <Route path="/equipment/:id" element={<EquipmentDetails />} />
+        <Route path="equipment/:id" element={<EquipmentDetails />} />
          {/* <Route path="results" element={<SearchResults />}/> */}
+        <Route path="/booking" element={<BookingPage />}/>
 
         {/* <Route path="" element={}/> */}
         {/* <Route path="" element={}/> */}
@@ -75,10 +82,8 @@ function App() {
         
         <Route path="*" element={<NotFound />} />
     </Routes>
-  
-
-
-     {/* <Footer/> */}
+ 
+ <Footer/> 
     </>
 
   );
