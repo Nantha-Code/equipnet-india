@@ -20,6 +20,7 @@ import { Navbar } from "./components/common/Navbar";
 import { Footer } from "./components/common/footer/Footer";
 
 
+
 // import SearchResults from "./components/common/SearchResults";
 // import Signup from "./pages/Signup";
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -48,7 +49,7 @@ function App() {
      {/* <SearchResults/> */}
      {/* <RegisterPage /> */}
      {/* <BookingPage /> */}
-
+      
   
       
 
@@ -73,7 +74,7 @@ function App() {
         {/* <Route path="/search" element={<SearchBar />} /> */}
         <Route path="equipment/:id" element={<EquipmentDetails />} />
          {/* <Route path="results" element={<SearchResults />}/> */}
-        <Route path="booking" element={<BookingPage />}/>
+        <Route path="/booking/:id" element={<BookingPage />}/>
 
         {/* <Route path="" element={}/> */}
         {/* <Route path="" element={}/> */}
