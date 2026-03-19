@@ -1,10 +1,9 @@
+import "./App.css"
 import { Route, Routes } from "react-router-dom";
 import Faq from "./components/common/footer/Faq";
 import Grievances from "./components/common/footer/Grievances";
 import PrivacyPolicy from "./components/common/footer/PrivacyPolicy";
 import TermsOfUse from "./components/common/footer/TermsOfUse";
-// import SearchBar from "./components/common/SearchBar";
-import EquipmentCard from "./components/equipment/EquipmentCard";
 import { EquipmentDetails } from "./components/equipment/EquipmentDetails";
 import { EquipmentList } from "./components/equipment/EquipmentList";
 import { About } from "./pages/About";
@@ -14,7 +13,6 @@ import { NotFound } from "./pages/NotFound";
 import { RegisterPage } from "./pages/RegisterPage";
 import UserDashboard from "./pages/UserDashboard";
 import {AdminDashboard} from "./pages/Admin/AdminDashboard";
-import "./App.css"
 import { BookingPage } from "./pages/BookingPage";
 import { Navbar } from "./components/common/Navbar";
 import { Footer } from "./components/common/footer/Footer";
@@ -60,7 +58,6 @@ function App() {
         <Route path="register" element={<RegisterPage />}/>
         <Route path="about" element={<About />}/>
         <Route path="equipmentlist" element={<EquipmentList />}/>
-        <Route path="equipmentcard" element={<EquipmentCard />}/>
         <Route path="grievances" element={<Grievances />} />
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="terms-of-use" element={<TermsOfUse />} />

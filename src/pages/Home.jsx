@@ -78,7 +78,7 @@ export  function Home() {
     </div>
 
  <div className="feauture">
-  <h2 className='featured-instruments-tittle'>Featured Instruments</h2>
+  <h2 className='featured-instruments-tittle'>Featured Categories</h2>
 
   <div className="featured-instruments">
 
@@ -91,7 +91,7 @@ export  function Home() {
         key={type}
         className="usage-group"
         onClick={() => navigate(`/category/${type}`)}
-        style={{ cursor: "pointer" }}>
+        style={{ cursor: "pointer" }} >
         <h3 className="usage-title">{type}</h3>
       </div>
 

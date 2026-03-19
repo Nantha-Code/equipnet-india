@@ -1,0 +1,124 @@
+/* ========================================= */
+/* --- Base Page Setup --- */
+/* ========================================= */
+.main-container-categery {
+  background-color: #0B1120; /* Your deep navy background */
+  min-height: 100vh;
+  padding: 50px 5%;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #F9FAFB;
+}
+
+.categery-name {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+  border: none;
+  color: white;
+}
+
+.categery-name span {
+  color: #00E5FF; /* Highlights the category name in Cyan */
+}
+
+/* ========================================= */
+/* --- The Grid Layout --- */
+/* ========================================= */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Fluid responsive columns */
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ========================================= */
+/* --- Individual Instrument Card --- */
+/* ========================================= */
+.intrument-main-container {
+  background-color: #111827; /* Slightly elevated card color */
+  border: 1px solid #1F2937;
+  border-radius: 12px;
+  overflow: hidden; /* Keeps the image inside the rounded corners */
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intrument-main-container:hover {
+  transform: translateY(-8px); /* Lifts the card on hover */
+  border-color: #00E5FF; /* Cyan border glow */
+  box-shadow: 0 10px 25px rgba(0, 229, 255, 0.15); /* Soft cyan shadow */
+}
+
+/* --- Image Styling --- */
+.image {
+  width: 100%;
+  height: 220px; /* Fixed height so all cards look uniform */
+  overflow: hidden;
+  border-bottom: 1px solid #1F2937;
+}
+
+.equipment-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Prevents image from stretching */
+  transition: transform 0.4s ease;
+}
+
+.intrument-main-container:hover .equipment-image {
+  transform: scale(1.05); /* Smooth inner image zoom on card hover */
+}
+
+/* --- Text Details --- */
+.equipment-details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.equipment-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #F9FAFB;
+  margin: 0 0 10px 0;
+  line-height: 1.3;
+}
+
+.equipment-location {
+  font-size: 0.95rem;
+  color: #9CA3AF; /* Muted gray text */
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* --- Empty State Message --- */
+.no-data-msg {
+  grid-column: 1 / -1; /* Forces the message to span across all columns */
+  text-align: center;
+  color: #9CA3AF;
+  font-size: 1.2rem;
+  padding: 50px 0;
+  border: 1px dashed #374151;
+  border-radius: 12px;
+  background-color: rgba(17, 24, 39, 0.5);
+}
+
+/* ========================================= */
+/* --- Responsive Design (Media Queries) --- */
+/* ========================================= */
+@media screen and (max-width: 600px) {
+  .main-container-categery {
+    padding: 30px 20px;
+  }
+
+  .categery-name {
+    font-size: 2rem;
+  }
+}
