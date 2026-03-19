@@ -112,43 +112,105 @@
   border: none;
 }
 
+
+/* ========================================= */
+/* --- The Main Container (Grid Layout) --- */
+/* ========================================= */
 .featured-instruments {
+  background-color: #0B1120; /* Your main page background */
+  padding: 40px 5%;
+  
+  /* Creates a responsive grid automatically */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+  
+  /* Centers the grid on massive screens */
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.instrument {
-  background-color: var(--card-bg);
-  border: 1px solid var(--card-border);
+/* Loading Text Styling */
+.featured-instruments > p {
+  color: #00E5FF;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  grid-column: 1 / -1; /* Forces the loading text to span the whole width */
+  margin-top: 50px;
+}
+
+/* ========================================= */
+/* --- The Category Cards --- */
+/* ========================================= */
+.usage-group {
+  background-color: #111827; /* Slightly elevated card color */
+  border: 1px solid #1F2937; /* Subtle dark gray border */
   border-radius: 12px;
-  padding: 30px;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.instrument:hover {
-  border-color: var(--accent-cyan);
-  transform: translateY(-5px);
-}
-
-.instrument-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 35px 20px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  /* The transition makes the hover effect smooth instead of instant */
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-.instrument-ul-list {
-  color: var(--text-muted);
-  font-size: 1.05rem;
+/* --- The Hover Effect Magic --- */
+.usage-group:hover {
+  transform: translateY(-8px); /* Lifts the card up */
+  background-color: #162032; /* Slightly lightens the card */
+  border-color: #00E5FF; /* Cyan border */
+  box-shadow: 0 10px 25px rgba(0, 229, 255, 0.15); /* Soft cyan glow underneath */
 }
 
-.instrument-ul-list strong {
-  color: var(--text-main);
+/* ========================================= */
+/* --- Text Inside the Cards --- */
+/* ========================================= */
+.usage-title {
+  color: #F9FAFB; /* Off-white for high contrast */
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+  text-transform: capitalize; /* Ensures categories like "microbiology" become "Microbiology" */
 }
 
+.usage-count {
+  color: #9CA3AF; /* Muted gray */
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+  
+  /* Styling the count like a little pill/badge */
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Optional: Make the badge glow cyan when hovering the parent card! */
+.usage-group:hover .usage-count {
+  color: #00E5FF;
+  background-color: rgba(0, 229, 255, 0.1);
+  border-color: rgba(0, 229, 255, 0.2);
+}
+
+/* ========================================= */
+/* --- Responsive Design (Mobile) --- */
+/* ========================================= */
+@media screen and (max-width: 600px) {
+  .featured-instruments {
+    grid-template-columns: 1fr; /* Stacks to 1 column on small phones */
+    padding: 30px 20px;
+  }
+  
+  .usage-group {
+    padding: 25px 20px;
+  }
+}
 /* --- About Section (Styled like the bottom CTA in the image) --- */
 .about-container {
   background-color: var(--card-bg);

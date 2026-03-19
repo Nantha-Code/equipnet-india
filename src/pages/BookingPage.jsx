@@ -44,17 +44,22 @@ export function BookingPage() {
     //   alert("Booking request submitted!");
     // }
     onSubmit: async (values) => {
-
   const bookingData = {
-    equipmentId: id,
+    equipmentId: Number(id),
     equipmentName: equipment.name,
     institution: equipment.institution,
-    ...values,
+
+    userRole: values.role,
+    purpose: values.purpose,
+
+    startDate: values.startDate,
+    endDate: values.endDate,
+
     status: "PENDING"
   };
 
   try {
-    const res = await fetch("https://your-api.com/bookings", {
+    const res = await fetch(`${API}/api/bookings`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -64,12 +69,12 @@ export function BookingPage() {
 
     const data = await res.json();
 
-    alert("Booking request sent to admin!");
+    console.log("Response:", data);
+    alert("Booking request sent!");
 
   } catch (err) {
     console.error(err);
   }
-
 }
   });
 

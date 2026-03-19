@@ -7,7 +7,7 @@ export function EquipmentList() {
   const [equipment, setEquipment] = useState([]);
   const [search, setSearch] = useState("")
   useEffect(() => {
-    fetch(API)
+    fetch(API )
       .then((res) => res.json())
       .then((data) => setEquipment(data))
       .catch((err) => console.error("API Error:", err));

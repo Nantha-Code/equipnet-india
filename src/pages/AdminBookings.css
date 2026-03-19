@@ -1,0 +1,177 @@
+/* ========================================= */
+/* --- Base Page Setup --- */
+/* ========================================= */
+.main-container {
+  background-color: #0B1120; /* Deep navy background */
+  min-height: 100vh;
+  padding: 40px 5%;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #F9FAFB;
+  border:white solid 2px;
+}
+
+.main-tittle {
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-align: center;
+  color: #00E5FF; /* Cyan accent for Admin titles */
+  margin-bottom: 40px;
+  border-bottom: 1px solid #1F2937;
+  padding-bottom: 20px;
+}
+
+/* ========================================= */
+/* --- The Grid Layout --- */
+/* ========================================= */
+.bookings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Fluid responsive grid */
+  gap: 25px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ========================================= */
+/* --- Individual Booking Card --- */
+/* ========================================= */
+.booking-card {
+  background-color: #111827; /* Elevated card background */
+  border: 1px solid #1F2937;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.booking-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border-color: #374151;
+}
+
+/* --- Card Header (Name & Status) --- */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #F9FAFB;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* --- Text Details --- */
+.user-role {
+  background-color: #1F2937;
+  color: #D1D5DB;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  align-self: flex-start; /* Keeps the background hugging the text tightly */
+  margin: 0 0 15px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.start-end-dates {
+  font-size: 0.95rem;
+  color: #9CA3AF; /* Muted gray */
+  margin: 0 0 20px 0;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.03); /* Very faint background to highlight dates */
+  border-radius: 6px;
+  border: 1px dashed #374151;
+}
+
+/* --- Dynamic Status Badges --- */
+.booking-status {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.booking-status.approved { background-color: rgba(16, 185, 129, 0.15); color: #10B981; } /* Green */
+.booking-status.rejected { background-color: rgba(239, 68, 68, 0.15); color: #EF4444; }   /* Red */
+.booking-status.pending  { background-color: rgba(245, 158, 11, 0.15); color: #F59E0B; }  /* Yellow */
+
+/* ========================================= */
+/* --- Action Buttons --- */
+/* ========================================= */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: auto; /* Pushes the buttons to the very bottom of the card */
+}
+
+.approve-button,
+.reject-button {
+  flex: 1; /* Makes both buttons equal width */
+  padding: 10px 0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+/* Approve (Green Theme) */
+.approve-button {
+  color: #10B981;
+  border: 1px solid #10B981;
+}
+
+.approve-button:hover {
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+.approve-button:active {
+  background-color: #10B981;
+  color: #0B1120;
+}
+
+/* Reject (Red Theme) */
+.reject-button {
+  color: #EF4444;
+  border: 1px solid #EF4444;
+}
+
+.reject-button:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.reject-button:active {
+  background-color: #EF4444;
+  color: #0B1120;
+}
+
+/* ========================================= */
+/* --- Responsive Design (Media Queries) --- */
+/* ========================================= */
+
+@media screen and (max-width: 600px) {
+  .main-container {
+    padding: 30px 20px;
+  }
+  
+  .main-tittle {
+    font-size: 1.8rem;
+  }
+  
+  .card-header {
+    flex-direction: column; /* Stacks the title and status on small phones */
+    gap: 12px;
+  }
+}

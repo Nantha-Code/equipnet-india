@@ -1,79 +1,148 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
+// import { API_1 } from "../global";
+// import "./AdminBookings.css";
 
-export function AdminBookings(){
+// export function AdminBookings() {
+//   const [Bookings, setBookings] = useState([]);
 
-const [bookings,setBookings] = useState([]);
+//   useEffect(() => {
+//     fetch(`${API_1}/api/bookings`)
+//       .then(res => res.json())
+//       .then(data => setBookings(data));
+//   }, []);
 
-useEffect(()=>{
+//   const updateStatus = async (id, status) => {
+//     await fetch(`${API_1}/api/bookings/${id}`, {
+//       method: "PUT",
+//       headers: {
+//         "Content-Type": "application/json"
+//       },
+//       body: JSON.stringify({ status })
+//     });
 
-fetch("https://your-api.com/bookings")
-.then(res=>res.json())
-.then(data=>setBookings(data));
+//     setBookings(prev =>
+//       prev.map(Bookings => Bookings.id === id ? { ...Bookings, status } : Bookings)
+//     );
+//   };
 
-},[]);
+//   return (
+//     <div className="main-container">
+//       <h2>Admin Booking Requests</h2>
 
-const approveBooking = async(id)=>{
+//       {Bookings.map(Booking => (
+//         <div key={Bookings.id} className="booking-card">
+//           <h3>{Bookings.equipmentName}</h3>
+//           <p>{Bookings.startDate} → {Bookings.endDate}</p>
+//           <p>{Bookings.userRole}</p>
+//           <p>Status: {Bookings.status}</p>
 
-await fetch(`https://your-api.com/bookings/${id}`,{
-method:"PUT",
-headers:{
-"Content-Type":"application/json"
-},
-body:JSON.stringify({status:"APPROVED"})
-});
+//           <button onClick={() => updateStatus(Bookings.id, "APPROVED")}>
+//             Approve
+//           </button>
 
-setBookings(prev =>
-prev.map(b => b.id===id ? {...b,status:"APPROVED"} : b)
-);
+//           <button onClick={() => updateStatus(Bookings.id, "REJECTED")}>
+//             Reject
+//           </button>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
 
-};
 
-const rejectBooking = async(id)=>{
 
-await fetch(`https://your-api.com/bookings/${id}`,{
-method:"PUT",
-headers:{
-"Content-Type":"application/json"
-},
-body:JSON.stringify({status:"REJECTED"})
-});
 
-setBookings(prev =>
-prev.map(b => b.id===id ? {...b,status:"REJECTED"} : b)
-);
 
-};
 
-return(
 
-<div>
 
-<h2>Admin Booking Requests</h2>
 
-{bookings.map(b=>(
-<div key={b.id} className="booking-card">
 
-<h3>{b.equipmentName}</h3>
 
-<p>{b.startDate} → {b.endDate}</p>
 
-<p>{b.role}</p>
 
-<p>Status: {b.status}</p>
 
-<button onClick={()=>approveBooking(b.id)}>
-Approve
-</button>
 
-<button onClick={()=>rejectBooking(b.id)}>
-Reject
-</button>
+// // import { useEffect, useState } from "react";
+// // import { BookingPage } from "./BookingPage";
 
-</div>
-))}
+// // export function AdminBookings(){
 
-</div>
+// // const [bookings,setBookings] = useState([]);
 
-);
+// // useEffect(()=>{
 
-}
+// // fetch("https://6971eb5e32c6bacb12c50344.mockapi.io/api/v1/movies/bookings")
+// // .then(res=>res.json())
+// // .then(data=>setBookings(data));
+
+// // },[]);
+
+// // const approveBooking = async(id)=>{
+
+// // await fetch(`https://6971eb5e32c6bacb12c50344.mockapi.io/api/v1/movies/bookings/${id}`,{
+// // method:"PUT",
+// // headers:{
+// // "Content-Type":"application/json"
+// // },
+// // body:JSON.stringify({status:"APPROVED"})
+// // });
+
+// // setBookings(prev =>
+// // prev.map(b => b.id===id ? {...b,status:"APPROVED"} : b)
+// // );
+
+// // };
+
+// // const rejectBooking = async(id)=>{
+
+// // await fetch(`https://6971eb5e32c6bacb12c50344.mockapi.io/api/v1/movies${id}`,{
+// // method:"PUT",
+// // headers:{
+// // "Content-Type":"application/json"
+// // },
+// // body:JSON.stringify({status:"REJECTED"})
+// // });
+
+// // setBookings(prev =>
+// // prev.map(b => b.id===id ? {...b,status:"REJECTED"} : b)
+// // );
+
+// // };
+
+// // return(
+
+// // <div className="main-container">
+
+// // <h2 className="main-tittle">Admin Booking Requests</h2>
+
+// // {bookings.map(b=>(
+// // <div key={BookingPage.id} className="booking-card">
+
+// // <h3 className="name">{b.equipmentName}</h3>
+
+// // <p className="start-end-dates">{b.startDate} → {b.endDate}</p>
+
+// // <p className="user-role">{b.role}</p>
+
+// // <p className="booking-status">Status: {b.status}</p>
+
+// // <div className="action-buttons">
+
+// // <button className="approve-button" onClick={()=>approveBooking(b.id)}>
+// // Approve
+// // </button>
+
+// // <button className="reject-button" onClick={()=>rejectBooking(b.id)}>
+// // Reject
+// // </button>
+// // </div>
+
+// // </div>
+// // ))}
+
+// // </div>
+
+// // );
+
+// // }

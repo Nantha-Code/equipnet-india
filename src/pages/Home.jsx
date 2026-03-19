@@ -1,13 +1,37 @@
 import "./Home.css"
 import { About } from './About';
 import { useNavigate } from 'react-router';
+import { useEffect, useState } from "react";
+import { API } from "../global";
 
 export  function Home() {
     const navigate = useNavigate();
-    
+
+    const [instruments, setInstruments] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch(API)
+      .then((res) => res.json())
+      .then((data) => {
+        setInstruments(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error(err);
+        setLoading(false);
+      });
+  }, []);
+    const groupedData = instruments.reduce((acc, item) => {
+  if (!acc[item.usageType]) {
+    acc[item.usageType] = [];
+  }
+  acc[item.usageType].push(item);
+  return acc;
+}, {});
   return (
 <>
-   {/* <Navbar/> */}
+
    <button onClick={() => navigate("admin")} >admin</button>
 <div className="bg">
 <div className="hero">
@@ -16,13 +40,7 @@ export  function Home() {
     <div className="srh-section">
     <h1 className='tittle-tagline'>India’s National Research Equipment Discovery Platform</h1>
 
-   {/* <SearchBar/> */}
-   {/* <input 
-   type="text" 
-   placeholder='search by name'
-   value={Search}
-   onChange={(event) =>setSearch(event.target.value)}
-   /> */}
+   
    
     <p className="search-tagline"> Discover and request access to world-class government-funded scientific infrastructure.
     </p>
@@ -60,54 +78,29 @@ export  function Home() {
     </div>
 
  <div className="feauture">
-        <h2 className='featured-instruments-tittle'>Featured Instruments</h2>
+  <h2 className='featured-instruments-tittle'>Featured Instruments</h2>
 
-    <div className="featured-instruments">
-        
-        <div className="instrument">
-            <ul className="instrument-ul">
-            <li className="instrument-ul-list"> <strong>Name:</strong> PCR Machine </li>
-            <li className="instrument-ul-list"> <strong>Location: </strong>IIT Madras</li>
-            </ul>
-        </div>
+  <div className="featured-instruments">
 
-        <div className="instrument">
-            <ul className="instrument-ul">
-            <li className="instrument-ul-list"> <strong>Name:</strong>SEM </li>
-            <li className="instrument-ul-list"> <strong>Location:</strong>IISc</li>
-            </ul>
-        </div>
+  {loading ? (
+    <p>Loading...</p>
+  ) : (
+    Object.keys(groupedData).map((type) => (
+      
+      <div
+        key={type}
+        className="usage-group"
+        onClick={() => navigate(`/category/${type}`)}
+        style={{ cursor: "pointer" }}>
+        <h3 className="usage-title">{type}</h3>
+      </div>
 
-        <div className="instrument">
-            <ul className="instrument-ul">
-            <li className="instrument-ul-list"> <strong>Name:</strong>NGS Sequencer </li>
-            <li className="instrument-ul-list"> <strong>Location:</strong>NIT Trichy</li>
-            </ul>
-        </div>
+    ))
+  )}
 
-        <div className="instrument">
-            <ul className="instrument-ul">
-            <li className="instrument-ul-list"> <strong>Name:</strong>Mass Spectrometer</li>
-            <li className="instrument-ul-list"> <strong>Name:</strong>Pune</li>
-            </ul>
-        </div>
-
-        <div className="instrument">
-            <ul className="instrument-ul">
-            <li className="instrument-ul-list"> <strong>Name:</strong>Mass Spectrometer</li>
-            <li className="instrument-ul-list"> <strong>Location:</strong>Pune</li>
-            </ul>
-        </div>
-
-        <div className="instrument">
-            <ul className="instrument-ul">
-            <li className="instrument-ul-list"> <strong>Name:</strong>Mass Spectrometer</li>
-            <li className="instrument-ul-list"> <strong>Location: </strong>Pune</li>
-            </ul>
-        </div>
-
-    </div>
 </div>
+</div>
+
     <div className="about-container" id='about'>
         <div className="about-tittle">
         <h2 className='about-h2'>About Us</h2>
