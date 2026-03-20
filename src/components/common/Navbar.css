@@ -25,6 +25,7 @@ header {
   display: flex;
   align-items: center;
   cursor: pointer;
+  align-content: center;
 }
 
 .logo {
@@ -35,6 +36,13 @@ header {
 
 .logo:hover {
   transform: scale(1.05); /* Slight zoom effect when hovered */
+}
+.h1{
+  color: white;
+  margin-left: 1rem;
+}
+.tittle{
+  color:white;
 }
 
 /* --- Navigation Links Container --- */

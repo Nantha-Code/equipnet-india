@@ -1,9 +1,10 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import "./RegisterPage.css";
+import { useNavigate } from 'react-router';
 
 export function RegisterPage() {
-
+   const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -151,7 +152,7 @@ export function RegisterPage() {
                   <p className="error">{formik.errors.confirmPassword}</p>
                 )}
               </div>
-            <button type="submit" className="submit-btn">
+            <button type="submit" className="submit-btn" onClick={() => navigate("/")} >
                Create Account
             </button>
 

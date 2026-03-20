@@ -3,6 +3,7 @@ import * as Yup from "yup";
 import { useNavigate } from 'react-router';
 import "./LoginPage.css";
 
+
 export function LoginPage() {
   const navigate = useNavigate();
   const formik = useFormik({
@@ -88,7 +89,7 @@ export function LoginPage() {
               <p className="error">{formik.errors.password}</p>
             )}
 
-            <button type="submit" className="login-btn">Login</button>
+            <button type="submit" className="login-btn" onClick={() => navigate("/")} >Login</button>
 
           </form>
 

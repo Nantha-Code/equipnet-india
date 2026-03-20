@@ -12,8 +12,10 @@ import { useNavigate } from 'react-router';
     <header>
       <div className="logo-container" onClick={() => navigate("/")}>
         <img className="logo" src="/project-logo.png" alt="logo"/>
+      <div className="h1">
+        <h1 classname="tittle">Equipnet</h1>
       </div>
-
+      </div>
       {/* Hamburger Button */}
       <div 
         className="hamburger" 
